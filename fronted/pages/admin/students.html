@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Students | Lion Consultancy Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         ADMIN SIDEBAR
+         ===================================================== -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-sidebar-brand">
+
+            <div class="admin-brand-mark">
+                L
+            </div>
+
+            <div>
+                <strong>LION</strong>
+                <span>CONSULTANCY</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-sidebar-nav">
+
+            <a
+                href="./dashboard.html"
+                class="admin-nav-item"
+            >
+                <span>⌂</span>
+                <strong>Dashboard</strong>
+            </a>
+
+
+            <a
+                href="./applications.html"
+                class="admin-nav-item"
+            >
+                <span>▣</span>
+                <strong>Applications</strong>
+            </a>
+
+
+            <a
+                href="./students.html"
+                class="admin-nav-item is-active"
+            >
+                <span>◉</span>
+                <strong>Students</strong>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+            >
+                <span>♢</span>
+                <strong>Universities</strong>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+            >
+                <span>◇</span>
+                <strong>Scholarships</strong>
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <div class="admin-system-status">
+                <span></span>
+                System operational
+            </div>
+
+
+            <button
+                type="button"
+                class="admin-nav-item admin-logout-button"
+                id="adminLogoutButton"
+                data-admin-logout
+            >
+                Sign out
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+         ===================================================== -->
+
+    <div class="admin-sidebar-overlay"></div>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main
+    class="admin-main"
+    data-admin-students
+>
+
+        <!-- TOP BAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                type="button"
+                class="admin-sidebar-toggle"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <div class="admin-topbar-title">
+
+                <span>
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Students
+                </h1>
+
+            </div>
+
+
+            <div class="admin-admin-profile">
+
+                <div class="admin-profile-avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Administrator
+                    </strong>
+
+                    <span>
+                        Super Administrator
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             STUDENTS CONTENT
+             ================================================= -->
+
+        <section class="admin-content">
+
+            <div class="admin-page-heading">
+
+                <div>
+
+                    <span class="admin-section-eyebrow">
+                        STUDENT MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Student directory
+                    </h2>
+
+                    <p>
+                        Manage student profiles,
+                        academic information,
+                        destinations and study progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH / FILTERS -->
+
+            <div class="admin-filter-card">
+
+                <div class="admin-filter-group">
+
+                    <label for="studentSearch">
+                        Search students
+                    </label>
+
+                    <input
+                        type="search"
+                        id="studentSearch"
+                        placeholder="Name, email or phone..."
+                    >
+
+                </div>
+
+
+                <div class="admin-filter-group">
+
+                    <label for="studentCountryFilter">
+                        Destination
+                    </label>
+
+                    <select
+                        id="studentCountryFilter"
+                    >
+
+                        <option value="">
+                            All destinations
+                        </option>
+
+                        <option value="korea">
+                            South Korea
+                        </option>
+
+                        <option value="china">
+                            China
+                        </option>
+
+                        <option value="germany">
+                            Germany
+                        </option>
+
+                        <option value="usa">
+                            USA
+                        </option>
+
+                        <option value="italy">
+                            Italy
+                        </option>
+
+                        <option value="uk">
+                            United Kingdom
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-primary-button"
+                    id="studentSearchButton"
+                >
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- STUDENT COUNT -->
+
+            <div class="admin-list-header">
+
+                <div>
+
+                    <span class="admin-section-eyebrow">
+                        STUDENTS
+                    </span>
+
+                    <h3>
+                        <span id="studentCount">
+                            0
+                        </span>
+                        Students
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT TABLE -->
+
+            <div class="admin-table-card">
+
+                <div
+                    id="studentsLoadingState"
+                    class="admin-loading-state"
+                    hidden
+                >
+                    Loading students...
+                </div>
+
+
+                <div
+                    id="studentsEmptyState"
+                    class="admin-empty-state"
+                >
+
+                    <div class="admin-history-empty-icon">
+                        ◉
+                    </div>
+
+                    <strong>
+                        No students yet
+                    </strong>
+
+                    <span>
+                        Student profiles will appear here
+                        once students are available.
+                    </span>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Contact
+                                </th>
+
+                                <th>
+                                    Destination
+                                </th>
+
+                                <th>
+                                    Study
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="studentsTableBody"
+                        >
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="../../js/admin.js"
+    ></script>
+
+</body>
+
+</html>

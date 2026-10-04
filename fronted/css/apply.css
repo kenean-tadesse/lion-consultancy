@@ -1,0 +1,858 @@
+/* =========================================================
+   LION CONSULTANCY
+   PREMIUM STUDENT APPLICATION SYSTEM
+   ========================================================= */
+
+.application-page {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(198, 164, 92, 0.08), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(20, 55, 90, 0.08), transparent 30%),
+        #f7f4ed;
+    color: #172333;
+}
+
+/* =========================================================
+   APPLICATION HEADER
+   ========================================================= */
+
+.application-header {
+    min-height: 78px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: rgba(10, 25, 42, 0.98);
+    border-bottom: 1px solid rgba(198, 164, 92, 0.35);
+    position: relative;
+    z-index: 20;
+}
+
+.application-header .logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.application-header .logo span {
+    color: #c6a45c;
+}
+
+.application-header-center {
+    text-align: center;
+}
+
+.application-header-label {
+    display: block;
+    color: #c6a45c;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.application-header-title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.application-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.application-back:hover {
+    color: #c6a45c;
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   APPLICATION HERO
+   ========================================================= */
+
+.application-hero {
+    position: relative;
+    padding: 90px 20px 110px;
+    text-align: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(9, 27, 45, 0.98),
+            rgba(17, 43, 68, 0.96)
+        );
+}
+
+.application-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(198, 164, 92, 0.18);
+    border-radius: 50%;
+    top: -220px;
+    left: -120px;
+}
+
+.application-hero::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border: 1px solid rgba(198, 164, 92, 0.12);
+    border-radius: 50%;
+    right: -220px;
+    bottom: -350px;
+}
+
+.application-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.application-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #c6a45c;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.application-eyebrow::before,
+.application-eyebrow::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: #c6a45c;
+}
+
+.application-hero h1 {
+    margin: 0 auto 20px;
+    max-width: 850px;
+    color: #ffffff;
+    font-size: clamp(2.4rem, 5vw, 4.7rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.application-hero h1 span {
+    color: #c6a45c;
+}
+
+.application-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   APPLICATION MAIN AREA
+   ========================================================= */
+
+.application-section {
+    width: min(1120px, 92%);
+    margin: -55px auto 90px;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.application-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 35px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(23, 35, 51, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 18px 55px rgba(9, 27, 45, 0.09);
+}
+
+.application-progress-step {
+    position: relative;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e9e5dc;
+    color: #718096;
+    font-size: 0.75rem;
+    font-weight: 800;
+    transition: all 0.35s ease;
+}
+
+.application-progress-step.active {
+    background: #c6a45c;
+    color: #10243a;
+    box-shadow: 0 0 0 6px rgba(198, 164, 92, 0.13);
+}
+
+.application-progress-step.completed {
+    background: #102b45;
+    color: #ffffff;
+}
+
+.application-progress-line {
+    width: 90px;
+    height: 2px;
+    background: #ddd8cc;
+    transition: background 0.35s ease;
+}
+
+.application-progress-line.active {
+    background: #c6a45c;
+}
+
+
+/* =========================================================
+   FORM CONTAINER
+   ========================================================= */
+
+.student-application-form {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid rgba(23, 35, 51, 0.08);
+    box-shadow: 0 25px 80px rgba(9, 27, 45, 0.10);
+    overflow: hidden;
+}
+
+.application-step {
+    display: none;
+    padding: 55px;
+    animation: applicationStepIn 0.4s ease both;
+}
+
+.application-step.active {
+    display: block;
+}
+
+@keyframes applicationStepIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   STEP HEADING
+   ========================================================= */
+
+.application-step-header {
+    margin-bottom: 40px;
+}
+
+.application-step-number {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #c6a45c;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.application-step-header h2 {
+    margin: 0 0 10px;
+    color: #12273d;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.15;
+}
+
+.application-step-header p {
+    max-width: 650px;
+    margin: 0;
+    color: #687587;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.application-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.application-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.application-field.full {
+    grid-column: 1 / -1;
+}
+
+.application-field label {
+    color: #26384d;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.application-field label span {
+    color: #c6a45c;
+}
+
+.application-field input,
+.application-field select,
+.application-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dce0e5;
+    border-radius: 11px;
+    background: #fbfcfd;
+    color: #172333;
+    font-family: inherit;
+    font-size: 0.92rem;
+    padding: 14px 15px;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.application-field textarea {
+    min-height: 145px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.application-field input:hover,
+.application-field select:hover,
+.application-field textarea:hover {
+    border-color: #bfc7d1;
+}
+
+.application-field input:focus,
+.application-field select:focus,
+.application-field textarea:focus {
+    border-color: #c6a45c;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(198, 164, 92, 0.12);
+}
+
+.application-field input::placeholder,
+.application-field textarea::placeholder {
+    color: #a0a9b5;
+}
+
+
+/* =========================================================
+   DOCUMENT CHECKLIST
+   ========================================================= */
+
+.application-documents {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.application-document-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    border: 1px solid #e0e3e7;
+    border-radius: 13px;
+    background: #fafbfc;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.application-document-item:hover {
+    border-color: #c6a45c;
+    background: #fffdf8;
+    transform: translateY(-2px);
+}
+
+.application-document-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: #c6a45c;
+    cursor: pointer;
+}
+
+.application-document-item strong {
+    display: block;
+    color: #26384d;
+    font-size: 0.88rem;
+    margin-bottom: 3px;
+}
+
+.application-document-item small {
+    display: block;
+    color: #8993a0;
+    font-size: 0.75rem;
+}
+
+.application-document-note {
+    margin-top: 22px;
+    padding: 17px 20px;
+    border-left: 3px solid #c6a45c;
+    background: #fbf8f0;
+    color: #6b7480;
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REVIEW AREA
+   ========================================================= */
+
+.application-review {
+    display: grid;
+    gap: 18px;
+}
+
+.application-review-group {
+    padding: 22px;
+    border: 1px solid #e3e6e9;
+    border-radius: 14px;
+    background: #fafbfc;
+}
+
+.application-review-group h3 {
+    margin: 0 0 15px;
+    color: #12273d;
+    font-size: 0.95rem;
+}
+
+.application-review-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 15px;
+    padding: 9px 0;
+    border-bottom: 1px solid #eceef0;
+}
+
+.application-review-row:last-child {
+    border-bottom: none;
+}
+
+.application-review-label {
+    color: #8993a0;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.application-review-value {
+    color: #26384d;
+    font-size: 0.85rem;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   CONSENT
+   ========================================================= */
+
+.application-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 19px;
+    border: 1px solid #e1e4e7;
+    border-radius: 13px;
+    background: #fcfcfb;
+}
+
+.application-consent input {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin-top: 2px;
+    accent-color: #c6a45c;
+}
+
+.application-consent label {
+    color: #697482;
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.application-consent strong {
+    color: #25374b;
+}
+
+
+/* =========================================================
+   FORM NAVIGATION
+   ========================================================= */
+
+.application-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 55px;
+    border-top: 1px solid #eceef0;
+    background: #fafbfc;
+}
+
+.application-page-number {
+    color: #8993a0;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.application-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.application-btn {
+    min-width: 135px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 9px;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.application-btn-secondary {
+    background: #ffffff;
+    color: #425367;
+    border-color: #d9dde2;
+}
+
+.application-btn-secondary:hover {
+    border-color: #aeb7c1;
+    background: #f6f7f8;
+}
+
+.application-btn-primary {
+    background: #122b45;
+    color: #ffffff;
+    border-color: #122b45;
+}
+
+.application-btn-primary:hover {
+    background: #c6a45c;
+    border-color: #c6a45c;
+    color: #10243a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(198, 164, 92, 0.22);
+}
+
+.application-btn-submit {
+    background: #c6a45c;
+    color: #10243a;
+    border-color: #c6a45c;
+}
+
+.application-btn-submit:hover {
+    background: #d3b875;
+    border-color: #d3b875;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(198, 164, 92, 0.25);
+}
+
+.application-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   VALIDATION STATES
+   ========================================================= */
+
+.application-field.has-error input,
+.application-field.has-error select,
+.application-field.has-error textarea {
+    border-color: #c85d5d;
+    box-shadow: 0 0 0 4px rgba(200, 93, 93, 0.08);
+}
+
+.application-error-message {
+    display: none;
+    color: #b84f4f;
+    font-size: 0.73rem;
+    line-height: 1.4;
+}
+
+.application-field.has-error .application-error-message {
+    display: block;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.application-success {
+    display: none;
+    padding: 65px 35px;
+    text-align: center;
+}
+
+.application-success.show {
+    display: block;
+}
+
+.application-success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #102b45;
+    color: #c6a45c;
+    font-size: 1.8rem;
+}
+
+.application-success h2 {
+    margin: 0 0 12px;
+    color: #12273d;
+    font-size: 2rem;
+}
+
+.application-success p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #687587;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   APPLICATION FOOTER
+   ========================================================= */
+
+.application-footer {
+    padding: 35px 20px;
+    background: #0b1d30;
+    color: rgba(255, 255, 255, 0.58);
+    text-align: center;
+    font-size: 0.78rem;
+}
+
+.application-footer strong {
+    color: #c6a45c;
+}
+
+
+/* =========================================================
+   RESPONSIVE APPLICATION DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .application-header {
+        padding: 0 4%;
+    }
+
+    .application-header-center {
+        display: none;
+    }
+
+    .application-section {
+        width: 94%;
+    }
+
+    .application-step {
+        padding: 40px 30px;
+    }
+
+    .application-navigation {
+        padding: 22px 30px;
+    }
+
+    .application-progress-line {
+        width: 55px;
+    }
+
+    .application-form-grid {
+        gap: 18px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .application-header {
+        min-height: 68px;
+    }
+
+    .application-header .logo {
+        font-size: 1.35rem;
+    }
+
+    .application-back {
+        font-size: 0.75rem;
+    }
+
+    .application-hero {
+        padding: 65px 18px 90px;
+    }
+
+    .application-hero h1 {
+        font-size: 2.45rem;
+    }
+
+    .application-hero p {
+        font-size: 0.9rem;
+    }
+
+    .application-section {
+        width: 94%;
+        margin-top: -40px;
+    }
+
+    .application-progress {
+        padding: 20px 12px;
+    }
+
+    .application-progress-step {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        font-size: 0.68rem;
+    }
+
+    .application-progress-line {
+        width: 18px;
+    }
+
+    .application-step {
+        padding: 32px 20px;
+    }
+
+    .application-step-header {
+        margin-bottom: 30px;
+    }
+
+    .application-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .application-field.full {
+        grid-column: auto;
+    }
+
+    .application-documents {
+        grid-template-columns: 1fr;
+    }
+
+    .application-review-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .application-navigation {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .application-page-number {
+        text-align: center;
+        order: -1;
+    }
+
+    .application-nav-actions {
+        width: 100%;
+    }
+
+    .application-btn {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .application-header {
+        padding: 0 16px;
+    }
+
+    .application-header .logo {
+        font-size: 1.15rem;
+        letter-spacing: 2px;
+    }
+
+    .application-back {
+        font-size: 0.7rem;
+    }
+
+    .application-hero h1 {
+        font-size: 2rem;
+    }
+
+    .application-progress-step {
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px;
+        font-size: 0.6rem;
+    }
+
+    .application-progress-line {
+        width: 10px;
+    }
+
+    .application-step {
+        padding: 28px 16px;
+    }
+
+    .application-navigation {
+        padding: 18px 16px;
+    }
+}

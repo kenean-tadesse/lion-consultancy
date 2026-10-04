@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore study opportunities in Germany with Lion Consultancy. Discover higher education pathways, academic preparation, student support and international opportunities."
+    >
+
+    <title>Study in Germany | Lion Consultancy</title>
+
+
+    <!-- =====================================================
+         FONTS
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+
+    <!-- =====================================================
+         PAGE CSS
+         ===================================================== -->
+
+    <style>
+
+        .destination-page {
+            background: #f7f4ee;
+            color: #071a3d;
+        }
+
+
+        /* =================================================
+           HEADER
+           ================================================= */
+
+        .destination-page-header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 21px 0;
+
+            transition:
+                background .35s ease,
+                padding .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .destination-page-header.scrolled {
+
+            padding: 14px 0;
+
+            background:
+                rgba(7,26,61,.96);
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 15px 50px
+                rgba(0,0,0,.16);
+        }
+
+
+        .destination-page-nav {
+
+            width: min(92%,1200px);
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .destination-page-logo {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 21px;
+
+            font-weight: 700;
+
+            letter-spacing: .08em;
+        }
+
+
+        .destination-page-logo span {
+
+            color: #d7a647;
+        }
+
+
+        .destination-page-links {
+
+            display: flex;
+
+            gap: 30px;
+
+            align-items: center;
+        }
+
+
+        .destination-page-links a {
+
+            color:
+                rgba(255,255,255,.84);
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: color .25s ease;
+        }
+
+
+        .destination-page-links a:hover {
+
+            color: #d7a647;
+        }
+
+
+        /* =================================================
+           HERO
+           ================================================= */
+
+        .destination-hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(5,18,42,.97),
+                    rgba(5,18,42,.80),
+                    rgba(5,18,42,.25)
+                ),
+
+                url("../images/germany-hero.jpg")
+                center/cover no-repeat;
+        }
+
+
+        .destination-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 550px;
+
+            height: 550px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(215,166,71,.16);
+
+            right: -200px;
+
+            top: -130px;
+        }
+
+
+        .destination-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: min(92%,1200px);
+
+            margin: auto;
+
+            padding-top: 80px;
+        }
+
+
+        .destination-eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #d7a647;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .2em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+
+        .destination-eyebrow::before {
+
+            content: "";
+
+            width: 38px;
+
+            height: 1px;
+
+            background: #d7a647;
+        }
+
+
+        .destination-hero h1 {
+
+            max-width: 800px;
+
+            color: white;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(3.5rem,7vw,7rem);
+
+            line-height: .98;
+
+            margin: 0 0 28px;
+        }
+
+
+        .destination-hero h1 span {
+
+            color: #d7a647;
+        }
+
+
+        .destination-hero p {
+
+            max-width: 650px;
+
+            color:
+                rgba(255,255,255,.76);
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 40px;
+        }
+
+
+        .destination-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+
+        .destination-button {
+
+            min-height: 54px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 0 28px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            border-radius: 3px;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+
+        .destination-button.primary {
+
+            background: #d7a647;
+
+            color: #071a3d;
+        }
+
+
+        .destination-button.primary:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(215,166,71,.25);
+        }
+
+
+        .destination-button.secondary {
+
+            border:
+                1px solid
+                rgba(255,255,255,.32);
+
+            color: white;
+        }
+
+
+        .destination-button.secondary:hover {
+
+            background:
+                rgba(255,255,255,.08);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =================================================
+           CONTENT
+           ================================================= */
+
+        .destination-container {
+
+            width: min(92%,1100px);
+
+            margin: auto;
+        }
+
+
+        .destination-section {
+
+            padding: 120px 0;
+        }
+
+
+        .destination-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 90px;
+
+            align-items: center;
+        }
+
+
+        .destination-label {
+
+            color: #b88a32;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .2em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .destination-title {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.5rem,5vw,4.4rem);
+
+            line-height: 1.08;
+
+            margin: 0 0 25px;
+        }
+
+
+        .destination-text {
+
+            color: #59657b;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =================================================
+           IMAGE
+           ================================================= */
+
+        .destination-image {
+
+            position: relative;
+        }
+
+
+        .destination-image img {
+
+            width: 100%;
+
+            display: block;
+
+            aspect-ratio: 4/5;
+
+            object-fit: cover;
+        }
+
+
+        .destination-image-note {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            left: -25px;
+
+            width: 220px;
+
+            padding: 24px;
+
+            background: #071a3d;
+
+            color: white;
+
+            box-shadow:
+                0 20px 50px
+                rgba(7,26,61,.2);
+        }
+
+
+        .destination-image-note strong {
+
+            display: block;
+
+            color: #d7a647;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .destination-image-note span {
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =================================================
+           FEATURES
+           ================================================= */
+
+        .destination-features {
+
+            padding: 120px 0;
+
+            background: #071a3d;
+
+            color: white;
+        }
+
+
+        .destination-heading {
+
+            max-width: 750px;
+
+            margin-bottom: 65px;
+        }
+
+
+        .destination-heading .destination-label {
+
+            color: #d7a647;
+        }
+
+
+        .destination-heading h2 {
+
+            margin: 0;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.5rem,5vw,4.5rem);
+
+            line-height: 1.08;
+        }
+
+
+        .feature-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+
+        .feature-card {
+
+            min-height: 270px;
+
+            padding: 38px 30px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            background:
+                rgba(255,255,255,.025);
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease;
+        }
+
+
+        .feature-card:hover {
+
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(215,166,71,.35);
+        }
+
+
+        .feature-number {
+
+            color: #d7a647;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .15em;
+
+            margin-bottom: 40px;
+        }
+
+
+        .feature-card h3 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 26px;
+
+            margin: 0 0 15px;
+        }
+
+
+        .feature-card p {
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+
+        /* =================================================
+           PATHWAYS
+           ================================================= */
+
+        .pathways {
+
+            padding: 120px 0;
+        }
+
+
+        .pathway-list {
+
+            margin-top: 60px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 20px;
+        }
+
+
+        .pathway-card {
+
+            padding: 35px;
+
+            background: white;
+
+            border:
+                1px solid #e8e2d6;
+        }
+
+
+        .pathway-card h3 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 25px;
+
+            margin: 0 0 12px;
+        }
+
+
+        .pathway-card p {
+
+            color: #687286;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+
+        /* =================================================
+           PROCESS
+           ================================================= */
+
+        .destination-process {
+
+            padding: 120px 0;
+
+            background: #eeeae1;
+        }
+
+
+        .process-line {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5,1fr);
+
+            margin-top: 60px;
+        }
+
+
+        .process-step {
+
+            padding:
+                25px 20px;
+
+            border-top:
+                1px solid #c9c1b1;
+        }
+
+
+        .process-step strong {
+
+            color: #b88a32;
+
+            font-size: 12px;
+
+            letter-spacing: .1em;
+        }
+
+
+        .process-step h3 {
+
+            margin:
+                30px 0 10px;
+
+            font-size: 17px;
+        }
+
+
+        .process-step p {
+
+            color: #687286;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           CTA
+           ================================================= */
+
+        .destination-cta {
+
+            padding: 115px 0;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071a3d,
+                    #102e62
+                );
+        }
+
+
+        .destination-cta-inner {
+
+            width: min(92%,800px);
+
+            margin: auto;
+        }
+
+
+        .destination-cta h2 {
+
+            color: white;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.5rem,5vw,4.5rem);
+
+            line-height: 1.1;
+
+            margin: 0 0 20px;
+        }
+
+
+        .destination-cta p {
+
+            max-width: 650px;
+
+            margin:
+                0 auto 35px;
+
+            color:
+                rgba(255,255,255,.66);
+
+            line-height: 1.8;
+        }
+
+
+        /* =================================================
+           DISCLAIMER
+           ================================================= */
+
+        .destination-disclaimer {
+
+            padding: 35px 0;
+
+            background: #050f24;
+
+            color:
+                rgba(255,255,255,.48);
+
+            text-align: center;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+           ================================================= */
+
+        @media (max-width: 950px) {
+
+            .destination-page-links {
+
+                display: none;
+            }
+
+
+            .destination-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 55px;
+            }
+
+
+            .feature-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .process-line {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+                gap: 25px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .destination-hero {
+
+                min-height: 850px;
+
+                background-position:
+                    65% center;
+            }
+
+
+            .destination-hero h1 {
+
+                font-size: 3.3rem;
+            }
+
+
+            .destination-hero p {
+
+                font-size: 16px;
+            }
+
+
+            .destination-section,
+            .destination-features,
+            .pathways,
+            .destination-process {
+
+                padding: 80px 0;
+            }
+
+
+            .feature-grid,
+            .pathway-list,
+            .process-line {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .destination-image-note {
+
+                position: relative;
+
+                left: 0;
+
+                bottom: 0;
+
+                width: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="destination-page">
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="destination-page-header">
+
+    <nav class="destination-page-nav">
+
+        <a
+            href="../index.html"
+            class="destination-page-logo"
+        >
+            LION<span>.</span>
+        </a>
+
+
+        <div class="destination-page-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="#why">
+                Why Germany
+            </a>
+
+            <a href="#pathways">
+                Pathways
+            </a>
+
+            <a href="#process">
+                Process
+            </a>
+
+            <a href="#contact">
+                Consultation
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="destination-hero">
+
+    <div class="destination-hero-content">
+
+        <div class="destination-eyebrow">
+            Germany
+        </div>
+
+
+        <h1>
+
+            Study in Germany.
+            <span>Build Your Future.</span>
+
+        </h1>
+
+
+        <p>
+
+            Explore higher-education opportunities in
+            Germany and prepare for an international
+            academic experience through a structured,
+            transparent application journey.
+
+        </p>
+
+
+        <div class="destination-actions">
+
+            <a
+                href="#contact"
+                class="destination-button primary"
+            >
+                Explore Your Options
+            </a>
+
+
+            <a
+                href="#process"
+                class="destination-button secondary"
+            >
+                View the Process
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<section
+    class="destination-section"
+    id="why"
+>
+
+    <div class="destination-container">
+
+        <div class="destination-grid">
+
+
+            <div>
+
+                <div class="destination-label">
+                    Germany
+                </div>
+
+
+                <h2 class="destination-title">
+
+                    An academic
+                    pathway with
+                    international reach.
+
+                </h2>
+
+
+                <p class="destination-text">
+
+                    Germany offers international students
+                    access to a broad higher-education
+                    environment and a range of academic
+                    pathways.
+
+                </p>
+
+
+                <p class="destination-text">
+
+                    Your suitable pathway depends on your
+                    academic background, selected program,
+                    institution and applicable admission
+                    requirements.
+
+                </p>
+
+            </div>
+
+
+            <div class="destination-image">
+
+                <img
+                    src="../images/germany-student.jpg"
+                    alt="International student studying in Germany"
+                    loading="lazy"
+                >
+
+
+                <div class="destination-image-note">
+
+                    <strong>
+                        EUROPE
+                    </strong>
+
+                    <span>
+                        Explore an international academic
+                        experience through a structured
+                        application pathway.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURES
+     ===================================================== -->
+
+<section class="destination-features">
+
+    <div class="destination-container">
+
+
+        <div class="destination-heading">
+
+            <div class="destination-label">
+                Explore Germany
+            </div>
+
+
+            <h2>
+
+                Education,
+                preparation and
+                international experience.
+
+            </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    01
+                </div>
+
+                <h3>
+                    University Education
+                </h3>
+
+                <p>
+                    Explore programs according to your
+                    academic background and the admission
+                    requirements of the selected institution.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    02
+                </div>
+
+                <h3>
+                    Academic Preparation
+                </h3>
+
+                <p>
+                    Understand the documents, academic
+                    requirements and application stages
+                    relevant to your chosen pathway.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    03
+                </div>
+
+                <h3>
+                    Language Development
+                </h3>
+
+                <p>
+                    Depending on the program, students may
+                    need or benefit from appropriate German
+                    or English-language preparation.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    04
+                </div>
+
+                <h3>
+                    International Exposure
+                </h3>
+
+                <p>
+                    Experience a new academic environment
+                    and develop skills relevant to an
+                    increasingly international world.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    05
+                </div>
+
+                <h3>
+                    Career Development
+                </h3>
+
+                <p>
+                    Explore academic and professional
+                    development opportunities appropriate
+                    to your study pathway.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    06
+                </div>
+
+                <h3>
+                    Student Guidance
+                </h3>
+
+                <p>
+                    Receive structured guidance as you
+                    prepare your application and transition
+                    toward your international studies.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PATHWAYS
+     ===================================================== -->
+
+<section
+    class="pathways"
+    id="pathways"
+>
+
+    <div class="destination-container">
+
+
+        <div class="destination-heading">
+
+            <div class="destination-label">
+                Academic Pathways
+            </div>
+
+
+            <h2 class="destination-title">
+
+                Find a pathway that
+                matches your goals.
+
+            </h2>
+
+        </div>
+
+
+        <div class="pathway-list">
+
+
+            <article class="pathway-card">
+
+                <h3>
+                    Undergraduate Study
+                </h3>
+
+                <p>
+                    Explore undergraduate opportunities
+                    according to your previous education,
+                    chosen field and institution-specific
+                    requirements.
+                </p>
+
+            </article>
+
+
+            <article class="pathway-card">
+
+                <h3>
+                    Master's Study
+                </h3>
+
+                <p>
+                    Explore postgraduate programs that
+                    correspond to your previous degree,
+                    academic profile and selected field.
+                </p>
+
+            </article>
+
+
+            <article class="pathway-card">
+
+                <h3>
+                    Language Preparation
+                </h3>
+
+                <p>
+                    Where applicable, explore language
+                    preparation connected to the academic
+                    pathway you intend to pursue.
+                </p>
+
+            </article>
+
+
+            <article class="pathway-card">
+
+                <h3>
+                    Academic Progression
+                </h3>
+
+                <p>
+                    Build a longer-term education plan
+                    around your academic goals and future
+                    professional direction.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+     ===================================================== -->
+
+<section
+    class="destination-process"
+    id="process"
+>
+
+    <div class="destination-container">
+
+
+        <div class="destination-heading">
+
+            <div class="destination-label">
+                Your Journey
+            </div>
+
+
+            <h2 class="destination-title">
+
+                A transparent path
+                from planning to preparation.
+
+            </h2>
+
+        </div>
+
+
+        <div class="process-line">
+
+
+            <div class="process-step">
+
+                <strong>01</strong>
+
+                <h3>
+                    Consultation
+                </h3>
+
+                <p>
+                    Discuss your education goals,
+                    background and preferred pathway.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <strong>02</strong>
+
+                <h3>
+                    Profile Review
+                </h3>
+
+                <p>
+                    Review the documents and requirements
+                    relevant to your potential pathway.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <strong>03</strong>
+
+                <h3>
+                    Application
+                </h3>
+
+                <p>
+                    Prepare and submit the application
+                    according to the selected institution.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <strong>04</strong>
+
+                <h3>
+                    Admission & Visa
+                </h3>
+
+                <p>
+                    Receive guidance through the applicable
+                    official procedures.
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <strong>05</strong>
+
+                <h3>
+                    Preparation
+                </h3>
+
+                <p>
+                    Prepare for your transition into the
+                    international academic environment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section
+    class="destination-cta"
+    id="contact"
+>
+
+    <div class="destination-cta-inner">
+
+        <div class="destination-label">
+            Start Your Journey
+        </div>
+
+
+        <h2>
+            Explore your Germany
+            study pathway.
+        </h2>
+
+
+        <p>
+            Start with a consultation and understand
+            the academic options and requirements that
+            may apply to your profile.
+        </p>
+
+
+        <a
+            href="../index.html#contact"
+            class="destination-button primary"
+        >
+            Request a Consultation
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DISCLAIMER
+     ===================================================== -->
+
+<footer class="destination-disclaimer">
+
+    <div class="destination-container">
+
+        Information presented on this page is for
+        educational and guidance purposes. Admission,
+        scholarships, student-support programs and visa
+        issuance are subject to individual eligibility,
+        institution policies, applicable requirements and
+        decisions by the relevant authorities. No admission,
+        scholarship, employment or visa outcome is
+        guaranteed.
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+    const destinationHeader =
+        document.querySelector(
+            ".destination-page-header"
+        );
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+
+            destinationHeader.classList.add("scrolled");
+
+        } else {
+
+            destinationHeader.classList.remove("scrolled");
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>

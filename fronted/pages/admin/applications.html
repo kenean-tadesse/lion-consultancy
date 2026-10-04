@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Lion Consultancy admin application management"
+    >
+
+    <title>
+        Applications | Lion Consultancy Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/admin.css"
+    >
+
+</head>
+
+
+<body class="admin-dashboard-page">
+
+
+    <!-- =====================================================
+         ADMIN APPLICATIONS
+         ===================================================== -->
+
+    <div class="admin-app">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+
+            <!-- BRAND -->
+
+            <div class="admin-sidebar-brand">
+
+                <div class="admin-brand-mark">
+                    L
+                </div>
+
+                <div class="admin-brand-text">
+
+                    <strong>
+                        LION
+                    </strong>
+
+                    <span>
+                        CONSULTANCY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 NAVIGATION
+                 ================================================= -->
+
+            <nav
+                class="admin-navigation"
+                aria-label="Admin navigation"
+            >
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="./dashboard.html"
+                    class="admin-nav-item"
+                    data-page="dashboard"
+                >
+
+                    <span class="admin-nav-icon">
+                        ⌂
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- APPLICATIONS -->
+
+                <a
+                    href="./applications.html"
+                    class="admin-nav-item active"
+                    data-page="applications"
+                >
+
+                    <span class="admin-nav-icon">
+                        ▤
+                    </span>
+
+                    <span>
+                        Applications
+                    </span>
+
+                </a>
+
+
+                <!-- INQUIRIES -->
+
+                <a
+                    href="./inquiries.html"
+                    class="admin-nav-item"
+                    data-page="inquiries"
+                >
+
+                    <span class="admin-nav-icon">
+                        ◉
+                    </span>
+
+                    <span>
+                        Inquiries
+                    </span>
+
+                </a>
+
+
+                <!-- UNIVERSITIES -->
+
+                <a
+                    href="#"
+                    class="admin-nav-item"
+                    data-page="universities"
+                >
+
+                    <span class="admin-nav-icon">
+                        ◈
+                    </span>
+
+                    <span>
+                        Universities
+                    </span>
+
+                </a>
+
+
+                <!-- SCHOLARSHIPS -->
+
+                <a
+                    href="#"
+                    class="admin-nav-item"
+                    data-page="scholarships"
+                >
+
+                    <span class="admin-nav-icon">
+                        ✦
+                    </span>
+
+                    <span>
+                        Scholarships
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR BOTTOM
+                 ================================================= -->
+
+            <div class="admin-sidebar-bottom">
+
+                <button
+                    type="button"
+                    class="admin-nav-item admin-logout-button"
+                    id="adminLogoutButton"
+                >
+
+                    <span class="admin-nav-icon">
+                        ↪
+                    </span>
+
+                    <span>
+                        Sign Out
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================================
+             MOBILE OVERLAY
+             ================================================= -->
+
+        <div
+            class="admin-sidebar-overlay"
+            id="adminSidebarOverlay"
+        ></div>
+
+
+        <!-- =================================================
+             MAIN AREA
+             ================================================= -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="admin-topbar">
+
+
+                <div class="admin-topbar-left">
+
+
+                    <button
+                        type="button"
+                        class="admin-menu-toggle"
+                        id="adminMenuToggle"
+                        aria-label="Open navigation"
+                    >
+                        ☰
+                    </button>
+
+
+                    <div>
+
+                        <p class="admin-topbar-label">
+                            ADMINISTRATION
+                        </p>
+
+                        <h1 id="adminPageTitle">
+                            Applications
+                        </h1>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ADMIN USER -->
+
+                <div class="admin-user">
+
+
+                    <div class="admin-user-avatar">
+                        LC
+                    </div>
+
+
+                    <div class="admin-user-info">
+
+                        <strong id="adminUserName">
+                            Administrator
+                        </strong>
+
+                        <span id="adminUserRole">
+                            Super Administrator
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================================
+                 APPLICATION CONTENT
+                 ================================================= -->
+
+            <section class="admin-content">
+
+
+                <!-- =================================================
+                     PAGE HEADING
+                     ================================================= -->
+
+                <div class="admin-page-heading">
+
+
+                    <div>
+
+                        <p class="admin-section-eyebrow">
+                            STUDENT MANAGEMENT
+                        </p>
+
+
+                        <h2>
+                            Student Applications
+                        </h2>
+
+
+                        <p>
+                            Review, search and manage student
+                            applications submitted through
+                            Lion Consultancy.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =================================================
+                     SEARCH / FILTER PANEL
+                     ================================================= -->
+
+                <section class="admin-panel">
+
+
+                    <div class="admin-panel-header">
+
+
+                        <div>
+
+                            <h3>
+                                Application Records
+                            </h3>
+
+                            <p>
+                                Search and filter submitted
+                                applications.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="admin-application-count"
+                            id="applicationCount"
+                        >
+                            0 applications
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- TOOLBAR -->
+
+                    <div class="admin-application-toolbar">
+
+
+                        <!-- SEARCH -->
+
+                        <div class="admin-search-field">
+
+
+                            <label for="applicationSearch">
+                                Search
+                            </label>
+
+
+                            <input
+                                type="search"
+                                id="applicationSearch"
+                                placeholder="Name, email, phone or university..."
+                                autocomplete="off"
+                            >
+
+
+                        </div>
+
+
+                        <!-- STATUS -->
+
+                        <div class="admin-filter-field">
+
+
+                            <label for="applicationStatusFilter">
+                                Status
+                            </label>
+
+
+                            <select
+                                id="applicationStatusFilter"
+                            >
+
+
+                                <option value="">
+                                    All statuses
+                                </option>
+
+
+                                <option value="submitted">
+                                    Submitted
+                                </option>
+
+
+                                <option value="under_review">
+                                    Under Review
+                                </option>
+
+
+                                <option value="documents_required">
+                                    Documents Required
+                                </option>
+
+
+                                <option value="application_sent">
+                                    Application Sent
+                                </option>
+
+
+                                <option value="admission_received">
+                                    Admission Received
+                                </option>
+
+
+                                <option value="visa_processing">
+                                    Visa Processing
+                                </option>
+
+
+                                <option value="completed">
+                                    Completed
+                                </option>
+
+
+                                <option value="rejected">
+                                    Rejected
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                        <!-- DESTINATION -->
+
+                        <div class="admin-filter-field">
+
+
+                            <label for="applicationCountryFilter">
+                                Destination
+                            </label>
+
+
+                            <select
+                                id="applicationCountryFilter"
+                            >
+
+
+                                <option value="">
+                                    All destinations
+                                </option>
+
+
+                                <option value="korea">
+                                    South Korea
+                                </option>
+
+
+                                <option value="china">
+                                    China
+                                </option>
+
+
+                                <option value="germany">
+                                    Germany
+                                </option>
+
+
+                                <option value="usa">
+                                    United States
+                                </option>
+
+
+                                <option value="italy">
+                                    Italy
+                                </option>
+
+
+                                <option value="uk">
+                                    United Kingdom
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                        <!-- SEARCH BUTTON -->
+
+                        <div class="admin-filter-action">
+
+
+                            <button
+                                type="button"
+                                class="admin-primary-button"
+                                id="applicationSearchButton"
+                            >
+                                Search
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     APPLICATION TABLE
+                     ================================================= -->
+
+                <section
+                    class="admin-panel admin-applications-panel"
+                >
+
+
+                    <div class="admin-table-wrapper">
+
+
+                        <table
+                            class="admin-application-table"
+                        >
+
+
+                            <thead>
+
+
+                                <tr>
+
+
+                                    <th>
+                                        Applicant
+                                    </th>
+
+
+                                    <th>
+                                        Contact
+                                    </th>
+
+
+                                    <th>
+                                        Destination
+                                    </th>
+
+
+                                    <th>
+                                        Study Plan
+                                    </th>
+
+
+                                    <th>
+                                        Status
+                                    </th>
+
+
+                                    <th>
+                                        Submitted
+                                    </th>
+
+
+                                    <th>
+                                        Action
+                                    </th>
+
+
+                                </tr>
+
+
+                            </thead>
+
+
+                            <tbody
+                                id="applicationsTableBody"
+                            >
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         EMPTY STATE
+                         ================================================= -->
+
+                    <div
+                        class="admin-empty-state"
+                        id="applicationsEmptyState"
+                        hidden
+                    >
+
+
+                        <div class="admin-empty-icon">
+                            ◌
+                        </div>
+
+
+                        <h3>
+                            No applications found
+                        </h3>
+
+
+                        <p>
+                            No student applications match
+                            the current search or filter
+                            criteria.
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LOADING STATE
+                         ================================================= -->
+
+                    <div
+                        class="admin-loading-state"
+                        id="applicationsLoadingState"
+                        hidden
+                    >
+
+
+                        <div
+                            class="admin-loading-spinner"
+                        ></div>
+
+
+                        <p>
+                            Loading applications...
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PAGINATION
+                         ================================================= -->
+
+                    <div class="admin-pagination">
+
+
+                        <div
+                            class="admin-pagination-info"
+                            id="applicationPaginationInfo"
+                        >
+                            Showing 0 applications
+                        </div>
+
+
+                        <div
+                            class="admin-pagination-controls"
+                        >
+
+
+                            <button
+                                type="button"
+                                class="admin-pagination-button"
+                                id="applicationPreviousPage"
+                                disabled
+                            >
+                                Previous
+                            </button>
+
+
+                            <span
+                                class="admin-pagination-number"
+                                id="applicationPageNumber"
+                            >
+                                1
+                            </span>
+
+
+                            <button
+                                type="button"
+                                class="admin-pagination-button"
+                                id="applicationNextPage"
+                                disabled
+                            >
+                                Next
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         APPLICATION DETAILS MODAL
+         ===================================================== -->
+
+    <div
+        class="admin-modal"
+        id="applicationDetailsModal"
+        aria-hidden="true"
+    >
+
+
+        <!-- MODAL OVERLAY -->
+
+        <div
+            class="admin-modal-overlay"
+            id="applicationModalOverlay"
+        ></div>
+
+
+        <!-- MODAL -->
+
+        <section
+            class="admin-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="applicationModalTitle"
+        >
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="admin-modal-header">
+
+
+                <div>
+
+                    <p class="admin-section-eyebrow">
+                        APPLICATION DETAILS
+                    </p>
+
+
+                    <h2 id="applicationModalTitle">
+                        Student Application
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="applicationModalClose"
+                    aria-label="Close application details"
+                >
+                    ×
+                </button>
+
+
+            </div>
+
+
+            <!-- MODAL BODY -->
+
+            <div
+                class="admin-modal-body"
+                id="applicationDetailsBody"
+            >
+            </div>
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="admin-modal-footer">
+
+
+                <button
+                    type="button"
+                    class="admin-secondary-button"
+                    id="applicationModalCancel"
+                >
+                    Close
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../../js/admin.js"></script>
+
+
+</body>
+
+</html>

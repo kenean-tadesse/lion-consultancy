@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore study opportunities in China with Lion Consultancy. Discover Chinese universities, academic programs, language and cultural experiences, scholarships and student support."
+    >
+
+    <meta
+        name="keywords"
+        content="study in China, Chinese universities, Ethiopia China education, study abroad China, scholarships China, Lion Consultancy"
+    >
+
+    <title>Study in China | Lion Consultancy</title>
+
+
+    <!-- =====================================================
+         FONTS
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+
+    <!-- =====================================================
+         CHINA PAGE CSS
+         ===================================================== -->
+
+    <style>
+
+        /* =================================================
+           BASE
+           ================================================= */
+
+        .china-page {
+            background: #f7f4ee;
+            color: #071a3d;
+        }
+
+
+        /* =================================================
+           HEADER
+           ================================================= */
+
+        .china-header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 21px 0;
+
+            transition:
+                background .35s ease,
+                padding .35s ease,
+                box-shadow .35s ease;
+
+        }
+
+
+        .china-header.scrolled {
+
+            padding: 14px 0;
+
+            background:
+                rgba(7, 26, 61, .96);
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 15px 50px
+                rgba(0, 0, 0, .16);
+
+        }
+
+
+        .china-nav {
+
+            width: min(92%, 1200px);
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .china-logo {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 21px;
+
+            font-weight: 700;
+
+            letter-spacing: .08em;
+
+        }
+
+
+        .china-logo span {
+
+            color: #d7a647;
+
+        }
+
+
+        .china-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        .china-links a {
+
+            color:
+                rgba(255,255,255,.84);
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition:
+                color .25s ease;
+
+        }
+
+
+        .china-links a:hover {
+
+            color: #d7a647;
+
+        }
+
+
+        /* =================================================
+           HERO
+           ================================================= */
+
+        .china-hero {
+
+            min-height: 100vh;
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(5,18,42,.97) 0%,
+                    rgba(5,18,42,.85) 42%,
+                    rgba(5,18,42,.25) 100%
+                ),
+
+                url("../images/china-hero.jpg")
+                center/cover no-repeat;
+
+        }
+
+
+        .china-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 650px;
+
+            height: 650px;
+
+            border-radius: 50%;
+
+            border: 1px solid
+                rgba(215,166,71,.15);
+
+            right: -250px;
+
+            top: -170px;
+
+        }
+
+
+        .china-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+
+            height: 400px;
+
+            border-radius: 50%;
+
+            border: 1px solid
+                rgba(255,255,255,.08);
+
+            right: 8%;
+
+            bottom: -280px;
+
+        }
+
+
+        .china-hero-content {
+
+            position: relative;
+
+            z-index: 3;
+
+            width: min(92%, 1200px);
+
+            margin: auto;
+
+            padding-top: 80px;
+
+        }
+
+
+        .china-eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #d7a647;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .2em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .china-eyebrow::before {
+
+            content: "";
+
+            width: 38px;
+
+            height: 1px;
+
+            background: #d7a647;
+
+        }
+
+
+        .china-hero h1 {
+
+            max-width: 800px;
+
+            margin: 0 0 28px;
+
+            color: white;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(3.5rem, 7vw, 7rem);
+
+            line-height: .98;
+
+        }
+
+
+        .china-hero h1 span {
+
+            color: #d7a647;
+
+        }
+
+
+        .china-hero p {
+
+            max-width: 650px;
+
+            margin-bottom: 40px;
+
+            color:
+                rgba(255,255,255,.76);
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .china-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+        }
+
+
+        .china-btn {
+
+            min-height: 54px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 0 28px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            border-radius: 3px;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+
+        }
+
+
+        .china-btn-primary {
+
+            background: #d7a647;
+
+            color: #071a3d;
+
+        }
+
+
+        .china-btn-primary:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(215,166,71,.25);
+
+        }
+
+
+        .china-btn-outline {
+
+            border:
+                1px solid
+                rgba(255,255,255,.32);
+
+            color: white;
+
+        }
+
+
+        .china-btn-outline:hover {
+
+            background:
+                rgba(255,255,255,.08);
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =================================================
+           HERO BOTTOM BAR
+           ================================================= */
+
+        .china-hero-bar {
+
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+
+            z-index: 4;
+
+            background:
+                rgba(3,12,29,.78);
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.08);
+
+            backdrop-filter:
+                blur(10px);
+
+        }
+
+
+        .china-hero-bar-inner {
+
+            width: min(92%, 1200px);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+        }
+
+
+        .china-stat {
+
+            padding: 25px 20px;
+
+            border-right:
+                1px solid
+                rgba(255,255,255,.08);
+
+        }
+
+
+        .china-stat:last-child {
+
+            border-right: 0;
+
+        }
+
+
+        .china-stat strong {
+
+            display: block;
+
+            color: #d7a647;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 24px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .china-stat span {
+
+            color:
+                rgba(255,255,255,.56);
+
+            font-size: 11px;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =================================================
+           INTRO
+           ================================================= */
+
+        .china-intro {
+
+            padding: 120px 0;
+
+        }
+
+
+        .china-container {
+
+            width: min(92%, 1100px);
+
+            margin: auto;
+
+        }
+
+
+        .china-two-column {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 90px;
+
+            align-items: center;
+
+        }
+
+
+        .china-label {
+
+            color: #b88a32;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .2em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .china-heading {
+
+            margin: 0 0 25px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.5rem, 5vw, 4.5rem);
+
+            line-height: 1.08;
+
+        }
+
+
+        .china-text {
+
+            color: #59657b;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* =================================================
+           IMAGE
+           ================================================= */
+
+        .china-image {
+
+            position: relative;
+
+        }
+
+
+        .china-image img {
+
+            width: 100%;
+
+            display: block;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+        }
+
+
+        .china-image-card {
+
+            position: absolute;
+
+            left: -25px;
+
+            bottom: 25px;
+
+            width: 210px;
+
+            padding: 25px;
+
+            background: #071a3d;
+
+            color: white;
+
+            box-shadow:
+                0 20px 50px
+                rgba(7,26,61,.18);
+
+        }
+
+
+        .china-image-card strong {
+
+            display: block;
+
+            color: #d7a647;
+
+            font-size: 28px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .china-image-card span {
+
+            color:
+                rgba(255,255,255,.65);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =================================================
+           WHY CHINA
+           ================================================= */
+
+        .china-opportunities {
+
+            padding: 120px 0;
+
+            background: #071a3d;
+
+            color: white;
+
+        }
+
+
+        .china-section-heading {
+
+            max-width: 760px;
+
+            margin-bottom: 70px;
+
+        }
+
+
+        .china-section-heading .china-label {
+
+            color: #d7a647;
+
+        }
+
+
+        .china-section-heading h2 {
+
+            margin: 0;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.5rem, 5vw, 4.5rem);
+
+            line-height: 1.08;
+
+        }
+
+
+        .china-feature-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .china-feature {
+
+            padding: 38px 30px;
+
+            min-height: 280px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            background:
+                rgba(255,255,255,.025);
+
+            transition:
+                transform .3s ease,
+                background .3s ease,
+                border-color .3s ease;
+
+        }
+
+
+        .china-feature:hover {
+
+            transform:
+                translateY(-7px);
+
+            background:
+                rgba(255,255,255,.05);
+
+            border-color:
+                rgba(215,166,71,.35);
+
+        }
+
+
+        .china-feature-number {
+
+            color: #d7a647;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .15em;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .china-feature h3 {
+
+            margin: 0 0 15px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 27px;
+
+        }
+
+
+        .china-feature p {
+
+            margin: 0;
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =================================================
+           STUDENT EXPERIENCE
+           ================================================= */
+
+        .china-experience {
+
+            padding: 120px 0;
+
+        }
+
+
+        .experience-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            margin-top: 55px;
+
+        }
+
+
+        .experience-card {
+
+            padding: 35px;
+
+            background: white;
+
+            border:
+                1px solid #e8e2d6;
+
+        }
+
+
+        .experience-card h3 {
+
+            margin: 0 0 12px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 25px;
+
+        }
+
+
+        .experience-card p {
+
+            margin: 0;
+
+            color: #687286;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =================================================
+           PROCESS
+           ================================================= */
+
+        .china-process {
+
+            padding: 120px 0;
+
+            background: #eeeae1;
+
+        }
+
+
+        .china-process-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            margin-top: 65px;
+
+        }
+
+
+        .china-process-step {
+
+            padding:
+                25px 22px;
+
+            border-top:
+                1px solid #c9c1b1;
+
+        }
+
+
+        .china-process-number {
+
+            color: #b88a32;
+
+            font-weight: 700;
+
+            font-size: 12px;
+
+            letter-spacing: .1em;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .china-process-step h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .china-process-step p {
+
+            color: #687286;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =================================================
+           CTA
+           ================================================= */
+
+        .china-cta {
+
+            padding: 115px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071a3d,
+                    #102e62
+                );
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .china-cta::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+
+            height: 600px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(215,166,71,.14);
+
+            top: -350px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+        }
+
+
+        .china-cta-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: min(92%, 800px);
+
+            margin: auto;
+
+        }
+
+
+        .china-cta h2 {
+
+            margin: 0 0 20px;
+
+            color: white;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(2.5rem, 5vw, 4.5rem);
+
+            line-height: 1.1;
+
+        }
+
+
+        .china-cta p {
+
+            max-width: 650px;
+
+            margin:
+                0 auto 35px;
+
+            color:
+                rgba(255,255,255,.67);
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =================================================
+           DISCLAIMER
+           ================================================= */
+
+        .china-disclaimer {
+
+            padding: 35px 0;
+
+            background: #050f24;
+
+            color:
+                rgba(255,255,255,.48);
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+            text-align: center;
+
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+           ================================================= */
+
+        @media (max-width: 950px) {
+
+            .china-links {
+
+                display: none;
+
+            }
+
+
+            .china-two-column {
+
+                grid-template-columns: 1fr;
+
+                gap: 55px;
+
+            }
+
+
+            .china-feature-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .china-process-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 30px;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .china-hero {
+
+                min-height: 850px;
+
+                background-position:
+                    65% center;
+
+            }
+
+
+            .china-hero h1 {
+
+                font-size: 3.3rem;
+
+            }
+
+
+            .china-hero p {
+
+                font-size: 16px;
+
+            }
+
+
+            .china-hero-bar {
+
+                display: none;
+
+            }
+
+
+            .china-feature-grid,
+            .experience-grid,
+            .china-process-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .china-intro,
+            .china-opportunities,
+            .china-experience,
+            .china-process {
+
+                padding: 80px 0;
+
+            }
+
+
+            .china-image-card {
+
+                position: relative;
+
+                left: 0;
+
+                bottom: 0;
+
+                width: auto;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="china-page">
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="china-header">
+
+    <nav class="china-nav">
+
+        <a
+            href="../index.html"
+            class="china-logo"
+        >
+            LION<span>.</span>
+        </a>
+
+
+        <div class="china-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="#opportunities">
+                Opportunities
+            </a>
+
+            <a href="#experience">
+                Student Experience
+            </a>
+
+            <a href="#process">
+                Process
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="china-hero">
+
+    <div class="china-hero-content">
+
+        <div class="china-eyebrow">
+            China
+        </div>
+
+
+        <h1>
+
+            Study in China.
+            <span>Think Beyond Borders.</span>
+
+        </h1>
+
+
+        <p>
+
+            Discover academic opportunities in one of
+            the world's most dynamic education and
+            technology environments, while experiencing
+            Chinese language, culture and international
+            student life.
+
+        </p>
+
+
+        <div class="china-actions">
+
+            <a
+                href="#contact"
+                class="china-btn china-btn-primary"
+            >
+                Explore Your Options
+            </a>
+
+
+            <a
+                href="#process"
+                class="china-btn china-btn-outline"
+            >
+                See the Journey
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         HERO STATS
+         ================================================= -->
+
+    <div class="china-hero-bar">
+
+        <div class="china-hero-bar-inner">
+
+
+            <div class="china-stat">
+
+                <strong>01</strong>
+
+                <span>
+                    Academic Pathways
+                </span>
+
+            </div>
+
+
+            <div class="china-stat">
+
+                <strong>02</strong>
+
+                <span>
+                    Language & Culture
+                </span>
+
+            </div>
+
+
+            <div class="china-stat">
+
+                <strong>03</strong>
+
+                <span>
+                    Career Development
+                </span>
+
+            </div>
+
+
+            <div class="china-stat">
+
+                <strong>04</strong>
+
+                <span>
+                    Student Support
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+     ===================================================== -->
+
+<section class="china-intro">
+
+    <div class="china-container">
+
+        <div class="china-two-column">
+
+
+            <div>
+
+                <div class="china-label">
+                    The China Opportunity
+                </div>
+
+
+                <h2 class="china-heading">
+
+                    Education connected
+                    to a changing world.
+
+                </h2>
+
+
+                <p class="china-text">
+
+                    Studying in China can provide
+                    international students with an
+                    opportunity to experience a broad
+                    academic environment while gaining
+                    exposure to language, culture,
+                    technology and new perspectives.
+
+                </p>
+
+
+                <p class="china-text">
+
+                    Through the appropriate university
+                    pathway, students can explore
+                    academic programs, Chinese-language
+                    learning, cultural experiences and
+                    career-development opportunities.
+
+                </p>
+
+            </div>
+
+
+            <div class="china-image">
+
+                <img
+                    src="../images/china-student.jpg"
+                    alt="International student studying in China"
+                    loading="lazy"
+                >
+
+
+                <div class="china-image-card">
+
+                    <strong>
+                        GLOBAL
+                    </strong>
+
+                    <span>
+                        Academic experiences that
+                        connect students with a
+                        rapidly changing international
+                        environment.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OPPORTUNITIES
+     ===================================================== -->
+
+<section
+    class="china-opportunities"
+    id="opportunities"
+>
+
+    <div class="china-container">
+
+
+        <div class="china-section-heading">
+
+            <div class="china-label">
+                Explore China
+            </div>
+
+
+            <h2>
+
+                Build knowledge,
+                experience and
+                international perspective.
+
+            </h2>
+
+        </div>
+
+
+        <div class="china-feature-grid">
+
+
+            <article class="china-feature">
+
+                <div class="china-feature-number">
+                    01
+                </div>
+
+                <h3>
+                    University Education
+                </h3>
+
+                <p>
+                    Explore academic pathways at Chinese
+                    universities based on your educational
+                    background and applicable admission
+                    requirements.
+                </p>
+
+            </article>
+
+
+            <article class="china-feature">
+
+                <div class="china-feature-number">
+                    02
+                </div>
+
+                <h3>
+                    Chinese Language
+                </h3>
+
+                <p>
+                    Develop language skills and gain
+                    exposure to Chinese culture as part
+                    of the wider international student
+                    experience.
+                </p>
+
+            </article>
+
+
+            <article class="china-feature">
+
+                <div class="china-feature-number">
+                    03
+                </div>
+
+                <h3>
+                    Technology & Innovation
+                </h3>
+
+                <p>
+                    Experience an environment shaped by
+                    technology, entrepreneurship,
+                    innovation and rapidly developing
+                    industries.
+                </p>
+
+            </article>
+
+
+            <article class="china-feature">
+
+                <div class="china-feature-number">
+                    04
+                </div>
+
+                <h3>
+                    Practical Learning
+                </h3>
+
+                <p>
+                    Depending on the university and
+                    program, students may encounter
+                    opportunities for practical learning
+                    and professional development.
+                </p>
+
+            </article>
+
+
+            <article class="china-feature">
+
+                <div class="china-feature-number">
+                    05
+                </div>
+
+                <h3>
+                    Career Development
+                </h3>
+
+                <p>
+                    Explore career guidance and
+                    skill-development activities that
+                    support longer-term professional
+                    preparation.
+                </p>
+
+            </article>
+
+
+            <article class="china-feature">
+
+                <div class="china-feature-number">
+                    06
+                </div>
+
+                <h3>
+                    Scholarships & Support
+                </h3>
+
+                <p>
+                    Scholarship and university support
+                    opportunities may be available to
+                    eligible students according to
+                    applicable policies.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STUDENT EXPERIENCE
+     ===================================================== -->
+
+<section
+    class="china-experience"
+    id="experience"
+>
+
+    <div class="china-container">
+
+
+        <div class="china-section-heading">
+
+            <div class="china-label">
+                Student Experience
+            </div>
+
+
+            <h2 class="china-heading">
+
+                Prepare for more
+                than the classroom.
+
+            </h2>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+
+            <article class="experience-card">
+
+                <h3>
+                    Academic Preparation
+                </h3>
+
+                <p>
+                    Understand program requirements,
+                    academic expectations and the
+                    application pathway before making
+                    your decision.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card">
+
+                <h3>
+                    Cultural Experience
+                </h3>
+
+                <p>
+                    Experience Chinese culture and
+                    develop a broader understanding of
+                    life in an international academic
+                    environment.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card">
+
+                <h3>
+                    Language Development
+                </h3>
+
+                <p>
+                    Where available, students can
+                    explore Chinese-language learning
+                    opportunities alongside their wider
+                    academic journey.
+                </p>
+
+            </article>
+
+
+            <article class="experience-card">
+
+                <h3>
+                    Future Career Skills
+                </h3>
+
+                <p>
+                    Develop communication, adaptability,
+                    academic and professional skills that
+                    can support future international
+                    opportunities.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+     ===================================================== -->
+
+<section
+    class="china-process"
+    id="process"
+>
+
+    <div class="china-container">
+
+
+        <div class="china-section-heading">
+
+            <div class="china-label">
+                Your Journey
+            </div>
+
+
+            <h2 class="china-heading">
+
+                A clear pathway from
+                consultation to preparation.
+
+            </h2>
+
+        </div>
+
+
+        <div class="china-process-grid">
+
+
+            <div class="china-process-step">
+
+                <div class="china-process-number">
+                    01
+                </div>
+
+                <h3>
+                    Consultation
+                </h3>
+
+                <p>
+                    Discuss your academic background,
+                    goals and preferred destination.
+                </p>
+
+            </div>
+
+
+            <div class="china-process-step">
+
+                <div class="china-process-number">
+                    02
+                </div>
+
+                <h3>
+                    Document Review
+                </h3>
+
+                <p>
+                    Review documents and identify the
+                    requirements for your selected
+                    pathway.
+                </p>
+
+            </div>
+
+
+            <div class="china-process-step">
+
+                <div class="china-process-number">
+                    03
+                </div>
+
+                <h3>
+                    University Application
+                </h3>
+
+                <p>
+                    Prepare and submit the application
+                    according to the relevant
+                    university procedures.
+                </p>
+
+            </div>
+
+
+            <div class="china-process-step">
+
+                <div class="china-process-number">
+                    04
+                </div>
+
+                <h3>
+                    Admission & Visa Guidance
+                </h3>
+
+                <p>
+                    Receive guidance through the official
+                    admission and visa procedures.
+                </p>
+
+            </div>
+
+
+            <div class="china-process-step">
+
+                <div class="china-process-number">
+                    05
+                </div>
+
+                <h3>
+                    Pre-Departure
+                </h3>
+
+                <p>
+                    Prepare for your academic transition
+                    and international student experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section
+    class="china-cta"
+    id="contact"
+>
+
+    <div class="china-cta-content">
+
+
+        <div class="china-label">
+            Begin Your Journey
+        </div>
+
+
+        <h2>
+
+            Your next chapter
+            can cross borders.
+
+        </h2>
+
+
+        <p>
+
+            Explore available pathways and receive
+            guidance based on your academic background,
+            goals and destination preferences.
+
+        </p>
+
+
+        <a
+            href="../index.html#contact"
+            class="china-btn china-btn-primary"
+        >
+            Request a Consultation
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DISCLAIMER
+     ===================================================== -->
+
+<footer class="china-disclaimer">
+
+    <div class="china-container">
+
+        Information presented on this page is for
+        educational and guidance purposes. University
+        admission, scholarships, student-support programs,
+        practical-learning opportunities and visa issuance
+        are subject to individual eligibility, university
+        policies, applicable requirements and decisions by
+        the relevant authorities. No admission, scholarship,
+        employment or visa outcome is guaranteed.
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     PAGE JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+    const chinaHeader =
+        document.querySelector(".china-header");
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+
+            chinaHeader.classList.add("scrolled");
+
+        } else {
+
+            chinaHeader.classList.remove("scrolled");
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

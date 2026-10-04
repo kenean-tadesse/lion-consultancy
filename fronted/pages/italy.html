@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study in Italy | Lion Consultancy</title>
+
+    <meta
+        name="description"
+        content="Explore study opportunities in Italy with Lion Consultancy. Discover universities, academic pathways, application guidance and student support."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        /* =====================================================
+           ITALY DESTINATION PAGE
+           ===================================================== */
+
+        .destination-page {
+            background: #f7f5ef;
+            color: #111827;
+        }
+
+        .destination-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 24px 6%;
+            transition: .4s ease;
+        }
+
+        .destination-header.scrolled {
+            background: rgba(10, 18, 35, .96);
+            backdrop-filter: blur(16px);
+            padding: 16px 6%;
+        }
+
+        .destination-nav {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .destination-logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .destination-logo span {
+            color: #d6ad60;
+        }
+
+        .destination-nav-links {
+            display: flex;
+            gap: 34px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .destination-nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .destination-nav-links a:hover {
+            color: #d6ad60;
+        }
+
+        .italy-hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 12, 25, .88),
+                    rgba(5, 12, 25, .48),
+                    rgba(5, 12, 25, .15)
+                ),
+                url("../images/italy-hero.jpg") center/cover no-repeat;
+        }
+
+        .italy-hero-content {
+            width: min(1200px, 88%);
+            margin: auto;
+            padding-top: 80px;
+            color: #fff;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 22px;
+            color: #d6ad60;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .italy-hero h1 {
+            max-width: 850px;
+            margin: 0 0 25px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(55px, 8vw, 110px);
+            line-height: .95;
+            font-weight: 500;
+        }
+
+        .italy-hero h1 span {
+            color: #d6ad60;
+        }
+
+        .italy-hero p {
+            max-width: 680px;
+            margin: 0;
+            color: rgba(255,255,255,.82);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 38px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            padding: 15px 27px;
+            text-decoration: none;
+            border: 1px solid #d6ad60;
+            color: #fff;
+            transition: .3s;
+            font-weight: 700;
+        }
+
+        .hero-btn.primary {
+            background: #d6ad60;
+            color: #111827;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .destination-section {
+            padding: 110px 6%;
+        }
+
+        .destination-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 55px;
+        }
+
+        .section-heading small {
+            color: #a27a32;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 15px 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(38px, 5vw, 65px);
+            font-weight: 500;
+            color: #101828;
+        }
+
+        .section-heading p {
+            color: #667085;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 38px 30px;
+            border: 1px solid #e5e1d8;
+            transition: .35s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,.08);
+        }
+
+        .feature-number {
+            color: #d6ad60;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .feature-card h3 {
+            margin: 20px 0 14px;
+            font-size: 23px;
+        }
+
+        .feature-card p {
+            color: #667085;
+            line-height: 1.8;
+        }
+
+        .pathway-section {
+            background: #101828;
+            color: #fff;
+        }
+
+        .pathway-section .section-heading h2 {
+            color: #fff;
+        }
+
+        .pathway-section .section-heading p {
+            color: rgba(255,255,255,.68);
+        }
+
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .pathway-card {
+            border: 1px solid rgba(255,255,255,.12);
+            padding: 35px;
+            background: rgba(255,255,255,.035);
+        }
+
+        .pathway-card h3 {
+            color: #d6ad60;
+            margin-bottom: 15px;
+        }
+
+        .pathway-card p {
+            color: rgba(255,255,255,.7);
+            line-height: 1.8;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .process-step {
+            position: relative;
+            padding: 28px 20px;
+            border-top: 2px solid #d6ad60;
+            background: #fff;
+        }
+
+        .process-step strong {
+            display: block;
+            color: #d6ad60;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .italy-cta {
+            padding: 110px 6%;
+            background:
+                linear-gradient(
+                    rgba(8, 16, 31, .9),
+                    rgba(8, 16, 31, .9)
+                ),
+                url("../images/italy-student.jpg") center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .italy-cta-inner {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .italy-cta h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 500;
+            margin: 0 0 22px;
+        }
+
+        .italy-cta p {
+            color: rgba(255,255,255,.72);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .legal-note {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px 6%;
+            color: #667085;
+            font-size: 12px;
+            line-height: 1.7;
+            text-align: center;
+            background: #efede6;
+        }
+
+        @media (max-width: 900px) {
+            .destination-nav-links {
+                display: none;
+            }
+
+            .feature-grid,
+            .pathway-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .italy-hero h1 {
+                font-size: clamp(48px, 14vw, 80px);
+            }
+        }
+    </style>
+</head>
+
+<body class="destination-page">
+
+<header class="destination-header" id="destinationHeader">
+    <nav class="destination-nav">
+
+        <a href="../index.html" class="destination-logo">
+            LION<span>.</span>
+        </a>
+
+        <ul class="destination-nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#why">Why Italy</a></li>
+            <li><a href="#pathways">Programs</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="italy-hero">
+
+    <div class="italy-hero-content">
+
+        <span class="eyebrow">
+            Study Destination
+        </span>
+
+        <h1>
+            Build Your Future<br>
+            in <span>Italy.</span>
+        </h1>
+
+        <p>
+            Explore academic opportunities in Italy and experience
+            a destination known for its universities, culture,
+            innovation and international student environment.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#contact" class="hero-btn primary">
+                Start Your Journey
+            </a>
+
+            <a href="#pathways" class="hero-btn">
+                Explore Programs
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY ITALY
+     ===================================================== -->
+
+<section class="destination-section" id="why">
+
+    <div class="destination-container">
+
+        <div class="section-heading">
+
+            <small>Why Italy</small>
+
+            <h2>
+                Education with
+                culture, history and opportunity.
+            </h2>
+
+            <p>
+                Italy offers international students the opportunity
+                to study in a culturally rich environment while
+                pursuing academic programs across a wide range
+                of disciplines.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <span class="feature-number">01</span>
+
+                <h3>Academic Diversity</h3>
+
+                <p>
+                    Explore programs across business, engineering,
+                    technology, design, architecture, arts and other
+                    academic fields.
+                </p>
+            </article>
+
+
+            <article class="feature-card">
+                <span class="feature-number">02</span>
+
+                <h3>International Environment</h3>
+
+                <p>
+                    Experience an international student community
+                    while developing academic, cultural and
+                    personal skills.
+                </p>
+            </article>
+
+
+            <article class="feature-card">
+                <span class="feature-number">03</span>
+
+                <h3>Student Experience</h3>
+
+                <p>
+                    Discover Italian culture, historic cities,
+                    modern industries and a diverse European
+                    educational environment.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PATHWAYS
+     ===================================================== -->
+
+<section class="destination-section pathway-section" id="pathways">
+
+    <div class="destination-container">
+
+        <div class="section-heading">
+
+            <small>Academic Pathways</small>
+
+            <h2>
+                Find a program aligned
+                with your goals.
+            </h2>
+
+            <p>
+                Our team can help you understand available
+                academic pathways and identify programs that
+                match your education and future plans.
+            </p>
+
+        </div>
+
+
+        <div class="pathway-grid">
+
+            <article class="pathway-card">
+                <h3>Undergraduate</h3>
+
+                <p>
+                    Explore bachelor's-level opportunities
+                    across a broad range of disciplines.
+                </p>
+            </article>
+
+
+            <article class="pathway-card">
+                <h3>Master's</h3>
+
+                <p>
+                    Consider advanced study options designed
+                    around academic and professional development.
+                </p>
+            </article>
+
+
+            <article class="pathway-card">
+                <h3>Specialized Study</h3>
+
+                <p>
+                    Discover selected professional, creative,
+                    technical and academic study pathways.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPLICATION PROCESS
+     ===================================================== -->
+
+<section class="destination-section" id="process">
+
+    <div class="destination-container">
+
+        <div class="section-heading">
+
+            <small>Our Process</small>
+
+            <h2>
+                A clear path from
+                consultation to application.
+            </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <article class="process-step">
+                <strong>STEP 01</strong>
+                <h3>Consultation</h3>
+                <p>
+                    Discuss your academic goals,
+                    destination and study preferences.
+                </p>
+            </article>
+
+
+            <article class="process-step">
+                <strong>STEP 02</strong>
+                <h3>Program Selection</h3>
+                <p>
+                    Review suitable programs and
+                    university requirements.
+                </p>
+            </article>
+
+
+            <article class="process-step">
+                <strong>STEP 03</strong>
+                <h3>Documents</h3>
+                <p>
+                    Prepare and review the documents
+                    required for your application.
+                </p>
+            </article>
+
+
+            <article class="process-step">
+                <strong>STEP 04</strong>
+                <h3>Application</h3>
+                <p>
+                    Submit applications according to
+                    the relevant university procedures.
+                </p>
+            </article>
+
+
+            <article class="process-step">
+                <strong>STEP 05</strong>
+                <h3>Visa Guidance</h3>
+                <p>
+                    Receive guidance on the applicable
+                    student visa process and requirements.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section class="italy-cta" id="contact">
+
+    <div class="italy-cta-inner">
+
+        <span class="eyebrow">
+            Your Next Chapter
+        </span>
+
+        <h2>
+            Start planning your
+            Italian study journey.
+        </h2>
+
+        <p>
+            Speak with Lion Consultancy about your academic
+            goals, potential programs and application pathway.
+        </p>
+
+        <a href="../index.html#contact" class="hero-btn primary">
+            Book a Consultation
+        </a>
+
+    </div>
+
+</section>
+
+
+<div class="legal-note">
+    Admission decisions, scholarships, visa outcomes and student
+    support programs are subject to university policies,
+    eligibility requirements and applicable regulations.
+    Lion Consultancy does not guarantee admission, scholarships,
+    visa approval or employment outcomes.
+</div>
+
+
+<script>
+    const header = document.getElementById("destinationHeader");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 60) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+fronted/images/Casual greeting response_files/
+fronted/images/reserve/Casual greeting response.html

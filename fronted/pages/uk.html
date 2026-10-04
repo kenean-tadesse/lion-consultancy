@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study in the United Kingdom | Lion Consultancy</title>
+
+    <meta
+        name="description"
+        content="Explore study opportunities in the United Kingdom with Lion Consultancy. Discover academic pathways, application guidance and student support."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+
+        /* =====================================================
+           UNITED KINGDOM DESTINATION PAGE
+           ===================================================== */
+
+        .uk-page {
+            background: #f7f5ef;
+            color: #111827;
+        }
+
+        .uk-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 24px 6%;
+            transition: .4s ease;
+        }
+
+        .uk-header.scrolled {
+            background: rgba(10, 18, 35, .96);
+            backdrop-filter: blur(16px);
+            padding: 16px 6%;
+        }
+
+        .uk-nav {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .uk-logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .uk-logo span {
+            color: #d6ad60;
+        }
+
+        .uk-links {
+            display: flex;
+            gap: 34px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .uk-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .uk-links a:hover {
+            color: #d6ad60;
+        }
+
+        .uk-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 12, 25, .9),
+                    rgba(5, 12, 25, .5),
+                    rgba(5, 12, 25, .12)
+                ),
+                url("../images/uk-hero.jpg") center/cover no-repeat;
+        }
+
+        .uk-hero-content {
+            width: min(1200px, 88%);
+            margin: auto;
+            padding-top: 80px;
+            color: #fff;
+        }
+
+        .uk-eyebrow {
+            display: inline-block;
+            color: #d6ad60;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .uk-hero h1 {
+            max-width: 900px;
+            margin: 0 0 25px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(52px, 8vw, 108px);
+            line-height: .95;
+            font-weight: 500;
+        }
+
+        .uk-hero h1 span {
+            color: #d6ad60;
+        }
+
+        .uk-hero p {
+            max-width: 680px;
+            color: rgba(255,255,255,.82);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .uk-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 38px;
+            flex-wrap: wrap;
+        }
+
+        .uk-button {
+            display: inline-flex;
+            padding: 15px 28px;
+            border: 1px solid #d6ad60;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .uk-button.primary {
+            background: #d6ad60;
+            color: #101828;
+        }
+
+        .uk-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .uk-section {
+            padding: 110px 6%;
+        }
+
+        .uk-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .uk-heading {
+            max-width: 760px;
+            margin-bottom: 55px;
+        }
+
+        .uk-heading small {
+            color: #a27a32;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .uk-heading h2 {
+            margin: 15px 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(38px, 5vw, 65px);
+            font-weight: 500;
+            color: #101828;
+        }
+
+        .uk-heading p {
+            color: #667085;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .uk-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .uk-feature {
+            padding: 38px 30px;
+            background: #fff;
+            border: 1px solid #e5e1d8;
+            transition: .35s;
+        }
+
+        .uk-feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,.08);
+        }
+
+        .uk-number {
+            color: #d6ad60;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .uk-feature h3 {
+            margin: 20px 0 14px;
+            font-size: 23px;
+        }
+
+        .uk-feature p {
+            color: #667085;
+            line-height: 1.8;
+        }
+
+        .uk-dark {
+            background: #101828;
+            color: #fff;
+        }
+
+        .uk-dark .uk-heading h2 {
+            color: #fff;
+        }
+
+        .uk-dark .uk-heading p {
+            color: rgba(255,255,255,.68);
+        }
+
+        .uk-pathways {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .uk-pathway {
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,.12);
+            background: rgba(255,255,255,.035);
+        }
+
+        .uk-pathway h3 {
+            color: #d6ad60;
+            margin-bottom: 15px;
+        }
+
+        .uk-pathway p {
+            color: rgba(255,255,255,.7);
+            line-height: 1.8;
+        }
+
+        .uk-process {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .uk-step {
+            padding: 28px 20px;
+            border-top: 2px solid #d6ad60;
+            background: #fff;
+        }
+
+        .uk-step strong {
+            display: block;
+            color: #d6ad60;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .uk-step h3 {
+            margin-bottom: 10px;
+        }
+
+        .uk-step p {
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .uk-cta {
+            padding: 110px 6%;
+            text-align: center;
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(8,16,31,.9),
+                    rgba(8,16,31,.9)
+                ),
+                url("../images/uk-student.jpg") center/cover no-repeat;
+        }
+
+        .uk-cta-inner {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .uk-cta h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 500;
+            margin-bottom: 22px;
+        }
+
+        .uk-cta p {
+            color: rgba(255,255,255,.72);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .uk-legal {
+            padding: 28px 6%;
+            background: #efede6;
+            color: #667085;
+            font-size: 12px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+
+            .uk-links {
+                display: none;
+            }
+
+            .uk-feature-grid,
+            .uk-pathways {
+                grid-template-columns: 1fr;
+            }
+
+            .uk-process {
+                grid-template-columns: 1fr;
+            }
+
+            .uk-hero h1 {
+                font-size: clamp(48px, 14vw, 80px);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="uk-page">
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="uk-header" id="ukHeader">
+
+    <nav class="uk-nav">
+
+        <a href="../index.html" class="uk-logo">
+            LION<span>.</span>
+        </a>
+
+        <ul class="uk-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#why">Why UK</a></li>
+            <li><a href="#pathways">Programs</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="uk-hero">
+
+    <div class="uk-hero-content">
+
+        <span class="uk-eyebrow">
+            Study Destination
+        </span>
+
+        <h1>
+            Build Your Future<br>
+            in the <span>United Kingdom.</span>
+        </h1>
+
+        <p>
+            Explore international study opportunities in the
+            United Kingdom through a structured pathway designed
+            around your academic goals and future plans.
+        </p>
+
+        <div class="uk-buttons">
+
+            <a href="#contact" class="uk-button primary">
+                Start Your Journey
+            </a>
+
+            <a href="#pathways" class="uk-button">
+                Explore Programs
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY UK
+     ===================================================== -->
+
+<section class="uk-section" id="why">
+
+    <div class="uk-container">
+
+        <div class="uk-heading">
+
+            <small>Why United Kingdom</small>
+
+            <h2>
+                A global academic
+                environment.
+            </h2>
+
+            <p>
+                The United Kingdom offers a wide range of
+                higher-education opportunities and an
+                internationally connected academic environment.
+            </p>
+
+        </div>
+
+
+        <div class="uk-feature-grid">
+
+            <article class="uk-feature">
+
+                <span class="uk-number">
+                    01
+                </span>
+
+                <h3>
+                    Academic Diversity
+                </h3>
+
+                <p>
+                    Explore programs across business,
+                    engineering, technology, healthcare,
+                    arts, finance and many other fields.
+                </p>
+
+            </article>
+
+
+            <article class="uk-feature">
+
+                <span class="uk-number">
+                    02
+                </span>
+
+                <h3>
+                    International Community
+                </h3>
+
+                <p>
+                    Study alongside students from different
+                    countries and develop experience within
+                    a globally connected environment.
+                </p>
+
+            </article>
+
+
+            <article class="uk-feature">
+
+                <span class="uk-number">
+                    03
+                </span>
+
+                <h3>
+                    Career Development
+                </h3>
+
+                <p>
+                    Develop academic knowledge, professional
+                    skills and international experience
+                    relevant to your future goals.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PATHWAYS
+     ===================================================== -->
+
+<section class="uk-section uk-dark" id="pathways">
+
+    <div class="uk-container">
+
+        <div class="uk-heading">
+
+            <small>
+                Academic Pathways
+            </small>
+
+            <h2>
+                Choose your next
+                academic chapter.
+            </h2>
+
+            <p>
+                We help students understand potential study
+                pathways and university requirements before
+                beginning the application process.
+            </p>
+
+        </div>
+
+
+        <div class="uk-pathways">
+
+            <article class="uk-pathway">
+
+                <h3>
+                    Undergraduate
+                </h3>
+
+                <p>
+                    Explore bachelor's-level programs across
+                    a broad range of academic disciplines.
+                </p>
+
+            </article>
+
+
+            <article class="uk-pathway">
+
+                <h3>
+                    Postgraduate
+                </h3>
+
+                <p>
+                    Consider master's and other advanced
+                    academic opportunities aligned with
+                    your education and career objectives.
+                </p>
+
+            </article>
+
+
+            <article class="uk-pathway">
+
+                <h3>
+                    Specialized Programs
+                </h3>
+
+                <p>
+                    Discover selected programs in professional,
+                    technical, creative and academic fields.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+     ===================================================== -->
+
+<section class="uk-section" id="process">
+
+    <div class="uk-container">
+
+        <div class="uk-heading">
+
+            <small>
+                Application Journey
+            </small>
+
+            <h2>
+                A structured process
+                from planning to application.
+            </h2>
+
+        </div>
+
+
+        <div class="uk-process">
+
+            <article class="uk-step">
+
+                <strong>
+                    STEP 01
+                </strong>
+
+                <h3>
+                    Consultation
+                </h3>
+
+                <p>
+                    Discuss your academic background,
+                    goals and destination preferences.
+                </p>
+
+            </article>
+
+
+            <article class="uk-step">
+
+                <strong>
+                    STEP 02
+                </strong>
+
+                <h3>
+                    Program Selection
+                </h3>
+
+                <p>
+                    Review suitable programs and
+                    admission requirements.
+                </p>
+
+            </article>
+
+
+            <article class="uk-step">
+
+                <strong>
+                    STEP 03
+                </strong>
+
+                <h3>
+                    Documents
+                </h3>
+
+                <p>
+                    Prepare and review documents required
+                    for your application.
+                </p>
+
+            </article>
+
+
+            <article class="uk-step">
+
+                <strong>
+                    STEP 04
+                </strong>
+
+                <h3>
+                    Application
+                </h3>
+
+                <p>
+                    Submit applications according to
+                    university procedures.
+                </p>
+
+            </article>
+
+
+            <article class="uk-step">
+
+                <strong>
+                    STEP 05
+                </strong>
+
+                <h3>
+                    Visa Guidance
+                </h3>
+
+                <p>
+                    Receive guidance on the applicable
+                    student visa process and requirements.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section class="uk-cta" id="contact">
+
+    <div class="uk-cta-inner">
+
+        <span class="uk-eyebrow">
+            Your Future Starts With A Plan
+        </span>
+
+        <h2>
+            Begin your UK study journey.
+        </h2>
+
+        <p>
+            Speak with Lion Consultancy about your academic
+            goals, potential programs and application pathway.
+        </p>
+
+        <a href="../index.html#contact" class="uk-button primary">
+            Book a Consultation
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LEGAL
+     ===================================================== -->
+
+<div class="uk-legal">
+
+    Admission decisions, scholarships, visa outcomes and
+    student support programs are subject to university
+    policies, eligibility requirements and applicable
+    regulations. Lion Consultancy does not guarantee
+    admission, scholarships, visa approval or employment
+    outcomes.
+
+</div>
+
+
+<script>
+
+    const ukHeader = document.getElementById("ukHeader");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 60) {
+            ukHeader.classList.add("scrolled");
+        } else {
+            ukHeader.classList.remove("scrolled");
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

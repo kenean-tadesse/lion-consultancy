@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Universities | Lion Consultancy</title>
+
+    <meta
+        name="description"
+        content="Manage universities for Lion Consultancy."
+    >
+
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body class="admin-universities-page">
+
+<div class="admin-app">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="admin-sidebar-brand">
+
+            <div class="admin-brand-mark">
+                L
+            </div>
+
+            <div>
+                <strong>LION</strong>
+                <span>CONSULTANCY</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-navigation">
+
+            <a href="dashboard.html"
+               class="admin-nav-item"
+               data-section="dashboard">
+
+                <span class="admin-nav-icon">⌂</span>
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="applications.html"
+               class="admin-nav-item"
+               data-section="applications">
+
+                <span class="admin-nav-icon">▣</span>
+                <span>Applications</span>
+
+            </a>
+
+
+            <a href="students.html"
+               class="admin-nav-item"
+               data-section="students">
+
+                <span class="admin-nav-icon">◉</span>
+                <span>Students</span>
+
+            </a>
+
+
+            <a href="universities.html"
+               class="admin-nav-item active"
+               data-section="universities">
+
+                <span class="admin-nav-icon">⌂</span>
+                <span>Universities</span>
+
+            </a>
+
+
+            <a href="scholarships.html"
+               class="admin-nav-item"
+               data-section="scholarships">
+
+                <span class="admin-nav-icon">◇</span>
+                <span>Scholarships</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <div class="admin-sidebar-status">
+
+                <span class="admin-status-dot"></span>
+
+                <span>
+                    System operational
+                </span>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="adminLogoutButton"
+                class="admin-logout-button"
+            >
+                Sign out
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="admin-main">
+
+        <!-- TOPBAR -->
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button
+                    type="button"
+                    id="adminMenuToggle"
+                    class="admin-menu-toggle"
+                    aria-label="Toggle navigation"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <span class="admin-topbar-label">
+                        ADMINISTRATION
+                    </span>
+
+                    <h1>
+                        Universities
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar-right">
+
+                <div class="admin-user">
+
+                    <div class="admin-user-avatar">
+                        A
+                    </div>
+
+                    <div class="admin-user-info">
+
+                        <strong id="adminUserName">
+                            Administrator
+                        </strong>
+
+                        <span id="adminUserRole">
+                            Super Administrator
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             CONTENT
+             ===================================================== -->
+
+        <div class="admin-content">
+
+
+            <!-- PAGE INTRO -->
+
+            <section class="admin-page-intro">
+
+                <div>
+
+                    <span class="admin-eyebrow">
+                        UNIVERSITY MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Universities
+                    </h2>
+
+                    <p>
+                        Manage partner universities, institutions,
+                        countries and available study opportunities.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addUniversityButton"
+                    class="admin-primary-button"
+                >
+
+                    <span>+</span>
+
+                    Add University
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <section class="admin-stat-grid">
+
+                <article class="admin-stat-card">
+
+                    <span class="admin-stat-label">
+                        Total Universities
+                    </span>
+
+                    <strong
+                        id="universityTotal"
+                        class="admin-stat-number"
+                    >
+                        0
+                    </strong>
+
+                    <span class="admin-stat-description">
+                        All universities
+                    </span>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <span class="admin-stat-label">
+                        Active
+                    </span>
+
+                    <strong
+                        id="universityActive"
+                        class="admin-stat-number"
+                    >
+                        0
+                    </strong>
+
+                    <span class="admin-stat-description">
+                        Currently available
+                    </span>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <span class="admin-stat-label">
+                        Countries
+                    </span>
+
+                    <strong
+                        id="universityCountries"
+                        class="admin-stat-number"
+                    >
+                        0
+                    </strong>
+
+                    <span class="admin-stat-description">
+                        Destination countries
+                    </span>
+
+                </article>
+
+
+                <article class="admin-stat-card">
+
+                    <span class="admin-stat-label">
+                        Featured
+                    </span>
+
+                    <strong
+                        id="universityFeatured"
+                        class="admin-stat-number"
+                    >
+                        0
+                    </strong>
+
+                    <span class="admin-stat-description">
+                        Featured institutions
+                    </span>
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 UNIVERSITY PANEL
+                 ================================================= -->
+
+            <section class="admin-panel university-panel">
+
+
+                <!-- HEADER -->
+
+                <div class="admin-panel-header">
+
+                    <div>
+
+                        <span class="admin-panel-eyebrow">
+                            UNIVERSITY DIRECTORY
+                        </span>
+
+                        <h3>
+                            All Universities
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TOOLBAR
+                     ================================================= -->
+
+                <div class="university-toolbar">
+
+
+                    <div class="university-search">
+
+                        <span class="university-search-icon">
+                            ⌕
+                        </span>
+
+                        <input
+                            type="search"
+                            id="universitySearch"
+                            placeholder="Search universities..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <select
+                        id="universityCountryFilter"
+                        class="university-filter"
+                    >
+
+                        <option value="all">
+                            All Countries
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="universityStatusFilter"
+                        class="university-filter"
+                    >
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="universityFeaturedFilter"
+                        class="university-filter"
+                    >
+
+                        <option value="all">
+                            All Universities
+                        </option>
+
+                        <option value="featured">
+                            Featured
+                        </option>
+
+                        <option value="standard">
+                            Standard
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TABLE
+                     ================================================= -->
+
+                <div class="university-table-wrapper">
+
+                    <table class="university-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    University
+                                </th>
+
+                                <th>
+                                    Country
+                                </th>
+
+                                <th>
+                                    City
+                                </th>
+
+                                <th>
+                                    Programs
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Featured
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="universitiesTableBody">
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="university-empty-state"
+                                >
+
+                                    <div>
+
+                                        <strong>
+                                            No universities yet
+                                        </strong>
+
+                                        <span>
+                                            Add your first university
+                                            to begin managing institutions.
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            class="admin-primary-button"
+                                            id="emptyAddUniversityButton"
+                                        >
+                                            Add University
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PAGINATION
+                     ================================================= -->
+
+                <div class="university-pagination">
+
+                    <span id="universityPaginationInfo">
+                        Showing 0 universities
+                    </span>
+
+
+                    <div
+                        id="universityPaginationControls"
+                        class="university-pagination-controls"
+                    ></div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     ADD / EDIT UNIVERSITY MODAL
+     ========================================================= -->
+
+<div
+    class="admin-modal-overlay"
+    id="universityModalOverlay"
+    aria-hidden="true"
+>
+
+    <div
+        class="admin-modal university-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="universityModalTitle"
+    >
+
+
+        <!-- HEADER -->
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <span class="admin-panel-eyebrow">
+                    UNIVERSITY
+                </span>
+
+                <h3 id="universityModalTitle">
+                    Add University
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="closeUniversityModal"
+                class="admin-modal-close"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form id="universityForm">
+
+            <input
+                type="hidden"
+                id="universityId"
+            >
+
+
+            <div class="university-form-grid">
+
+
+                <!-- UNIVERSITY NAME -->
+
+                <div class="admin-form-group university-form-full">
+
+                    <label for="universityName">
+                        University Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="universityName"
+                        name="name"
+                        placeholder="e.g. Seoul National University"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- COUNTRY -->
+
+                <div class="admin-form-group">
+
+                    <label for="universityCountry">
+                        Country
+                    </label>
+
+                    <input
+                        type="text"
+                        id="universityCountry"
+                        name="country"
+                        placeholder="e.g. South Korea"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CITY -->
+
+                <div class="admin-form-group">
+
+                    <label for="universityCity">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="universityCity"
+                        name="city"
+                        placeholder="e.g. Seoul"
+                    >
+
+                </div>
+
+
+
+                <!-- WEBSITE -->
+
+                <div class="admin-form-group university-form-full">
+
+                    <label for="universityWebsite">
+                        University Website
+                    </label>
+
+                    <input
+                        type="url"
+                        id="universityWebsite"
+                        name="website"
+                        placeholder="https://www.university.edu"
+                    >
+
+                </div>
+
+
+
+                <!-- PROGRAMS -->
+
+                <div class="admin-form-group university-form-full">
+
+                    <label for="universityPrograms">
+                        Programs
+                    </label>
+
+                    <input
+                        type="text"
+                        id="universityPrograms"
+                        name="programs"
+                        placeholder="Business, Engineering, Computer Science"
+                    >
+
+                    <small>
+                        Separate multiple programs with commas.
+                    </small>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="admin-form-group university-form-full">
+
+                    <label for="universityDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="universityDescription"
+                        name="description"
+                        rows="4"
+                        placeholder="Short description about the university..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- LOGO -->
+
+                <div class="admin-form-group">
+
+                    <label for="universityLogo">
+                        Logo URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="universityLogo"
+                        name="logo"
+                        placeholder="https://..."
+                    >
+
+                </div>
+
+
+
+                <!-- RANKING -->
+
+                <div class="admin-form-group">
+
+                    <label for="universityRanking">
+                        Ranking
+                    </label>
+
+                    <input
+                        type="text"
+                        id="universityRanking"
+                        name="ranking"
+                        placeholder="e.g. #45"
+                    >
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div class="admin-form-group">
+
+                    <label for="universityStatus">
+                        Status
+                    </label>
+
+                    <select
+                        id="universityStatus"
+                        name="status"
+                    >
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- FEATURED -->
+
+                <div class="admin-form-group">
+
+                    <label>
+                        Featured University
+                    </label>
+
+                    <label class="university-toggle">
+
+                        <input
+                            type="checkbox"
+                            id="universityFeatured"
+                            name="featured"
+                        >
+
+                        <span class="university-toggle-slider"></span>
+
+                        <span>
+                            Show as featured
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="admin-modal-actions">
+
+                <button
+                    type="button"
+                    id="cancelUniversityButton"
+                    class="admin-secondary-button"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="admin-primary-button"
+                >
+                    Save University
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- SIDEBAR OVERLAY -->
+
+<div
+    id="adminSidebarOverlay"
+    class="admin-sidebar-overlay"
+></div>
+
+
+<script src="../../js/admin.js"></script>
+<script src="../../js/universities.js"></script>
+
+</body>
+</html>

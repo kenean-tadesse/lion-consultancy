@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings | Lion Consultancy</title>
+
+    <meta
+        name="description"
+        content="Lion Consultancy administration settings."
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../css/admin.css"
+    >
+
+</head>
+
+
+<body class="admin-settings-page">
+
+
+    <!-- =========================================
+         ADMIN APP
+    ========================================== -->
+
+    <div class="admin-app">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+
+            <!-- BRAND -->
+
+            <div class="admin-sidebar-brand">
+
+                <div class="admin-brand-mark">
+                    L
+                </div>
+
+                <div>
+                    <strong>LION</strong>
+                    <span>CONSULTANCY</span>
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 NAVIGATION
+            ================================== -->
+
+            <nav
+                class="admin-navigation"
+                aria-label="Administration navigation"
+            >
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="./dashboard.html"
+                    class="admin-nav-item"
+                    data-section="dashboard"
+                >
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true"
+                    >
+                        ⌂
+                    </span>
+
+                    <span class="admin-nav-content">
+                        <strong>Dashboard</strong>
+                        <small>
+                            Overview & activity
+                        </small>
+                    </span>
+
+                </a>
+
+
+
+                <!-- APPLICATIONS -->
+
+                <a
+                    href="./applications.html"
+                    class="admin-nav-item"
+                    data-section="applications"
+                >
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true"
+                    >
+                        ▣
+                    </span>
+
+                    <span class="admin-nav-content">
+                        <strong>Applications</strong>
+                        <small>
+                            Review student applications
+                        </small>
+                    </span>
+
+                    <span
+                        class="admin-nav-badge"
+                        id="applicationsBadge"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+
+                <!-- STUDENTS -->
+
+                <a
+                    href="./students.html"
+                    class="admin-nav-item"
+                    data-section="students"
+                >
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true"
+                    >
+                        ◉
+                    </span>
+
+                    <span class="admin-nav-content">
+                        <strong>Students</strong>
+                        <small>
+                            Student profiles & records
+                        </small>
+                    </span>
+
+                </a>
+
+
+
+                <!-- UNIVERSITIES -->
+
+                <a
+                    href="./universities.html"
+                    class="admin-nav-item"
+                    data-section="universities"
+                >
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true"
+                    >
+                        ⌂
+                    </span>
+
+                    <span class="admin-nav-content">
+                        <strong>Universities</strong>
+                        <small>
+                            Partners & programs
+                        </small>
+                    </span>
+
+                </a>
+
+
+
+                <!-- SCHOLARSHIPS -->
+
+                <a
+                    href="./scholarships.html"
+                    class="admin-nav-item"
+                    data-section="scholarships"
+                >
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true"
+                    >
+                        ◇
+                    </span>
+
+                    <span class="admin-nav-content">
+                        <strong>Scholarships</strong>
+                        <small>
+                            Funding & opportunities
+                        </small>
+                    </span>
+
+                </a>
+
+
+
+                <!-- DIVIDER -->
+
+                <div
+                    class="admin-nav-divider"
+                    aria-hidden="true"
+                ></div>
+
+
+
+                <!-- SETTINGS -->
+
+                <a
+                    href="./settings.html"
+                    class="admin-nav-item active"
+                    data-section="settings"
+                    aria-current="page"
+                >
+
+                    <span
+                        class="admin-nav-icon"
+                        aria-hidden="true"
+                    >
+                        ⚙
+                    </span>
+
+                    <span class="admin-nav-content">
+                        <strong>Settings</strong>
+                        <small>
+                            System preferences
+                        </small>
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+
+            <!-- =================================
+                 SIDEBAR BOTTOM
+            ================================== -->
+
+            <div class="admin-sidebar-bottom">
+
+                <div class="admin-sidebar-status">
+
+                    <span class="admin-status-dot"></span>
+
+                    <span>
+                        System operational
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="adminLogoutButton"
+                    class="admin-logout-button"
+                >
+                    Sign out
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =====================================
+             MAIN
+        ====================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================
+                 TOPBAR
+            ================================== -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        id="adminMenuToggle"
+                        class="admin-menu-toggle"
+                        aria-label="Toggle navigation"
+                        aria-controls="adminSidebar"
+                        aria-expanded="false"
+                    >
+                        ☰
+                    </button>
+
+
+                    <div>
+
+                        <span class="admin-topbar-label">
+                            ADMINISTRATION
+                        </span>
+
+                        <h1 id="adminPageTitle">
+                            Settings
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="admin-topbar-right">
+
+                    <div class="admin-user">
+
+                        <div class="admin-user-avatar">
+                            A
+                        </div>
+
+                        <div class="admin-user-info">
+
+                            <strong id="adminUserName">
+                                Administrator
+                            </strong>
+
+                            <span id="adminUserRole">
+                                Super Administrator
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================
+                 SETTINGS CONTENT
+            ================================== -->
+
+            <div class="admin-content">
+
+
+                <!-- =================================
+                     PAGE INTRO
+                ================================== -->
+
+                <section class="admin-welcome">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            SYSTEM CONFIGURATION
+                        </span>
+
+                        <h2>
+                            Administration settings
+                        </h2>
+
+                        <p>
+                            Manage your Lion Consultancy
+                            administration account and system
+                            preferences.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     GENERAL SETTINGS
+                ================================== -->
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span class="admin-panel-eyebrow">
+                                GENERAL
+                            </span>
+
+                            <h3>
+                                General settings
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="generalSettingsForm"
+                        class="admin-settings-form"
+                    >
+
+
+                        <!-- CONSULTANCY NAME -->
+
+                        <div class="admin-form-group">
+
+                            <label for="consultancyName">
+                                Consultancy name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="consultancyName"
+                                name="consultancyName"
+                                value="Lion Consultancy"
+                                autocomplete="organization"
+                            >
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="admin-form-group">
+
+                            <label for="consultancyEmail">
+                                Administration email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="consultancyEmail"
+                                name="consultancyEmail"
+                                value="info@lionconsultancy.com"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+
+
+                        <!-- PHONE -->
+
+                        <div class="admin-form-group">
+
+                            <label for="consultancyPhone">
+                                Phone number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="consultancyPhone"
+                                name="consultancyPhone"
+                                placeholder="+251 ..."
+                            >
+
+                        </div>
+
+
+
+                        <!-- COUNTRY -->
+
+                        <div class="admin-form-group">
+
+                            <label for="consultancyCountry">
+                                Country
+                            </label>
+
+                            <input
+                                type="text"
+                                id="consultancyCountry"
+                                name="consultancyCountry"
+                                value="Ethiopia"
+                            >
+
+                        </div>
+
+
+
+                        <!-- SAVE -->
+
+                        <div class="admin-settings-actions">
+
+                            <button
+                                type="submit"
+                                class="admin-primary-button"
+                            >
+                                Save general settings
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     ADMIN PROFILE
+                ================================== -->
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span class="admin-panel-eyebrow">
+                                ADMINISTRATOR
+                            </span>
+
+                            <h3>
+                                Administrator profile
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form
+                        id="adminProfileForm"
+                        class="admin-settings-form"
+                    >
+
+
+                        <!-- NAME -->
+
+                        <div class="admin-form-group">
+
+                            <label for="adminFullName">
+                                Full name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="adminFullName"
+                                name="adminFullName"
+                                value="Administrator"
+                                autocomplete="name"
+                            >
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="admin-form-group">
+
+                            <label for="adminEmail">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="adminEmail"
+                                name="adminEmail"
+                                value="admin@lionconsultancy.com"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+
+
+                        <!-- ROLE -->
+
+                        <div class="admin-form-group">
+
+                            <label for="adminRole">
+                                Role
+                            </label>
+
+                            <input
+                                type="text"
+                                id="adminRole"
+                                name="adminRole"
+                                value="Super Administrator"
+                                readonly
+                            >
+
+                        </div>
+
+
+
+                        <!-- SAVE -->
+
+                        <div class="admin-settings-actions">
+
+                            <button
+                                type="submit"
+                                class="admin-primary-button"
+                            >
+                                Save profile
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     CHANGE PASSWORD
+                ================================== -->
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span class="admin-panel-eyebrow">
+                                SECURITY
+                            </span>
+
+                            <h3>
+                                Change password
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form
+                        id="passwordForm"
+                        class="admin-settings-form"
+                    >
+
+
+                        <!-- CURRENT PASSWORD -->
+
+                        <div class="admin-form-group">
+
+                            <label for="currentPassword">
+                                Current password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="currentPassword"
+                                name="currentPassword"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- NEW PASSWORD -->
+
+                        <div class="admin-form-group">
+
+                            <label for="newPassword">
+                                New password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="newPassword"
+                                name="newPassword"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <small>
+                                Use at least 8 characters.
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- CONFIRM PASSWORD -->
+
+                        <div class="admin-form-group">
+
+                            <label for="confirmPassword">
+                                Confirm new password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- SAVE -->
+
+                        <div class="admin-settings-actions">
+
+                            <button
+                                type="submit"
+                                class="admin-primary-button"
+                            >
+                                Update password
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     NOTIFICATIONS
+                ================================== -->
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span class="admin-panel-eyebrow">
+                                NOTIFICATIONS
+                            </span>
+
+                            <h3>
+                                Notification preferences
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form
+                        id="notificationSettingsForm"
+                        class="admin-settings-form"
+                    >
+
+
+                        <!-- NEW APPLICATIONS -->
+
+                        <label class="admin-setting-toggle">
+
+                            <span>
+
+                                <strong>
+                                    New application alerts
+                                </strong>
+
+                                <small>
+                                    Receive alerts when a student
+                                    submits a new application.
+                                </small>
+
+                            </span>
+
+                            <input
+                                type="checkbox"
+                                id="notifyApplications"
+                                name="notifyApplications"
+                                checked
+                            >
+
+                        </label>
+
+
+
+                        <!-- DOCUMENT UPDATES -->
+
+                        <label class="admin-setting-toggle">
+
+                            <span>
+
+                                <strong>
+                                    Document update alerts
+                                </strong>
+
+                                <small>
+                                    Receive alerts when students
+                                    upload or update documents.
+                                </small>
+
+                            </span>
+
+                            <input
+                                type="checkbox"
+                                id="notifyDocuments"
+                                name="notifyDocuments"
+                                checked
+                            >
+
+                        </label>
+
+
+
+                        <!-- APPOINTMENTS -->
+
+                        <label class="admin-setting-toggle">
+
+                            <span>
+
+                                <strong>
+                                    Appointment reminders
+                                </strong>
+
+                                <small>
+                                    Receive reminders for upcoming
+                                    student appointments.
+                                </small>
+
+                            </span>
+
+                            <input
+                                type="checkbox"
+                                id="notifyAppointments"
+                                name="notifyAppointments"
+                                checked
+                            >
+
+                        </label>
+
+
+
+                        <!-- SYSTEM -->
+
+                        <label class="admin-setting-toggle">
+
+                            <span>
+
+                                <strong>
+                                    System notifications
+                                </strong>
+
+                                <small>
+                                    Receive important system and
+                                    security notifications.
+                                </small>
+
+                            </span>
+
+                            <input
+                                type="checkbox"
+                                id="notifySystem"
+                                name="notifySystem"
+                                checked
+                            >
+
+                        </label>
+
+
+
+                        <!-- SAVE -->
+
+                        <div class="admin-settings-actions">
+
+                            <button
+                                type="submit"
+                                class="admin-primary-button"
+                            >
+                                Save notification settings
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     SYSTEM INFORMATION
+                ================================== -->
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span class="admin-panel-eyebrow">
+                                SYSTEM
+                            </span>
+
+                            <h3>
+                                System information
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="admin-system-information">
+
+
+                        <div class="admin-system-row">
+
+                            <span>
+                                Application
+                            </span>
+
+                            <strong>
+                                Lion Consultancy
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="admin-system-row">
+
+                            <span>
+                                Environment
+                            </span>
+
+                            <strong>
+                                Production
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="admin-system-row">
+
+                            <span>
+                                System status
+                            </span>
+
+                            <strong class="admin-system-status">
+                                Operational
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="admin-system-row">
+
+                            <span>
+                                Administrator access
+                            </span>
+
+                            <strong>
+                                Super Administrator
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     DANGER ZONE
+                ================================== -->
+
+                <section class="admin-panel admin-danger-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span class="admin-panel-eyebrow">
+                                DANGER ZONE
+                            </span>
+
+                            <h3>
+                                Account actions
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="admin-danger-content">
+
+                        <div>
+
+                            <strong>
+                                Reset local settings
+                            </strong>
+
+                            <p>
+                                Restore this page's local settings
+                                to their default values.
+                            </p>
+
+                        </div>
+
+
+
+                        <button
+                            type="button"
+                            id="resetSettingsButton"
+                            class="admin-danger-button"
+                        >
+                            Reset settings
+                        </button>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================
+                     STATUS MESSAGE
+                ================================== -->
+
+                <div
+                    id="settingsMessage"
+                    class="admin-settings-message"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         MOBILE OVERLAY
+    ========================================== -->
+
+    <div
+        id="adminSidebarOverlay"
+        class="admin-sidebar-overlay"
+    ></div>
+
+
+
+    <!-- =========================================
+         ADMIN JAVASCRIPT
+    ========================================== -->
+
+    <script src="../../js/admin.js"></script>
+
+
+
+    <!-- =========================================
+         SETTINGS JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =================================
+                   ELEMENTS
+                ================================= */
+
+                const message =
+                    document.getElementById(
+                        "settingsMessage"
+                    );
+
+
+                const generalForm =
+                    document.getElementById(
+                        "generalSettingsForm"
+                    );
+
+
+                const profileForm =
+                    document.getElementById(
+                        "adminProfileForm"
+                    );
+
+
+                const passwordForm =
+                    document.getElementById(
+                        "passwordForm"
+                    );
+
+
+                const notificationForm =
+                    document.getElementById(
+                        "notificationSettingsForm"
+                    );
+
+
+                const resetButton =
+                    document.getElementById(
+                        "resetSettingsButton"
+                    );
+
+
+
+                /* =================================
+                   CURRENT PAGE
+                ================================= */
+
+                const navItems =
+                    document.querySelectorAll(
+                        ".admin-navigation .admin-nav-item"
+                    );
+
+
+                const currentPage =
+                    (
+                        window.location.pathname
+                            .split("/")
+                            .pop() ||
+                        "dashboard.html"
+                    ).toLowerCase();
+
+
+                navItems.forEach(function (item) {
+
+                    const href =
+                        item.getAttribute("href");
+
+                    if (!href) {
+                        return;
+                    }
+
+
+                    const targetPage =
+                        (
+                            href
+                                .split("/")
+                                .pop() ||
+                            ""
+                        ).toLowerCase();
+
+
+                    if (targetPage === currentPage) {
+
+                        item.classList.add("active");
+
+                        item.setAttribute(
+                            "aria-current",
+                            "page"
+                        );
+
+                    } else {
+
+                        item.classList.remove("active");
+
+                        item.removeAttribute(
+                            "aria-current"
+                        );
+
+                    }
+
+                });
+
+
+
+                /* =================================
+                   SHOW MESSAGE
+                ================================= */
+
+                function showMessage(
+                    text,
+                    type = "success"
+                ) {
+
+                    if (!message) {
+                        return;
+                    }
+
+
+                    message.textContent = text;
+
+                    message.className =
+                        "admin-settings-message " +
+                        type;
+
+
+                    window.clearTimeout(
+                        showMessage.timer
+                    );
+
+
+                    showMessage.timer =
+                        window.setTimeout(
+                            function () {
+
+                                message.textContent = "";
+
+                                message.className =
+                                    "admin-settings-message";
+
+                            },
+                            4000
+                        );
+
+                }
+
+
+
+                /* =================================
+                   GENERAL SETTINGS
+                ================================= */
+
+                if (generalForm) {
+
+                    generalForm.addEventListener(
+                        "submit",
+                        function (event) {
+
+                            event.preventDefault();
+
+
+                            const settings = {
+
+                                consultancyName:
+                                    document.getElementById(
+                                        "consultancyName"
+                                    ).value.trim(),
+
+                                consultancyEmail:
+                                    document.getElementById(
+                                        "consultancyEmail"
+                                    ).value.trim(),
+
+                                consultancyPhone:
+                                    document.getElementById(
+                                        "consultancyPhone"
+                                    ).value.trim(),
+
+                                consultancyCountry:
+                                    document.getElementById(
+                                        "consultancyCountry"
+                                    ).value.trim()
+
+                            };
+
+
+                            localStorage.setItem(
+                                "lionGeneralSettings",
+                                JSON.stringify(settings)
+                            );
+
+
+                            showMessage(
+                                "General settings saved successfully."
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================
+                   ADMIN PROFILE
+                ================================= */
+
+                if (profileForm) {
+
+                    profileForm.addEventListener(
+                        "submit",
+                        function (event) {
+
+                            event.preventDefault();
+
+
+                            const profile = {
+
+                                name:
+                                    document.getElementById(
+                                        "adminFullName"
+                                    ).value.trim(),
+
+                                email:
+                                    document.getElementById(
+                                        "adminEmail"
+                                    ).value.trim()
+
+                            };
+
+
+                            localStorage.setItem(
+                                "lionAdminProfile",
+                                JSON.stringify(profile)
+                            );
+
+
+                            const topbarName =
+                                document.getElementById(
+                                    "adminUserName"
+                                );
+
+
+                            if (topbarName) {
+
+                                topbarName.textContent =
+                                    profile.name ||
+                                    "Administrator";
+
+                            }
+
+
+                            showMessage(
+                                "Administrator profile saved successfully."
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================
+                   CHANGE PASSWORD
+                ================================= */
+
+                if (passwordForm) {
+
+                    passwordForm.addEventListener(
+                        "submit",
+                        function (event) {
+
+                            event.preventDefault();
+
+
+                            const currentPassword =
+                                document.getElementById(
+                                    "currentPassword"
+                                ).value;
+
+
+                            const newPassword =
+                                document.getElementById(
+                                    "newPassword"
+                                ).value;
+
+
+                            const confirmPassword =
+                                document.getElementById(
+                                    "confirmPassword"
+                                ).value;
+
+
+                            if (!currentPassword) {
+
+                                showMessage(
+                                    "Please enter your current password.",
+                                    "error"
+                                );
+
+                                return;
+
+                            }
+
+
+                            if (newPassword.length < 8) {
+
+                                showMessage(
+                                    "The new password must contain at least 8 characters.",
+                                    "error"
+                                );
+
+                                return;
+
+                            }
+
+
+                            if (
+                                newPassword !==
+                                confirmPassword
+                            ) {
+
+                                showMessage(
+                                    "The new passwords do not match.",
+                                    "error"
+                                );
+
+                                return;
+
+                            }
+
+
+                            /*
+                             * IMPORTANT:
+                             *
+                             * This frontend form validates the
+                             * password fields only.
+                             *
+                             * Real administrator password
+                             * changes must be handled by the
+                             * backend authentication system.
+                             */
+
+                            showMessage(
+                                "Password validation completed. Connect this form to the backend authentication API to permanently change the password."
+                            );
+
+
+                            passwordForm.reset();
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================
+                   NOTIFICATIONS
+                ================================= */
+
+                if (notificationForm) {
+
+                    notificationForm.addEventListener(
+                        "submit",
+                        function (event) {
+
+                            event.preventDefault();
+
+
+                            const notifications = {
+
+                                applications:
+                                    document.getElementById(
+                                        "notifyApplications"
+                                    ).checked,
+
+                                documents:
+                                    document.getElementById(
+                                        "notifyDocuments"
+                                    ).checked,
+
+                                appointments:
+                                    document.getElementById(
+                                        "notifyAppointments"
+                                    ).checked,
+
+                                system:
+                                    document.getElementById(
+                                        "notifySystem"
+                                    ).checked
+
+                            };
+
+
+                            localStorage.setItem(
+                                "lionNotificationSettings",
+                                JSON.stringify(
+                                    notifications
+                                )
+                            );
+
+
+                            showMessage(
+                                "Notification preferences saved successfully."
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================
+                   LOAD SAVED SETTINGS
+                ================================= */
+
+                function loadSavedSettings() {
+
+
+                    /* GENERAL */
+
+                    const savedGeneral =
+                        localStorage.getItem(
+                            "lionGeneralSettings"
+                        );
+
+
+                    if (savedGeneral) {
+
+                        try {
+
+                            const settings =
+                                JSON.parse(
+                                    savedGeneral
+                                );
+
+
+                            if (settings.consultancyName) {
+
+                                document.getElementById(
+                                    "consultancyName"
+                                ).value =
+                                    settings.consultancyName;
+
+                            }
+
+
+                            if (settings.consultancyEmail) {
+
+                                document.getElementById(
+                                    "consultancyEmail"
+                                ).value =
+                                    settings.consultancyEmail;
+
+                            }
+
+
+                            if (settings.consultancyPhone) {
+
+                                document.getElementById(
+                                    "consultancyPhone"
+                                ).value =
+                                    settings.consultancyPhone;
+
+                            }
+
+
+                            if (settings.consultancyCountry) {
+
+                                document.getElementById(
+                                    "consultancyCountry"
+                                ).value =
+                                    settings.consultancyCountry;
+
+                            }
+
+                        } catch (error) {
+
+                            console.error(
+                                "Unable to load general settings:",
+                                error
+                            );
+
+                        }
+
+                    }
+
+
+
+                    /* PROFILE */
+
+                    const savedProfile =
+                        localStorage.getItem(
+                            "lionAdminProfile"
+                        );
+
+
+                    if (savedProfile) {
+
+                        try {
+
+                            const profile =
+                                JSON.parse(
+                                    savedProfile
+                                );
+
+
+                            if (profile.name) {
+
+                                document.getElementById(
+                                    "adminFullName"
+                                ).value =
+                                    profile.name;
+
+                                const topbarName =
+                                    document.getElementById(
+                                        "adminUserName"
+                                    );
+
+
+                                if (topbarName) {
+
+                                    topbarName.textContent =
+                                        profile.name;
+
+                                }
+
+                            }
+
+
+                            if (profile.email) {
+
+                                document.getElementById(
+                                    "adminEmail"
+                                ).value =
+                                    profile.email;
+
+                            }
+
+                        } catch (error) {
+
+                            console.error(
+                                "Unable to load admin profile:",
+                                error
+                            );
+
+                        }
+
+                    }
+
+
+
+                    /* NOTIFICATIONS */
+
+                    const savedNotifications =
+                        localStorage.getItem(
+                            "lionNotificationSettings"
+                        );
+
+
+                    if (savedNotifications) {
+
+                        try {
+
+                            const notifications =
+                                JSON.parse(
+                                    savedNotifications
+                                );
+
+
+                            if (
+                                typeof notifications.applications ===
+                                "boolean"
+                            ) {
+
+                                document.getElementById(
+                                    "notifyApplications"
+                                ).checked =
+                                    notifications.applications;
+
+                            }
+
+
+                            if (
+                                typeof notifications.documents ===
+                                "boolean"
+                            ) {
+
+                                document.getElementById(
+                                    "notifyDocuments"
+                                ).checked =
+                                    notifications.documents;
+
+                            }
+
+
+                            if (
+                                typeof notifications.appointments ===
+                                "boolean"
+                            ) {
+
+                                document.getElementById(
+                                    "notifyAppointments"
+                                ).checked =
+                                    notifications.appointments;
+
+                            }
+
+
+                            if (
+                                typeof notifications.system ===
+                                "boolean"
+                            ) {
+
+                                document.getElementById(
+                                    "notifySystem"
+                                ).checked =
+                                    notifications.system;
+
+                            }
+
+                        } catch (error) {
+
+                            console.error(
+                                "Unable to load notification settings:",
+                                error
+                            );
+
+                        }
+
+                    }
+
+                }
+
+
+
+                /* =================================
+                   RESET SETTINGS
+                ================================= */
+
+                if (resetButton) {
+
+                    resetButton.addEventListener(
+                        "click",
+                        function () {
+
+                            const confirmed =
+                                window.confirm(
+                                    "Reset all local settings to their default values?"
+                                );
+
+
+                            if (!confirmed) {
+                                return;
+                            }
+
+
+                            localStorage.removeItem(
+                                "lionGeneralSettings"
+                            );
+
+
+                            localStorage.removeItem(
+                                "lionAdminProfile"
+                            );
+
+
+                            localStorage.removeItem(
+                                "lionNotificationSettings"
+                            );
+
+
+                            window.location.reload();
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================
+                   LOAD
+                ================================= */
+
+                loadSavedSettings();
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

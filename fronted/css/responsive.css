@@ -1,0 +1,2138 @@
+/* =========================================================
+   LION CONSULTANCY
+   PREMIUM RESPONSIVE SYSTEM
+   responsive.css
+========================================================= */
+
+
+/* =========================================================
+   01. LARGE DESKTOP
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+    .container {
+        width: min(
+            calc(100% - 120px),
+            1380px
+        );
+    }
+
+
+    .site-header {
+        padding-inline: 55px;
+    }
+
+
+    .hero-layout {
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(620px, 1.05fr);
+
+        gap: 40px;
+    }
+
+
+    .hero h1 {
+        font-size: 116px;
+    }
+
+
+    .orbit-system {
+        width: min(720px, 48vw);
+    }
+
+
+    .section {
+        padding-block: 175px;
+    }
+
+}
+
+
+/* =========================================================
+   02. LAPTOP
+   1200px — 1439px
+========================================================= */
+
+@media (max-width: 1439px) {
+
+    .hero-layout {
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(480px, 1.05fr);
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(64px, 7vw, 96px);
+    }
+
+
+    .orbit-system {
+        width:
+            min(610px, 48vw);
+    }
+
+
+    .desktop-nav {
+        gap: 25px;
+        margin-right: 25px;
+    }
+
+
+    .site-header {
+        padding-inline: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   03. TABLET LANDSCAPE
+   992px — 1199px
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    :root {
+        --section-space: 120px;
+    }
+
+
+    .container {
+        width:
+            min(
+                calc(100% - 56px),
+                1100px
+            );
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    .site-header {
+        height: 82px;
+        padding-inline: 28px;
+    }
+
+
+    .site-header.scrolled {
+        height: 72px;
+    }
+
+
+    .desktop-nav {
+        gap: 19px;
+        margin-right: 20px;
+    }
+
+
+    .desktop-nav a {
+        font-size: 10px;
+    }
+
+
+    .header-link {
+        padding-inline: 16px;
+        min-height: 40px;
+        font-size: 9px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-layout {
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(400px, 1.05fr);
+
+        gap: 10px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(58px, 7vw, 82px);
+    }
+
+
+    .hero-lead {
+        font-size: 14px;
+    }
+
+
+    .hero-proof {
+        margin-top: 40px;
+    }
+
+
+    .hero-visual {
+        height: 650px;
+    }
+
+
+    .orbit-system {
+        width:
+            min(560px, 52vw);
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .intro-grid {
+        grid-template-columns:
+            0.5fr
+            1.5fr;
+
+        gap: 45px;
+    }
+
+
+    .section-heading {
+        margin-bottom: 55px;
+    }
+
+
+    /* ---------- DESTINATIONS ---------- */
+
+    .destination-grid {
+        grid-auto-rows: 290px;
+    }
+
+
+    /* ---------- FEATURED ---------- */
+
+    .featured-content {
+        padding: 50px;
+    }
+
+
+    .featured-panel {
+        min-height: 600px;
+    }
+
+
+    .featured-image {
+        min-height: 600px;
+    }
+
+
+    /* ---------- TRUST ---------- */
+
+    .trust-grid {
+        gap: 55px;
+    }
+
+
+    .trust-card {
+        min-height: 500px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta-panel {
+        padding:
+            70px 65px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-top {
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   04. TABLET PORTRAIT
+   768px — 991px
+========================================================= */
+
+@media (max-width: 991px) {
+
+    :root {
+        --section-space: 105px;
+    }
+
+
+    .container {
+        width:
+            min(
+                calc(100% - 48px),
+                850px
+            );
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .site-header {
+        height: 78px;
+        padding-inline: 24px;
+    }
+
+
+    .desktop-nav,
+    .header-link {
+        display: none;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        min-height:
+            auto;
+    }
+
+
+    .hero-layout {
+
+        min-height:
+            auto;
+
+        grid-template-columns:
+            1fr;
+
+        padding-top: 145px;
+
+        padding-bottom: 70px;
+    }
+
+
+    .hero-content {
+        max-width: 760px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(62px, 11vw, 100px);
+    }
+
+
+    .hero-lead {
+        max-width: 650px;
+        font-size: 15px;
+    }
+
+
+    .hero-visual {
+
+        height:
+            620px;
+
+        margin-top:
+            -20px;
+    }
+
+
+    .orbit-system {
+
+        width:
+            min(600px, 78vw);
+    }
+
+
+    .scroll-cue {
+        display: none;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 30px;
+    }
+
+
+    .intro-copy {
+        max-width: 760px;
+    }
+
+
+    /* =====================================================
+       DESTINATIONS
+    ===================================================== */
+
+    .destination-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        grid-auto-rows:
+            310px;
+    }
+
+
+    .destination-card:nth-child(1),
+    .destination-card:nth-child(2),
+    .destination-card:nth-child(n+3) {
+
+        grid-column:
+            span 1;
+    }
+
+
+    .destination-card:nth-child(1) {
+        grid-column:
+            span 2;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .service-item {
+
+        grid-template-columns:
+            55px
+            55px
+            1fr
+            auto;
+
+        gap: 20px;
+
+        min-height:
+            115px;
+    }
+
+
+    .service-copy h3 {
+        font-size: 24px;
+    }
+
+
+    /* =====================================================
+       FEATURED
+    ===================================================== */
+
+    .featured-panel {
+
+        grid-template-columns:
+            1fr;
+
+        min-height:
+            auto;
+    }
+
+
+    .featured-image {
+
+        min-height:
+            430px;
+    }
+
+
+    .featured-content {
+
+        padding:
+            55px 45px 65px;
+    }
+
+
+    /* =====================================================
+       JOURNEY
+    ===================================================== */
+
+    .journey-grid {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap:
+            50px 30px;
+
+        margin-top:
+            60px;
+    }
+
+
+    .journey-line {
+        display: none;
+    }
+
+
+    .journey-step {
+
+        min-height:
+            220px;
+
+        padding:
+            0 !important;
+
+        margin:
+            0 !important;
+
+        border-right:
+            0 !important;
+    }
+
+
+    .journey-dot {
+
+        margin-top:
+            35px;
+    }
+
+
+    /* =====================================================
+       TRUST
+    ===================================================== */
+
+    .trust-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            60px;
+    }
+
+
+    .trust-card {
+
+        max-width:
+            650px;
+
+        min-height:
+            500px;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta-panel {
+
+        padding:
+            65px 45px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-top {
+
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+
+        gap:
+            45px;
+    }
+
+
+    .footer-brand {
+        grid-column:
+            span 3;
+    }
+
+}
+
+
+/* =========================================================
+   05. LARGE MOBILE
+   576px — 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+    :root {
+        --section-space: 85px;
+    }
+
+
+    .container {
+
+        width:
+            calc(100% - 36px);
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .site-header {
+
+        height:
+            72px;
+
+        padding-inline:
+            18px;
+    }
+
+
+    .brand-copy strong {
+
+        font-size:
+            14px;
+    }
+
+
+    .brand-copy small {
+
+        font-size:
+            6px;
+
+        letter-spacing:
+            0.3em;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero-layout {
+
+        padding-top:
+            120px;
+
+        padding-bottom:
+            30px;
+    }
+
+
+    .eyebrow {
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            0.19em;
+
+        margin-bottom:
+            22px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                53px,
+                14vw,
+                76px
+            );
+
+        letter-spacing:
+            -0.06em;
+    }
+
+
+    .hero-lead {
+
+        margin-top:
+            25px;
+
+        font-size:
+            13px;
+
+        line-height:
+            1.8;
+    }
+
+
+    .hero-actions {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        margin-top:
+            28px;
+    }
+
+
+    .btn {
+
+        width:
+            100%;
+
+        min-height:
+            54px;
+    }
+
+
+    .hero-proof {
+
+        margin-top:
+            35px;
+
+        padding-top:
+            18px;
+    }
+
+
+    .hero-proof > div {
+
+        padding-right:
+            15px;
+
+        margin-right:
+            15px;
+    }
+
+
+    .hero-proof strong {
+
+        font-size:
+            21px;
+    }
+
+
+    .hero-proof span {
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            0.08em;
+    }
+
+
+    /* =====================================================
+       HERO VISUAL
+    ===================================================== */
+
+    .hero-visual {
+
+        height:
+            470px;
+
+        margin-top:
+            -15px;
+    }
+
+
+    .orbit-system {
+
+        width:
+            100%;
+
+        max-width:
+            510px;
+    }
+
+
+    .globe {
+
+        width:
+            49%;
+    }
+
+
+    .plane-icon {
+
+        font-size:
+            29px;
+    }
+
+
+    .orbit-node {
+
+        font-size:
+            7px;
+
+        padding:
+            6px 8px;
+    }
+
+
+    .node-korea {
+
+        right:
+            1%;
+    }
+
+
+    .node-china {
+
+        right:
+            5%;
+
+        bottom:
+            25%;
+    }
+
+
+    .node-eu {
+
+        left:
+            0%;
+    }
+
+
+    .label-top,
+    .label-bottom,
+    .hero-visual-caption {
+
+        display:
+            none;
+    }
+
+
+    /* =====================================================
+       SECTION HEADINGS
+    ===================================================== */
+
+    .section h2 {
+
+        font-size:
+            clamp(
+                40px,
+                11vw,
+                58px
+            );
+    }
+
+
+    .section-heading {
+
+        display:
+            block;
+
+        margin-bottom:
+            45px;
+    }
+
+
+    .section-heading > p {
+
+        margin-top:
+            25px;
+
+        font-size:
+            13px;
+    }
+
+
+    /* =====================================================
+       DESTINATIONS
+    ===================================================== */
+
+    .destination-grid {
+
+        grid-template-columns:
+            1fr;
+
+        grid-auto-rows:
+            330px;
+
+        gap:
+            10px;
+    }
+
+
+    .destination-card:nth-child(1),
+    .destination-card:nth-child(2),
+    .destination-card:nth-child(n+3) {
+
+        grid-column:
+            span 1;
+    }
+
+
+    .destination-content {
+
+        inset:
+            auto 20px 20px;
+
+        grid-template-columns:
+            auto 1fr auto;
+
+        gap:
+            12px;
+    }
+
+
+    .destination-content h3 {
+
+        font-size:
+            31px;
+    }
+
+
+    .destination-arrow {
+
+        width:
+            38px;
+
+        height:
+            38px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .service-item {
+
+        grid-template-columns:
+            38px 1fr auto;
+
+        gap:
+            15px;
+
+        min-height:
+            105px;
+    }
+
+
+    .service-no {
+
+        font-size:
+            8px;
+    }
+
+
+    .service-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            15px;
+    }
+
+
+    .service-copy h3 {
+
+        font-size:
+            21px;
+    }
+
+
+    .service-copy p {
+
+        font-size:
+            11px;
+
+        line-height:
+            1.65;
+    }
+
+
+    .service-arrow {
+
+        font-size:
+            17px;
+    }
+
+
+    /* =====================================================
+       FEATURED
+    ===================================================== */
+
+    .featured-image {
+
+        min-height:
+            330px;
+    }
+
+
+    .featured-image::after {
+
+        width:
+            210px;
+
+        height:
+            210px;
+    }
+
+
+    .featured-content {
+
+        padding:
+            42px 28px 48px;
+    }
+
+
+    .featured-content h2 {
+
+        font-size:
+            46px;
+    }
+
+
+    .featured-content > p {
+
+        font-size:
+            13px;
+    }
+
+
+    .featured-points {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+        margin:
+            25px 0 30px;
+    }
+
+
+    /* =====================================================
+       JOURNEY
+    ===================================================== */
+
+    .journey-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            45px;
+    }
+
+
+    .journey-step {
+
+        min-height:
+            auto;
+    }
+
+
+    .journey-step h3 {
+
+        font-size:
+            27px;
+    }
+
+
+    .journey-dot {
+
+        margin-top:
+            25px;
+    }
+
+
+    /* =====================================================
+       TRUST
+    ===================================================== */
+
+    .trust-list {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            14px;
+    }
+
+
+    .trust-card {
+
+        min-height:
+            460px;
+
+        padding:
+            25px;
+    }
+
+
+    .trust-orbit {
+
+        width:
+            220px;
+
+        height:
+            220px;
+    }
+
+
+    .trust-card blockquote {
+
+        font-size:
+            32px;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta-panel {
+
+        padding:
+            48px 24px;
+    }
+
+
+    .cta-panel > p {
+
+        font-size:
+            12px;
+
+        line-height:
+            1.8;
+    }
+
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            0;
+    }
+
+
+    .contact-form {
+
+        margin-top:
+            35px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .site-footer {
+
+        padding-top:
+            60px;
+    }
+
+
+    .footer-top {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            40px 25px;
+
+        padding-bottom:
+            50px;
+    }
+
+
+    .footer-brand {
+
+        grid-column:
+            span 2;
+    }
+
+
+    .footer-bottom {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        justify-content:
+            center;
+
+        padding-block:
+            22px;
+    }
+
+}
+
+
+/* =========================================================
+   06. SMALL MOBILE
+   400px — 575px
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .container {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    /* ---------- BRAND ---------- */
+
+    .brand-orbit {
+
+        width:
+            37px;
+
+        height:
+            37px;
+    }
+
+
+    .brand-globe {
+
+        width:
+            25px;
+
+        height:
+            25px;
+    }
+
+
+    .brand-plane {
+
+        font-size:
+            11px;
+
+        transform:
+            translate(10px, -6px)
+            rotate(-15deg);
+    }
+
+
+    .brand-copy strong {
+
+        font-size:
+            12px;
+
+        letter-spacing:
+            0.12em;
+    }
+
+
+    .brand-copy small {
+
+        margin-top:
+            4px;
+
+        font-size:
+            5px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-layout {
+
+        padding-top:
+            108px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            51px;
+
+        line-height:
+            0.97;
+    }
+
+
+    .hero-lead {
+
+        font-size:
+            12px;
+    }
+
+
+    .hero-proof {
+
+        justify-content:
+            space-between;
+    }
+
+
+    .hero-proof > div {
+
+        padding-right:
+            9px;
+
+        margin-right:
+            9px;
+    }
+
+
+    .hero-proof strong {
+
+        font-size:
+            18px;
+    }
+
+
+    .hero-proof span {
+
+        font-size:
+            6px;
+    }
+
+
+    /* ---------- HERO GLOBE ---------- */
+
+    .hero-visual {
+
+        height:
+            390px;
+    }
+
+
+    .orbit-system {
+
+        width:
+            112%;
+
+        margin-left:
+            -6%;
+    }
+
+
+    .orbit-ring-one {
+
+        inset:
+            12%;
+    }
+
+
+    .orbit-ring-two {
+
+        inset:
+            20%;
+    }
+
+
+    .orbit-ring-three {
+
+        inset:
+            29%;
+    }
+
+
+    .orbit-node {
+
+        display:
+            none;
+    }
+
+
+    /* ---------- DESTINATIONS ---------- */
+
+    .destination-grid {
+
+        grid-auto-rows:
+            280px;
+    }
+
+
+    .destination-content h3 {
+
+        font-size:
+            28px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .service-item {
+
+        grid-template-columns:
+            30px 1fr auto;
+
+        gap:
+            10px;
+    }
+
+
+    .service-icon {
+
+        width:
+            30px;
+
+        height:
+            30px;
+
+        font-size:
+            12px;
+    }
+
+
+    .service-copy h3 {
+
+        font-size:
+            18px;
+    }
+
+
+    .service-copy p {
+
+        font-size:
+            10px;
+    }
+
+
+    /* ---------- FEATURED ---------- */
+
+    .featured-image {
+
+        min-height:
+            270px;
+    }
+
+
+    .featured-content {
+
+        padding:
+            35px 20px 40px;
+    }
+
+
+    .featured-content h2 {
+
+        font-size:
+            40px;
+    }
+
+
+    /* ---------- TRUST ---------- */
+
+    .trust-card {
+
+        min-height:
+            400px;
+
+        padding:
+            20px;
+    }
+
+
+    .trust-orbit {
+
+        width:
+            190px;
+
+        height:
+            190px;
+    }
+
+
+    .trust-card blockquote {
+
+        font-size:
+            28px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta-panel {
+
+        padding:
+            38px 18px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-top {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column:
+            span 1;
+    }
+
+
+    .footer-bottom {
+
+        font-size:
+            7px;
+    }
+
+}
+
+
+/* =========================================================
+   07. VERY SMALL DEVICES
+   < 400px
+========================================================= */
+
+@media (max-width: 399px) {
+
+    .hero h1 {
+
+        font-size:
+            45px;
+    }
+
+
+    .hero-proof strong {
+
+        font-size:
+            16px;
+    }
+
+
+    .hero-proof span {
+
+        font-size:
+            5px;
+    }
+
+
+    .hero-visual {
+
+        height:
+            340px;
+    }
+
+
+    .section h2 {
+
+        font-size:
+            37px;
+    }
+
+
+    .destination-grid {
+
+        grid-auto-rows:
+            250px;
+    }
+
+
+    .destination-content h3 {
+
+        font-size:
+            25px;
+    }
+
+
+    .featured-content h2 {
+
+        font-size:
+            35px;
+    }
+
+
+    .trust-card blockquote {
+
+        font-size:
+            25px;
+    }
+
+}
+
+
+/* =========================================================
+   08. LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+    max-height: 600px
+) and (
+    orientation: landscape
+) {
+
+    .hero-layout {
+
+        padding-top:
+            100px;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .hero-visual {
+
+        height:
+            430px;
+
+        margin-top:
+            0;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            52px;
+    }
+
+
+    .hero-lead {
+
+        margin-top:
+            18px;
+
+        font-size:
+            11px;
+    }
+
+
+    .hero-actions {
+
+        margin-top:
+            20px;
+    }
+
+
+    .hero-proof {
+
+        margin-top:
+            25px;
+    }
+
+}
+
+
+/* =========================================================
+   09. TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+    .destination-card:hover {
+
+        transform:
+            none;
+    }
+
+
+    .service-item:hover {
+
+        padding-inline:
+            0;
+
+        background:
+            transparent;
+    }
+
+
+    .btn:hover {
+
+        transform:
+            none;
+    }
+
+
+    .destination-card:hover
+    .destination-image {
+
+        transform:
+            none;
+    }
+
+}
+
+
+/* =========================================================
+   10. PRINT
+========================================================= */
+
+@media print {
+
+    .site-header,
+    .mobile-menu,
+    .cursor-glow,
+    .site-loader,
+    .scroll-cue,
+    .hero-visual {
+
+        display:
+            none !important;
+    }
+
+
+    body {
+
+        background:
+            #ffffff;
+
+        color:
+            #000000;
+    }
+
+
+    .section {
+
+        padding-block:
+            30px;
+    }
+
+}
+/* =========================================================
+   LION CONSULTANCY
+   PREMIUM RESPONSIVE SYSTEM
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(92%, 1100px);
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 6vw, 5rem);
+    }
+
+    .destinations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .container {
+        width: min(92%, 900px);
+    }
+
+    /* HEADER */
+
+    .nav-menu {
+        gap: 22px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 850px;
+    }
+
+    .hero-content {
+        max-width: 560px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.8rem, 7vw, 4.5rem);
+    }
+
+    .hero-description {
+        max-width: 520px;
+    }
+
+    /* DESTINATIONS */
+
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* TRUST */
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-content {
+        max-width: 700px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: min(92%, 680px);
+    }
+
+    /* HEADER */
+
+    .site-header {
+        padding: 16px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 25px;
+
+        background: rgba(7, 26, 61, 0.98);
+
+        border-top: 1px solid rgba(255,255,255,0.08);
+
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-menu a {
+        width: 100%;
+        padding: 14px 0;
+        text-align: center;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 780px;
+        padding: 120px 0 80px;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+        line-height: 1.05;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* SECTION */
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .section-description {
+        font-size: 15px;
+    }
+
+    /* DESTINATIONS */
+
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FEATURED */
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .destination-card {
+        min-height: 300px;
+    }
+
+    .service-card {
+        padding: 28px 22px;
+    }
+
+    .process-card {
+        padding: 25px 20px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+/* =========================================================
+   PREMIUM SCROLL REVEAL
+   ========================================================= */
+
+.reveal,
+.service-card,
+.destination-card,
+.process-card {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible,
+.service-card.visible,
+.destination-card.visible,
+.process-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   PREMIUM HEADER SCROLL STATE
+   ========================================================= */
+
+.site-header {
+    transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        padding 0.35s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(7, 26, 61, 0.96);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 24px;
+    height: 2px;
+
+    background: currentColor;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+   ========================================================= */
+
+.form-message {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    opacity: 0;
+    transform: translateY(5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.form-message.success {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   BODY LOCK WHEN MOBILE MENU IS OPEN
+   ========================================================= */
+
+body.menu-open {
+    overflow: hidden;
+}

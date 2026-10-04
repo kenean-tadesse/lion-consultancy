@@ -1,0 +1,4053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore study opportunities in South Korea with Lion Consultancy. Discover universities, programs, scholarships, Korean language learning and student support."
+    >
+
+    <meta
+        name="keywords"
+        content="study in Korea, Korean universities, Ethiopia Korea education, study abroad Korea, scholarships Korea, Lion Consultancy"
+    >
+
+    <title>Study in Korea | Lion Consultancy</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         MAIN STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <!-- =====================================================
+         PAGE STYLES
+         ===================================================== -->
+
+    <style>
+
+        /* =================================================
+           KOREA PAGE
+           ================================================= */
+
+        .korea-page {
+            background: #f7f4ee;
+            color: #071a3d;
+        }
+
+
+        /* =================================================
+           NAVIGATION
+           ================================================= */
+
+        .destination-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            padding: 20px 0;
+
+            transition:
+                background .35s ease,
+                box-shadow .35s ease,
+                padding .35s ease;
+        }
+
+        .destination-header.scrolled {
+            background: rgba(7, 26, 61, .96);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 15px 50px rgba(0,0,0,.16);
+            padding: 14px 0;
+        }
+
+        .destination-nav {
+            width: min(92%, 1200px);
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .destination-logo {
+            color: white;
+            text-decoration: none;
+
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: .08em;
+        }
+
+        .destination-logo span {
+            color: #d7a647;
+        }
+
+        .destination-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .destination-links a {
+            color: rgba(255,255,255,.86);
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: color .25s ease;
+        }
+
+        .destination-links a:hover {
+            color: #d7a647;
+        }
+
+
+        /* =================================================
+           HERO
+           ================================================= */
+
+        .korea-hero {
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5,18,42,.96) 0%,
+                    rgba(5,18,42,.82) 42%,
+                    rgba(5,18,42,.30) 100%
+                ),
+                url("../images/korea-hero.jpg")
+                center/cover no-repeat;
+        }
+
+        .korea-hero::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(215,166,71,.16),
+                    transparent 35%
+                );
+
+            pointer-events: none;
+        }
+
+        .korea-hero-content {
+            position: relative;
+            z-index: 2;
+
+            width: min(92%, 1200px);
+            margin: auto;
+
+            padding-top: 80px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #d7a647;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: .18em;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 35px;
+            height: 1px;
+
+            background: #d7a647;
+        }
+
+        .korea-hero h1 {
+            max-width: 780px;
+
+            color: white;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: clamp(
+                3.5rem,
+                7vw,
+                7rem
+            );
+
+            line-height: .98;
+
+            margin: 0 0 30px;
+        }
+
+        .korea-hero h1 span {
+            color: #d7a647;
+        }
+
+        .korea-hero p {
+            max-width: 650px;
+
+            color: rgba(255,255,255,.78);
+
+            font-size: 18px;
+            line-height: 1.8;
+
+            margin-bottom: 40px;
+        }
+
+        .korea-hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .korea-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 54px;
+
+            padding: 0 28px;
+
+            border-radius: 4px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+        }
+
+        .korea-btn-primary {
+            background: #d7a647;
+            color: #071a3d;
+        }
+
+        .korea-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(215,166,71,.25);
+        }
+
+        .korea-btn-outline {
+            color: white;
+            border: 1px solid rgba(255,255,255,.35);
+        }
+
+        .korea-btn-outline:hover {
+            background: rgba(255,255,255,.08);
+            transform: translateY(-3px);
+        }
+
+
+        /* =================================================
+           HERO SIDE DATA
+           ================================================= */
+
+        .hero-facts {
+            position: absolute;
+            right: 5%;
+            bottom: 45px;
+
+            z-index: 3;
+
+            display: flex;
+            gap: 35px;
+        }
+
+        .hero-fact {
+            color: white;
+        }
+
+        .hero-fact strong {
+            display: block;
+
+            color: #d7a647;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 30px;
+        }
+
+        .hero-fact span {
+            color: rgba(255,255,255,.6);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+
+        /* =================================================
+           INTRODUCTION
+           ================================================= */
+
+        .korea-intro {
+            padding: 120px 0;
+        }
+
+        .korea-container {
+            width: min(92%, 1100px);
+            margin: auto;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: #b88a32;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: .2em;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .korea-heading {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: clamp(
+                2.5rem,
+                5vw,
+                4.5rem
+            );
+
+            line-height: 1.08;
+
+            margin: 0 0 25px;
+        }
+
+        .korea-text {
+            color: #536078;
+
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+
+        /* =================================================
+           FEATURE IMAGE
+           ================================================= */
+
+        .korea-image {
+            position: relative;
+        }
+
+        .korea-image img {
+            width: 100%;
+            display: block;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            border-radius: 3px;
+        }
+
+        .image-caption {
+            position: absolute;
+
+            left: 20px;
+            bottom: 20px;
+
+            padding: 15px 20px;
+
+            background: rgba(7,26,61,.92);
+
+            color: white;
+
+            font-size: 13px;
+        }
+
+        .image-caption strong {
+            display: block;
+            color: #d7a647;
+            margin-bottom: 4px;
+        }
+
+
+        /* =================================================
+           OPPORTUNITIES
+           ================================================= */
+
+        .opportunities {
+            background: #071a3d;
+            color: white;
+
+            padding: 120px 0;
+        }
+
+        .opportunities-heading {
+            max-width: 750px;
+            margin-bottom: 70px;
+        }
+
+        .opportunities-heading .section-label {
+            color: #d7a647;
+        }
+
+        .opportunities-heading h2 {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: clamp(
+                2.5rem,
+                5vw,
+                4.5rem
+            );
+
+            line-height: 1.1;
+
+            margin: 0;
+        }
+
+        .opportunity-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 1px;
+
+            background: rgba(255,255,255,.12);
+        }
+
+        .opportunity-card {
+            padding: 45px 35px;
+
+            background: #071a3d;
+
+            min-height: 260px;
+        }
+
+        .opportunity-number {
+            color: #d7a647;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: .15em;
+
+            margin-bottom: 35px;
+        }
+
+        .opportunity-card h3 {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 27px;
+
+            margin: 0 0 15px;
+        }
+
+        .opportunity-card p {
+            color: rgba(255,255,255,.62);
+
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+
+        /* =================================================
+           SUPPORT SECTION
+           ================================================= */
+
+        .support {
+            padding: 120px 0;
+        }
+
+        .support-list {
+            margin-top: 40px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .support-item {
+            display: flex;
+            gap: 18px;
+
+            padding: 25px;
+
+            background: white;
+
+            border: 1px solid #e9e4d9;
+        }
+
+        .support-icon {
+            width: 42px;
+            height: 42px;
+
+            flex: 0 0 42px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: rgba(215,166,71,.12);
+
+            color: #b88a32;
+
+            font-weight: 700;
+        }
+
+        .support-item h4 {
+            margin: 0 0 6px;
+
+            font-size: 16px;
+        }
+
+        .support-item p {
+            margin: 0;
+
+            color: #687286;
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           PROCESS
+           ================================================= */
+
+        .korea-process {
+            padding: 120px 0;
+
+            background: #eeeae1;
+        }
+
+        .process-intro {
+            max-width: 700px;
+            margin-bottom: 70px;
+        }
+
+        .process-intro h2 {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: clamp(
+                2.5rem,
+                5vw,
+                4.2rem
+            );
+
+            line-height: 1.1;
+
+            margin: 0;
+        }
+
+        .journey {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 20px;
+        }
+
+        .journey-step {
+            position: relative;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #cfc8ba;
+        }
+
+        .journey-step-number {
+            color: #b88a32;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 35px;
+        }
+
+        .journey-step h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .journey-step p {
+            color: #687286;
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           CTA
+           ================================================= */
+
+        .korea-cta {
+            position: relative;
+
+            padding: 110px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071a3d,
+                    #102d60
+                );
+
+            overflow: hidden;
+        }
+
+        .korea-cta::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(215,166,71,.18);
+
+            right: -180px;
+            top: -180px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+
+            width: min(92%, 800px);
+            margin: auto;
+        }
+
+        .cta-content h2 {
+            color: white;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: clamp(
+                2.5rem,
+                5vw,
+                4.5rem
+            );
+
+            margin: 0 0 20px;
+        }
+
+        .cta-content p {
+            color: rgba(255,255,255,.68);
+
+            max-width: 650px;
+            margin: 0 auto 35px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =================================================
+           DISCLAIMER
+           ================================================= */
+
+        .disclaimer {
+            padding: 35px 0;
+
+            background: #050f24;
+
+            color: rgba(255,255,255,.5);
+
+            font-size: 11px;
+            line-height: 1.8;
+
+            text-align: center;
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+           ================================================= */
+
+        @media (max-width: 900px) {
+
+            .destination-links {
+                display: none;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .opportunity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .hero-facts {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .korea-hero {
+                min-height: 850px;
+
+                background-position:
+                    65% center;
+            }
+
+            .korea-hero h1 {
+                font-size: 3.3rem;
+            }
+
+            .korea-hero p {
+                font-size: 16px;
+            }
+
+            .korea-intro,
+            .opportunities,
+            .support,
+            .korea-process {
+                padding: 80px 0;
+            }
+
+            .support-list {
+                grid-template-columns: 1fr;
+            }
+
+            .journey {
+                grid-template-columns: 1fr;
+            }
+
+        }
+        /* =========================================================
+   KOREA CTA ACTIONS
+   ========================================================= */
+
+.korea-cta-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.korea-btn-eligibility {
+
+    appearance: none;
+
+    border: 1px solid rgba(215,166,71,.65);
+
+    background: rgba(255,255,255,.05);
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+.korea-btn-eligibility:hover {
+
+    background: #d7a647;
+
+    color: #071a3d;
+
+    border-color: #d7a647;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(215,166,71,.22);
+
+}
+
+
+.korea-btn i {
+
+    margin-left: 9px;
+
+}
+
+
+
+/* =========================================================
+   ELIGIBILITY MODAL
+   ========================================================= */
+
+.eligibility-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+
+}
+
+
+.eligibility-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+.eligibility-backdrop {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(2,10,25,.82);
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.eligibility-panel {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 100%);
+
+    max-height: min(88vh, 900px);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #f8f6f1;
+
+    color: #071a3d;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.45);
+
+    transform:
+        translateY(35px)
+        scale(.97);
+
+    transition:
+        transform .4s cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.eligibility-modal.active
+.eligibility-panel {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.eligibility-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 32px 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071a3d,
+            #102d60
+        );
+
+    color: white;
+
+    flex-shrink: 0;
+
+}
+
+
+.eligibility-kicker {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d7a647;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+}
+
+
+.eligibility-header h2 {
+
+    margin: 0 0 7px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 34px;
+
+}
+
+
+.eligibility-header p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size: 13px;
+
+}
+
+
+.eligibility-header p span {
+
+    margin: 0 7px;
+
+    color: #d7a647;
+
+}
+
+
+.eligibility-close {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid
+        rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.06);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+
+}
+
+
+.eligibility-close:hover {
+
+    background: #d7a647;
+
+    color: #071a3d;
+
+    transform: rotate(90deg);
+
+}
+
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.eligibility-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-bottom:
+        1px solid #e5e0d7;
+
+    background: white;
+
+}
+
+
+.eligibility-summary-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 20px 25px;
+
+    border-right:
+        1px solid #e5e0d7;
+
+}
+
+
+.eligibility-summary-item:last-child {
+
+    border-right: 0;
+
+}
+
+
+.summary-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(215,166,71,.12);
+
+    color: #b88a32;
+
+}
+
+
+.eligibility-summary-item strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 12px;
+
+}
+
+
+.eligibility-summary-item small {
+
+    display: block;
+
+    color: #778094;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+}
+
+
+
+/* =========================================================
+   SCROLLING CONTENT
+   ========================================================= */
+
+.eligibility-content {
+
+    overflow-y: auto;
+
+    padding: 25px 30px 35px;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        #d7a647
+        #ebe7df;
+
+}
+
+
+.eligibility-content::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+.eligibility-content::-webkit-scrollbar-track {
+
+    background: #ebe7df;
+
+}
+
+
+.eligibility-content::-webkit-scrollbar-thumb {
+
+    background: #d7a647;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* =========================================================
+   ELIGIBILITY CARDS
+   ========================================================= */
+
+.eligibility-card {
+
+    margin-bottom: 10px;
+
+    border:
+        1px solid #e3ded4;
+
+    background: white;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.eligibility-card:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.eligibility-card.active {
+
+    border-color:
+        rgba(215,166,71,.55);
+
+    box-shadow:
+        0 8px 25px rgba(7,26,61,.06);
+
+}
+
+
+.eligibility-card-header {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        48px 1fr 30px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 19px 22px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #071a3d;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.eligibility-number {
+
+    color: #b88a32;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+}
+
+
+.eligibility-card-title {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.eligibility-card-header > i {
+
+    color: #9aa1af;
+
+    font-size: 11px;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+
+}
+
+
+.eligibility-card.active
+.eligibility-card-header > i {
+
+    transform: rotate(180deg);
+
+    color: #b88a32;
+
+}
+
+
+.eligibility-card-body {
+
+    display: none;
+
+    padding:
+        0 25px 25px 85px;
+
+}
+
+
+.eligibility-card.active
+.eligibility-card-body {
+
+    display: block;
+
+    animation:
+        eligibilityReveal .35s ease;
+
+}
+
+
+@keyframes eligibilityReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   BODY CONTENT
+   ========================================================= */
+
+.eligibility-card-body ul {
+
+    margin: 0;
+
+    padding-left: 19px;
+
+}
+
+
+.eligibility-card-body li {
+
+    margin-bottom: 10px;
+
+    color: #59657a;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+}
+
+
+.eligibility-card-body li:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.eligibility-card-body li::marker {
+
+    color: #d7a647;
+
+}
+
+
+.eligibility-intro,
+.eligibility-text {
+
+    margin: 0 0 18px;
+
+    color: #657086;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+}
+
+
+
+/* =========================================================
+   OPTIONS
+   ========================================================= */
+
+.eligibility-option {
+
+    display: grid;
+
+    grid-template-columns:
+        190px 1fr;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    border-bottom:
+        1px solid #eeeae2;
+
+}
+
+
+.eligibility-option:last-of-type {
+
+    border-bottom: 0;
+
+}
+
+
+.eligibility-option strong {
+
+    color: #071a3d;
+
+    font-size: 12px;
+
+}
+
+
+.eligibility-option span {
+
+    color: #687286;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =========================================================
+   LANGUAGE GRID
+   ========================================================= */
+
+.language-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.language-grid > div {
+
+    padding: 18px;
+
+    border: 1px solid #e8e3da;
+
+    background: #faf9f6;
+
+}
+
+
+.language-grid strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #657086;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+}
+
+
+.language-grid span {
+
+    color: #071a3d;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+}
+
+
+
+/* =========================================================
+   DOCUMENT GRID
+   ========================================================= */
+
+.document-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.document-grid > div {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: #faf9f6;
+
+    border: 1px solid #e9e4db;
+
+}
+
+
+.document-grid i {
+
+    color: #b88a32;
+
+    width: 17px;
+
+    padding-top: 2px;
+
+}
+
+
+.document-grid span {
+
+    color: #59657a;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =========================================================
+   NOTES
+   ========================================================= */
+
+.eligibility-note {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: flex-start;
+
+    margin-top: 18px;
+
+    padding: 15px 17px;
+
+    background:
+        rgba(215,166,71,.08);
+
+    border-left:
+        3px solid #d7a647;
+
+}
+
+
+.eligibility-note i {
+
+    flex: 0 0 auto;
+
+    padding-top: 3px;
+
+    color: #b88a32;
+
+}
+
+
+.eligibility-note span {
+
+    color: #687286;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =========================================================
+   FINANCIAL
+   ========================================================= */
+
+.financial-highlight {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071a3d,
+            #102d60
+        );
+
+    color: white;
+
+}
+
+
+.financial-highlight span {
+
+    font-size: 12px;
+
+    color: rgba(255,255,255,.65);
+
+}
+
+
+.financial-highlight strong {
+
+    color: #d7a647;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+
+/* =========================================================
+   FEES
+   ========================================================= */
+
+.fee-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.fee-card {
+
+    padding: 20px;
+
+    background: #faf9f6;
+
+    border:
+        1px solid #e5e0d7;
+
+}
+
+
+.fee-card span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #737d8f;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+}
+
+
+.fee-card strong {
+
+    color: #071a3d;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 23px;
+
+}
+
+
+.tuition-list {
+
+    border-top:
+        1px solid #e5e0d7;
+
+}
+
+
+.tuition-list > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 13px 0;
+
+    border-bottom:
+        1px solid #eeeae2;
+
+}
+
+
+.tuition-list span {
+
+    color: #657086;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.tuition-list strong {
+
+    flex: 0 0 auto;
+
+    color: #071a3d;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+   WARNING
+   ========================================================= */
+
+.eligibility-warning {
+
+    display: flex;
+
+    gap: 13px;
+
+    margin-top: 20px;
+
+    padding: 16px;
+
+    background:
+        rgba(7,26,61,.05);
+
+    border:
+        1px solid #ddd8ce;
+
+}
+
+
+.eligibility-warning > i {
+
+    color: #b88a32;
+
+    padding-top: 3px;
+
+}
+
+
+.eligibility-warning strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 11px;
+
+}
+
+
+.eligibility-warning span {
+
+    display: block;
+
+    color: #687286;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+
+}
+
+
+
+/* =========================================================
+   MODAL FOOTER
+   ========================================================= */
+
+.eligibility-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 20px 30px;
+
+    background: white;
+
+    border-top:
+        1px solid #e5e0d7;
+
+    flex-shrink: 0;
+
+}
+
+
+.eligibility-footer strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 13px;
+
+}
+
+
+.eligibility-footer span {
+
+    color: #778094;
+
+    font-size: 11px;
+
+}
+
+
+.eligibility-apply-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 48px;
+
+    padding: 0 23px;
+
+    background: #d7a647;
+
+    color: #071a3d;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.eligibility-apply-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(215,166,71,.25);
+
+}
+
+
+body.eligibility-open {
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .eligibility-modal {
+
+        padding: 0;
+
+        align-items: stretch;
+
+    }
+
+
+    .eligibility-panel {
+
+        width: 100%;
+
+        max-height: 100vh;
+
+        height: 100vh;
+
+        border-radius: 0;
+
+    }
+
+
+    .eligibility-header {
+
+        padding: 24px 20px;
+
+    }
+
+
+    .eligibility-header h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .eligibility-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .eligibility-summary-item {
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid #e5e0d7;
+
+        padding: 14px 20px;
+
+    }
+
+
+    .eligibility-summary-item:last-child {
+
+        border-bottom: 0;
+
+    }
+
+
+    .eligibility-content {
+
+        padding: 15px;
+
+    }
+
+
+    .eligibility-card-header {
+
+        grid-template-columns:
+            35px 1fr 25px;
+
+        padding: 17px;
+
+        gap: 10px;
+
+    }
+
+
+    .eligibility-card-body {
+
+        padding:
+            0 17px 20px 17px;
+
+    }
+
+
+    .eligibility-option {
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+    }
+
+
+    .language-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .document-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .financial-highlight {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .tuition-list > div {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .eligibility-footer {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+        padding: 17px 20px;
+
+        gap: 14px;
+
+    }
+
+
+    .eligibility-apply-btn {
+
+        width: 100%;
+
+    }
+
+
+    .korea-cta-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .korea-cta-actions .korea-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body class="korea-page">
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<header class="destination-header">
+
+    <nav class="destination-nav">
+
+        <a
+            href="../index.html"
+            class="destination-logo"
+        >
+            LION<span>.</span>
+        </a>
+
+        <div class="destination-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="#opportunities">
+                Opportunities
+            </a>
+
+            <a href="#support">
+                Student Support
+            </a>
+
+            <a href="#process">
+                Process
+            </a>
+
+            <a href="#contact">
+                Start Your Journey
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="korea-hero">
+
+    <div class="korea-hero-content">
+
+        <div class="eyebrow">
+            South Korea
+        </div>
+
+        <h1>
+            Study in Korea.
+            <span>Build for the World.</span>
+        </h1>
+
+        <p>
+            Discover a university experience that brings
+            together quality education, Korean language and
+            culture, practical learning, student support and
+            international career development.
+        </p>
+
+        <div class="korea-hero-actions">
+
+            <a
+                href="#contact"
+                class="korea-btn korea-btn-primary"
+            >
+                Explore Your Options
+            </a>
+
+            <a
+                href="#process"
+                class="korea-btn korea-btn-outline"
+            >
+                Understand the Process
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-facts">
+
+        <div class="hero-fact">
+            <strong>01</strong>
+            <span>Education</span>
+        </div>
+
+        <div class="hero-fact">
+            <strong>02</strong>
+            <span>Language</span>
+        </div>
+
+        <div class="hero-fact">
+            <strong>03</strong>
+            <span>Experience</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<section class="korea-intro">
+
+    <div class="korea-container">
+
+        <div class="two-column">
+
+            <div>
+
+                <div class="section-label">
+                    The Opportunity
+                </div>
+
+                <h2 class="korea-heading">
+                    More than a degree.
+                    A global academic journey.
+                </h2>
+
+                <p class="korea-text">
+                    Studying in South Korea can offer
+                    qualified international students an
+                    opportunity to experience a modern
+                    university environment while developing
+                    academic, language and professional
+                    skills.
+                </p>
+
+                <p class="korea-text">
+                    Through the appropriate university
+                    pathway, students may explore Korean
+                    language education, cultural experiences,
+                    career-development activities and
+                    eligible practical-learning opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="korea-image">
+
+                <img
+                    src="../images/korea-student.jpg"
+                    alt="International student experience in Korea"
+                    loading="lazy"
+                >
+
+                <div class="image-caption">
+
+                    <strong>
+                        FROM ETHIOPIA
+                    </strong>
+
+                    TO A NEW ACADEMIC HORIZON
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OPPORTUNITIES
+     ===================================================== -->
+
+<section
+    class="opportunities"
+    id="opportunities"
+>
+
+    <div class="korea-container">
+
+        <div class="opportunities-heading">
+
+            <div class="section-label">
+                Explore Korea
+            </div>
+
+            <h2>
+                Build skills beyond
+                the classroom.
+            </h2>
+
+        </div>
+
+
+        <div class="opportunity-grid">
+
+
+            <article class="opportunity-card">
+
+                <div class="opportunity-number">
+                    01
+                </div>
+
+                <h3>
+                    University Education
+                </h3>
+
+                <p>
+                    Explore higher-education opportunities
+                    at Korean universities according to
+                    academic qualifications and university
+                    admission requirements.
+                </p>
+
+            </article>
+
+
+            <article class="opportunity-card">
+
+                <div class="opportunity-number">
+                    02
+                </div>
+
+                <h3>
+                    Korean Language
+                </h3>
+
+                <p>
+                    Develop Korean-language skills while
+                    experiencing the culture and environment
+                    surrounding your university journey.
+                </p>
+
+            </article>
+
+
+            <article class="opportunity-card">
+
+                <div class="opportunity-number">
+                    03
+                </div>
+
+                <h3>
+                    Practical Learning
+                </h3>
+
+                <p>
+                    Eligible students may explore
+                    university-approved practical,
+                    industry or community experiences,
+                    subject to applicable requirements.
+                </p>
+
+            </article>
+
+
+            <article class="opportunity-card">
+
+                <div class="opportunity-number">
+                    04
+                </div>
+
+                <h3>
+                    Career Development
+                </h3>
+
+                <p>
+                    Access career guidance and activities
+                    designed to help students develop skills
+                    relevant to their future professional
+                    direction.
+                </p>
+
+            </article>
+
+
+            <article class="opportunity-card">
+
+                <div class="opportunity-number">
+                    05
+                </div>
+
+                <h3>
+                    Student Support
+                </h3>
+
+                <p>
+                    Depending on the university and
+                    eligibility, students may have access to
+                    academic, language and student-life
+                    support.
+                </p>
+
+            </article>
+
+
+            <article class="opportunity-card">
+
+                <div class="opportunity-number">
+                    06
+                </div>
+
+                <h3>
+                    Scholarship Opportunities
+                </h3>
+
+                <p>
+                    Scholarships and other university-approved
+                    support opportunities may be available
+                    to eligible students.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STUDENT SUPPORT
+     ===================================================== -->
+
+<section
+    class="support"
+    id="support"
+>
+
+    <div class="korea-container">
+
+        <div class="two-column">
+
+            <div>
+
+                <div class="section-label">
+                    Student Support
+                </div>
+
+                <h2 class="korea-heading">
+                    A pathway designed
+                    around the student.
+                </h2>
+
+                <p class="korea-text">
+                    Moving to another country for university
+                    is more than an admission decision.
+                    Students need preparation, information
+                    and guidance throughout the journey.
+                </p>
+
+            </div>
+
+
+            <div class="support-list">
+
+
+                <div class="support-item">
+
+                    <div class="support-icon">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Academic Guidance
+                        </h4>
+
+                        <p>
+                            Support understanding programs,
+                            requirements and application
+                            procedures.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    <div class="support-icon">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Language Preparation
+                        </h4>
+
+                        <p>
+                            Explore Korean-language learning
+                            opportunities where applicable.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    <div class="support-icon">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Student-Life Guidance
+                        </h4>
+
+                        <p>
+                            Information designed to help
+                            students understand their new
+                            university environment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    <div class="support-icon">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Career Preparation
+                        </h4>
+
+                        <p>
+                            Guidance around skills,
+                            career-development activities and
+                            future pathways.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPLICATION PROCESS
+     ===================================================== -->
+
+<section
+    class="korea-process"
+    id="process"
+>
+
+    <div class="korea-container">
+
+        <div class="process-intro">
+
+            <div class="section-label">
+                Your Journey
+            </div>
+
+            <h2>
+                From Ethiopia
+                to your university destination.
+            </h2>
+
+        </div>
+
+
+        <div class="journey">
+
+
+            <div class="journey-step">
+
+                <div class="journey-step-number">
+                    01
+                </div>
+
+                <h3>
+                    Consultation
+                </h3>
+
+                <p>
+                    Understand your academic goals,
+                    destination preferences and available
+                    pathways.
+                </p>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-step-number">
+                    02
+                </div>
+
+                <h3>
+                    Document Review
+                </h3>
+
+                <p>
+                    Review the academic and supporting
+                    documents required for the selected
+                    pathway.
+                </p>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-step-number">
+                    03
+                </div>
+
+                <h3>
+                    University Application
+                </h3>
+
+                <p>
+                    Prepare and submit the application
+                    according to the relevant university
+                    requirements.
+                </p>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-step-number">
+                    04
+                </div>
+
+                <h3>
+                    Admission & Visa Guidance
+                </h3>
+
+                <p>
+                    Receive guidance through the official
+                    admission and visa procedures.
+                </p>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <div class="journey-step-number">
+                    05
+                </div>
+
+                <h3>
+                    Prepare for Korea
+                </h3>
+
+                <p>
+                    Prepare for your academic and student
+                    experience before departure.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+<!-- =====================================================
+     CTA / ELIGIBILITY
+     ===================================================== -->
+
+<section
+    class="korea-cta"
+    id="contact"
+>
+
+    <div class="cta-content">
+
+        <div class="section-label">
+            Start Your Journey
+        </div>
+
+        <h2>
+            Your Korean university
+            journey starts here.
+        </h2>
+
+        <p>
+            Explore your options, understand the requirements
+            and take the next step toward an international
+            education experience.
+        </p>
+
+
+        <div class="korea-cta-actions">
+
+            <a
+                href="../index.html#contact"
+                class="korea-btn korea-btn-primary"
+            >
+                Request a Consultation
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+            <button
+                type="button"
+                class="korea-btn korea-btn-eligibility"
+                id="openEligibility"
+            >
+                <i class="fa-solid fa-circle-check"></i>
+                Eligibility Criteria
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         ELIGIBILITY MODAL
+         ================================================= -->
+
+    <div
+        class="eligibility-modal"
+        id="eligibilityModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="eligibility-backdrop"
+            id="eligibilityBackdrop"
+        ></div>
+
+
+        <div
+            class="eligibility-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="eligibilityTitle"
+        >
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="eligibility-header">
+
+                <div>
+
+                    <span class="eligibility-kicker">
+                        INTERNATIONAL ADMISSIONS
+                    </span>
+
+                    <h2 id="eligibilityTitle">
+                        Daejin University
+                    </h2>
+
+                    <p>
+                        Admission Eligibility
+                        <span>•</span>
+                        Spring 2027
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="eligibility-close"
+                    id="closeEligibility"
+                    aria-label="Close eligibility criteria"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+
+            <!-- QUICK SUMMARY -->
+
+            <div class="eligibility-summary">
+
+                <div class="eligibility-summary-item">
+
+                    <span class="summary-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            International Students
+                        </strong>
+
+                        <small>
+                            Freshman & transfer pathways
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="eligibility-summary-item">
+
+                    <span class="summary-icon">
+                        <i class="fa-solid fa-language"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Language Requirements
+                        </strong>
+
+                        <small>
+                            Korean or approved English qualifications
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="eligibility-summary-item">
+
+                    <span class="summary-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Financial Proof
+                        </strong>
+
+                        <small>
+                            KRW 20,000,000 minimum
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ELIGIBILITY CONTENT -->
+
+            <div class="eligibility-content">
+
+
+                <!-- 01 -->
+
+                <article class="eligibility-card active">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            01
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            Applicant Eligibility
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <ul>
+
+                            <li>
+                                Applicant must be a foreign national
+                                whose parents are both foreign nationals.
+                            </li>
+
+                            <li>
+                                Applicant must have completed, or expect
+                                to complete, the required regular
+                                elementary, middle and high-school
+                                curriculum in Korea or abroad.
+                            </li>
+
+                            <li>
+                                Dual or multiple nationalities involving
+                                the applicant or either parent are not
+                                recognized as foreign-national status
+                                for this admission category.
+                            </li>
+
+                            <li>
+                                Applicants who acquired foreign
+                                nationality after birth are not
+                                recognized as foreign nationals for
+                                this category.
+                            </li>
+
+                            <li>
+                                Freshman applicants must meet the
+                                university's academic eligibility
+                                requirements.
+                            </li>
+
+                            <li>
+                                Applicant age must be
+                                <strong>25 or younger.</strong>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 02 -->
+
+                <article class="eligibility-card">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            02
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            Korean Language Requirements
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <p class="eligibility-intro">
+                            Applicants may satisfy Korean-language
+                            eligibility through one of the approved
+                            pathways below.
+                        </p>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                TOPIK
+                            </strong>
+
+                            <span>
+                                TOPIK Level 3 or higher.
+                                Level 2 or higher may apply to
+                                Arts and Physical Education majors.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                King Sejong Institute
+                            </strong>
+
+                            <span>
+                                Intermediate 1 or higher.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                KIIP
+                            </strong>
+
+                            <span>
+                                KIIP Level 4 or higher.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                University Korean Program
+                            </strong>
+
+                            <span>
+                                Completion of an approved Korean-language
+                                program through the university's Korean
+                                Language Education Center, including
+                                applicable 6-month, 2-semester or
+                                400-hour pathways.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                Korean Assessment
+                            </strong>
+
+                            <span>
+                                Passing the Korean-language assessment
+                                administered by the University's
+                                Korean Language Education Center.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-note">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            <span>
+                                Certain qualifying applicants may be
+                                admitted conditionally and required to
+                                complete a special Korean-language or
+                                designated Korean Studies program during
+                                the first year.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 03 -->
+
+                <article class="eligibility-card">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            03
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            English Language Requirements
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <div class="language-grid">
+
+                            <div>
+
+                                <strong>
+                                    IELTS
+                                </strong>
+
+                                <span>
+                                    5.5+
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    CEFR
+                                </strong>
+
+                                <span>
+                                    B2
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    NEW TEPS
+                                </strong>
+
+                                <span>
+                                    202+
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    TOEFL iBT
+                                </strong>
+
+                                <span>
+                                    3.5+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="eligibility-note">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            <span>
+                                TOEFL scoring rules changed in January
+                                2026. Tests taken on or before January
+                                20, 2026 may be recognized under the
+                                former scoring system through January
+                                20, 2028, subject to validity rules.
+                            </span>
+
+                        </div>
+
+
+                        <p class="eligibility-text">
+
+                            Applicants from countries where English is
+                            a native or legally recognized official
+                            language may qualify for an exemption by
+                            providing acceptable proof of completed
+                            secondary or higher education. For countries
+                            where English is an official language,
+                            the curriculum must have been taught in
+                            English.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 04 -->
+
+                <article class="eligibility-card">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            04
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            Graduation Requirements
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <p class="eligibility-intro">
+                            International students must satisfy at
+                            least one approved Korean-language
+                            graduation requirement.
+                        </p>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                TOPIK
+                            </strong>
+
+                            <span>
+                                Level 4 before graduation.
+                                Level 3 may apply to Arts and
+                                Physical Education.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                King Sejong Institute
+                            </strong>
+
+                            <span>
+                                Intermediate 2 or higher.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-option">
+
+                            <strong>
+                                KIIP
+                            </strong>
+
+                            <span>
+                                KIIP pre-assessment 81+ or KIIP
+                                Level 4 or higher.
+                            </span>
+
+                        </div>
+
+
+                        <div class="eligibility-note">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            <span>
+                                Approved bilingual programs, including
+                                English-track and Chinese-track programs,
+                                are exempt from the Korean-language
+                                graduation requirement.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 05 -->
+
+                <article class="eligibility-card">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            05
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            Required Documents
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <div class="document-grid">
+
+                            <div>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>
+                                    Graduation / expected-graduation
+                                    certificate
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>
+                                    Academic transcript
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-passport"></i>
+                                <span>
+                                    Passport and identification
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>
+                                    Family relationship documents
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-language"></i>
+                                <span>
+                                    Korean / English qualification
+                                    evidence where applicable
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-camera"></i>
+                                <span>
+                                    Passport-style photograph
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-file-signature"></i>
+                                <span>
+                                    Personal-information consent form
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-stamp"></i>
+                                <span>
+                                    Apostille or required consular
+                                    authentication
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="eligibility-note">
+
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+                            <span>
+                                Documents not issued in Korean or English
+                                generally require an appropriately
+                                notarized Korean or English translation.
+                                Original-document requirements apply.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 06 -->
+
+                <article class="eligibility-card">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            06
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            Financial Requirements
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <div class="financial-highlight">
+
+                            <span>
+                                Required Bank Balance
+                            </span>
+
+                            <strong>
+                                KRW 20,000,000+
+                            </strong>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                Submit one original bank-balance
+                                certificate for the financial sponsor.
+                            </li>
+
+                            <li>
+                                Accepted sponsor may be the applicant
+                                or a parent.
+                            </li>
+
+                            <li>
+                                If both parents are deceased, a sibling
+                                may act as sponsor according to the
+                                applicable requirements.
+                            </li>
+
+                            <li>
+                                Required funds must remain deposited
+                                until the first day of the Fall 2026
+                                semester under the supplied admissions
+                                guidance.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 07 -->
+
+                <article class="eligibility-card">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            07
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            Application Fee & Tuition
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <div class="fee-grid">
+
+                            <div class="fee-card">
+
+                                <span>
+                                    Application Fee
+                                </span>
+
+                                <strong>
+                                    KRW 100,000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="fee-card">
+
+                                <span>
+                                    Scholarship Range
+                                </span>
+
+                                <strong>
+                                    20% – 100%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="eligibility-text">
+
+                            The application fee must be deposited into
+                            the university-designated account by the
+                            deadline. Late or insufficient payment may
+                            result in disqualification. The application
+                            fee is non-refundable.
+
+                        </p>
+
+
+                        <div class="tuition-list">
+
+                            <div>
+
+                                <span>
+                                    Global Industry & Trade /
+                                    Public Talent /
+                                    International Cooperation
+                                </span>
+
+                                <strong>
+                                    KRW 3,613,000
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Humanities
+                                </span>
+
+                                <strong>
+                                    KRW 3,613,000
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Arts
+                                </span>
+
+                                <strong>
+                                    KRW 4,717,000
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    BioHealthcare &
+                                    Food & Nutrition
+                                </span>
+
+                                <strong>
+                                    KRW 4,305,000
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Sports / IT Convergence /
+                                    Engineering
+                                </span>
+
+                                <strong>
+                                    KRW 4,717,000
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="eligibility-note">
+
+                            <i class="fa-solid fa-award"></i>
+
+                            <span>
+                                New-student scholarships may range from
+                                20% to 100% of tuition depending on the
+                                applicable criteria. Continuing-student
+                                scholarships depend on previous-semester
+                                performance and university regulations.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 08 -->
+
+                <article class="eligibility-card">
+
+                    <button
+                        type="button"
+                        class="eligibility-card-header"
+                    >
+
+                        <span class="eligibility-number">
+                            08
+                        </span>
+
+                        <span class="eligibility-card-title">
+                            Important Admission Conditions
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="eligibility-card-body">
+
+                        <ul>
+
+                            <li>
+                                Applications are submitted through the
+                                official Study in Korea online system.
+                            </li>
+
+                            <li>
+                                Applicants must submit required
+                                admission documents and pay the
+                                application fee by the applicable
+                                deadline.
+                            </li>
+
+                            <li>
+                                Original documents are required where
+                                the admissions guidance specifies
+                                originals.
+                            </li>
+
+                            <li>
+                                False information, forged documents or
+                                fraudulent applications may result in
+                                cancellation of admission or enrollment.
+                            </li>
+
+                            <li>
+                                Applicants admitted to multiple
+                                universities may register at only one
+                                university.
+                            </li>
+
+                            <li>
+                                Visa issuance is determined by the
+                                relevant authorities. Admission does
+                                not guarantee visa issuance.
+                            </li>
+
+                            <li>
+                                Additional supporting documents may be
+                                requested during document review.
+                            </li>
+
+                            <li>
+                                Transfer students must satisfy the
+                                university's required remaining semesters
+                                according to their admission year.
+                            </li>
+
+                        </ul>
+
+
+                        <div class="eligibility-warning">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <div>
+
+                                <strong>
+                                    Important
+                                </strong>
+
+                                <span>
+                                    The official Korean admissions
+                                    guidelines prevail if there is any
+                                    discrepancy between an English
+                                    translation and the official Korean
+                                    version.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+            </div>
+
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="eligibility-footer">
+
+                <div>
+
+                    <strong>
+                        Ready to move forward?
+                    </strong>
+
+                    <span>
+                        Start your Lion Consultancy application.
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="apply.html"
+                    class="eligibility-apply-btn"
+                >
+
+                    START APPLICATION
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DISCLAIMER
+     ===================================================== -->
+
+<footer class="disclaimer">
+
+    <div class="korea-container">
+
+        Information presented on this page is for
+        educational and guidance purposes. University
+        admission, scholarships, student-support programs,
+        practical-experience opportunities and visa issuance
+        are subject to individual eligibility, university
+        policies, applicable requirements and decisions by
+        the relevant authorities. No admission, scholarship,
+        employment or visa outcome is guaranteed.
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+/* =========================================================
+   KOREA PAGE
+   NAVIGATION + ELIGIBILITY SYSTEM
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    const header =
+        document.querySelector(".destination-header");
+
+
+    if (header) {
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 50) {
+
+                header.classList.add("scrolled");
+
+            } else {
+
+                header.classList.remove("scrolled");
+
+            }
+
+        });
+
+    }
+
+
+
+    /* =====================================================
+       ELIGIBILITY MODAL
+       ===================================================== */
+
+    const modal =
+        document.getElementById("eligibilityModal");
+
+    const openButton =
+        document.getElementById("openEligibility");
+
+    const closeButton =
+        document.getElementById("closeEligibility");
+
+    const backdrop =
+        document.getElementById("eligibilityBackdrop");
+
+
+    if (
+        !modal ||
+        !openButton ||
+        !closeButton ||
+        !backdrop
+    ) {
+
+        return;
+
+    }
+
+
+    function openEligibility() {
+
+        modal.classList.add("active");
+
+        modal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.classList.add(
+            "eligibility-open"
+        );
+
+    }
+
+
+    function closeEligibility() {
+
+        modal.classList.remove("active");
+
+        modal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "eligibility-open"
+        );
+
+    }
+
+
+    openButton.addEventListener(
+        "click",
+        openEligibility
+    );
+
+
+    closeButton.addEventListener(
+        "click",
+        closeEligibility
+    );
+
+
+    backdrop.addEventListener(
+        "click",
+        closeEligibility
+    );
+
+
+    /* =====================================================
+       ESCAPE KEY
+       ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (
+                event.key === "Escape" &&
+                modal.classList.contains("active")
+            ) {
+
+                closeEligibility();
+
+            }
+
+        }
+    );
+
+
+
+    /* =====================================================
+       ELIGIBILITY ACCORDION
+       ===================================================== */
+
+    const cards =
+        document.querySelectorAll(
+            ".eligibility-card"
+        );
+
+
+    cards.forEach((card) => {
+
+        const button =
+            card.querySelector(
+                ".eligibility-card-header"
+            );
+
+
+        if (!button) {
+
+            return;
+
+        }
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const isActive =
+                    card.classList.contains("active");
+
+
+                /*
+                 * Close every other section.
+                 */
+
+                cards.forEach((otherCard) => {
+
+                    otherCard.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                /*
+                 * Re-open the clicked section
+                 * if it wasn't already open.
+                 */
+
+                if (!isActive) {
+
+                    card.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

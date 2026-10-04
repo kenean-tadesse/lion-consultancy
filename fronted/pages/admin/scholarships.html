@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Scholarships | Lion Consultancy</title>
+
+    <meta
+        name="description"
+        content="Manage scholarships and funding opportunities for Lion Consultancy students."
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../css/admin.css"
+    >
+
+</head>
+
+
+<body class="admin-scholarships-page">
+
+
+    <!-- =========================================
+         ADMIN APP
+    ========================================== -->
+
+    <div class="admin-app">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+            <!-- BRAND -->
+
+            <div class="admin-sidebar-brand">
+
+                <div class="admin-brand-mark">
+                    L
+                </div>
+
+                <div>
+                    <strong>LION</strong>
+                    <span>CONSULTANCY</span>
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 NAVIGATION
+            ================================== -->
+
+            <nav
+                class="admin-navigation"
+                aria-label="Administration navigation"
+            >
+
+                <a
+                    href="./dashboard.html"
+                    class="admin-nav-item"
+                    data-section="dashboard"
+                >
+                    <span class="admin-nav-icon">⌂</span>
+
+                    <span class="admin-nav-content">
+                        <strong>Dashboard</strong>
+                        <small>Overview & activity</small>
+                    </span>
+                </a>
+
+
+                <a
+                    href="./applications.html"
+                    class="admin-nav-item"
+                    data-section="applications"
+                >
+                    <span class="admin-nav-icon">▣</span>
+
+                    <span class="admin-nav-content">
+                        <strong>Applications</strong>
+                        <small>Review student applications</small>
+                    </span>
+
+                    <span
+                        class="admin-nav-badge"
+                        id="applicationsBadge"
+                    >
+                        0
+                    </span>
+                </a>
+
+
+                <a
+                    href="./students.html"
+                    class="admin-nav-item"
+                    data-section="students"
+                >
+                    <span class="admin-nav-icon">◉</span>
+
+                    <span class="admin-nav-content">
+                        <strong>Students</strong>
+                        <small>Student profiles & records</small>
+                    </span>
+                </a>
+
+
+                <a
+                    href="./universities.html"
+                    class="admin-nav-item"
+                    data-section="universities"
+                >
+                    <span class="admin-nav-icon">⌂</span>
+
+                    <span class="admin-nav-content">
+                        <strong>Universities</strong>
+                        <small>Partners & programs</small>
+                    </span>
+                </a>
+
+
+                <a
+                    href="./scholarships.html"
+                    class="admin-nav-item active"
+                    data-section="scholarships"
+                    aria-current="page"
+                >
+                    <span class="admin-nav-icon">◇</span>
+
+                    <span class="admin-nav-content">
+                        <strong>Scholarships</strong>
+                        <small>Funding & opportunities</small>
+                    </span>
+                </a>
+
+
+                <div
+                    class="admin-nav-divider"
+                    aria-hidden="true"
+                ></div>
+
+
+                <a
+                    href="./settings.html"
+                    class="admin-nav-item"
+                    data-section="settings"
+                >
+                    <span class="admin-nav-icon">⚙</span>
+
+                    <span class="admin-nav-content">
+                        <strong>Settings</strong>
+                        <small>System preferences</small>
+                    </span>
+                </a>
+
+            </nav>
+
+
+            <!-- =================================
+                 SIDEBAR BOTTOM
+            ================================== -->
+
+            <div class="admin-sidebar-bottom">
+
+                <div class="admin-sidebar-status">
+
+                    <span class="admin-status-dot"></span>
+
+                    <span>
+                        System operational
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="adminLogoutButton"
+                    class="admin-logout-button"
+                >
+                    Sign out
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================
+             MAIN
+        ====================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================
+                 TOPBAR
+            ================================== -->
+
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        id="adminMenuToggle"
+                        class="admin-menu-toggle"
+                        aria-label="Toggle navigation"
+                        aria-controls="adminSidebar"
+                        aria-expanded="false"
+                    >
+                        ☰
+                    </button>
+
+
+                    <div>
+
+                        <span class="admin-topbar-label">
+                            ADMINISTRATION
+                        </span>
+
+                        <h1 id="adminPageTitle">
+                            Scholarships
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-topbar-right">
+
+                    <div class="admin-user">
+
+                        <div class="admin-user-avatar">
+                            A
+                        </div>
+
+                        <div class="admin-user-info">
+
+                            <strong id="adminUserName">
+                                Administrator
+                            </strong>
+
+                            <span id="adminUserRole">
+                                Super Administrator
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================
+                 CONTENT
+            ================================== -->
+
+            <div class="admin-content">
+
+
+                <!-- =================================
+                     PAGE INTRO
+                ================================== -->
+
+                <section class="admin-welcome">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            FUNDING & OPPORTUNITIES
+                        </span>
+
+                        <h2>
+                            Scholarship management
+                        </h2>
+
+                        <p>
+                            Manage scholarship opportunities,
+                            eligibility requirements, deadlines,
+                            funding information and student
+                            opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="addScholarshipButton"
+                        class="admin-primary-button"
+                    >
+                        + Add scholarship
+                    </button>
+
+                </section>
+
+
+                <!-- =================================
+                     STATISTICS
+                ================================== -->
+
+                <section class="admin-stat-grid">
+
+
+                    <article class="admin-stat-card">
+
+                        <span class="admin-stat-label">
+                            Total Scholarships
+                        </span>
+
+                        <strong
+                            id="totalScholarships"
+                            class="admin-stat-number"
+                        >
+                            0
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            All scholarship opportunities
+                        </span>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <span class="admin-stat-label">
+                            Active
+                        </span>
+
+                        <strong
+                            id="activeScholarships"
+                            class="admin-stat-number"
+                        >
+                            0
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            Currently available
+                        </span>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <span class="admin-stat-label">
+                            Featured
+                        </span>
+
+                        <strong
+                            id="featuredScholarships"
+                            class="admin-stat-number"
+                        >
+                            0
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            Featured opportunities
+                        </span>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <span class="admin-stat-label">
+                            Closing Soon
+                        </span>
+
+                        <strong
+                            id="closingScholarships"
+                            class="admin-stat-number"
+                        >
+                            0
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            Deadline within 30 days
+                        </span>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- =================================
+                     SCHOLARSHIP MANAGEMENT PANEL
+                ================================== -->
+
+                <section class="admin-panel">
+
+
+                    <!-- HEADER -->
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span class="admin-panel-eyebrow">
+                                SCHOLARSHIP DATABASE
+                            </span>
+
+                            <h3>
+                                Available scholarships
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         FILTERS
+                    ================================== -->
+
+                    <div class="admin-scholarship-toolbar">
+
+
+                        <!-- SEARCH -->
+
+                        <div class="admin-search-box">
+
+                            <span
+                                aria-hidden="true"
+                            >
+                                🔎
+                            </span>
+
+                            <input
+                                type="search"
+                                id="scholarshipSearch"
+                                placeholder="Search scholarships..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <!-- COUNTRY -->
+
+                        <select
+                            id="countryFilter"
+                            class="admin-filter-select"
+                        >
+
+                            <option value="all">
+                                All countries
+                            </option>
+
+                            <option value="South Korea">
+                                South Korea
+                            </option>
+
+                            <option value="China">
+                                China
+                            </option>
+
+                            <option value="Germany">
+                                Germany
+                            </option>
+
+                            <option value="United States">
+                                United States
+                            </option>
+
+                            <option value="Italy">
+                                Italy
+                            </option>
+
+                            <option value="United Kingdom">
+                                United Kingdom
+                            </option>
+
+                            <option value="Japan">
+                                Japan
+                            </option>
+
+                            <option value="Canada">
+                                Canada
+                            </option>
+
+                            <option value="Australia">
+                                Australia
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+
+                        <!-- STATUS -->
+
+                        <select
+                            id="statusFilter"
+                            class="admin-filter-select"
+                        >
+
+                            <option value="all">
+                                All statuses
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="upcoming">
+                                Upcoming
+                            </option>
+
+                            <option value="closed">
+                                Closed
+                            </option>
+
+                        </select>
+
+
+                        <!-- CATEGORY -->
+
+                        <select
+                            id="categoryFilter"
+                            class="admin-filter-select"
+                        >
+
+                            <option value="all">
+                                All categories
+                            </option>
+
+                            <option value="Undergraduate">
+                                Undergraduate
+                            </option>
+
+                            <option value="Masters">
+                                Masters
+                            </option>
+
+                            <option value="PhD">
+                                PhD
+                            </option>
+
+                            <option value="Research">
+                                Research
+                            </option>
+
+                            <option value="Exchange">
+                                Exchange
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                    <!-- =================================
+                         TABLE
+                    ================================== -->
+
+                    <div class="admin-table-wrapper">
+
+                        <table
+                            class="admin-data-table"
+                            id="scholarshipTable"
+                        >
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Scholarship
+                                    </th>
+
+                                    <th>
+                                        Country
+                                    </th>
+
+                                    <th>
+                                        Study level
+                                    </th>
+
+                                    <th>
+                                        Funding
+                                    </th>
+
+                                    <th>
+                                        Deadline
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Actions
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody
+                                id="scholarshipTableBody"
+                            >
+
+                            </tbody>
+
+                        </table>
+
+
+                        <!-- EMPTY -->
+
+                        <div
+                            id="scholarshipEmptyState"
+                            class="admin-empty-state"
+                            hidden
+                        >
+
+                            <div>
+                                ◇
+                            </div>
+
+                            <h3>
+                                No scholarships found
+                            </h3>
+
+                            <p>
+                                Try changing your search or
+                                filter criteria.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =================================
+                         PAGINATION
+                    ================================== -->
+
+                    <div class="admin-pagination">
+
+                        <span id="scholarshipResultCount">
+                            0 scholarships
+                        </span>
+
+                        <div>
+
+                            <button
+                                type="button"
+                                id="previousPage"
+                                class="admin-pagination-button"
+                            >
+                                Previous
+                            </button>
+
+                            <button
+                                type="button"
+                                id="nextPage"
+                                class="admin-pagination-button"
+                            >
+                                Next
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =========================================
+         MOBILE OVERLAY
+    ========================================== -->
+
+    <div
+        id="adminSidebarOverlay"
+        class="admin-sidebar-overlay"
+    ></div>
+
+
+
+    <!-- =========================================
+         SCHOLARSHIP MODAL
+    ========================================== -->
+
+    <div
+        class="admin-modal"
+        id="scholarshipModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="admin-modal-overlay"
+            id="scholarshipModalOverlay"
+        ></div>
+
+
+        <div
+            class="admin-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="scholarshipModalTitle"
+        >
+
+
+            <!-- HEADER -->
+
+            <div class="admin-modal-header">
+
+                <div>
+
+                    <span class="admin-panel-eyebrow">
+                        SCHOLARSHIP
+                    </span>
+
+                    <h2 id="scholarshipModalTitle">
+                        Add scholarship
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="closeScholarshipModal"
+                    class="admin-modal-close"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                id="scholarshipForm"
+                class="admin-modal-form"
+            >
+
+                <input
+                    type="hidden"
+                    id="scholarshipId"
+                >
+
+
+                <!-- NAME -->
+
+                <div class="admin-form-group">
+
+                    <label for="scholarshipName">
+                        Scholarship name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="scholarshipName"
+                        required
+                        placeholder="e.g. Global Korea Scholarship"
+                    >
+
+                </div>
+
+
+                <!-- PROVIDER -->
+
+                <div class="admin-form-group">
+
+                    <label for="scholarshipProvider">
+                        Provider / university
+                    </label>
+
+                    <input
+                        type="text"
+                        id="scholarshipProvider"
+                        required
+                        placeholder="Scholarship provider"
+                    >
+
+                </div>
+
+
+                <!-- COUNTRY + LEVEL -->
+
+                <div class="admin-form-row">
+
+
+                    <div class="admin-form-group">
+
+                        <label for="scholarshipCountry">
+                            Country
+                        </label>
+
+                        <select
+                            id="scholarshipCountry"
+                            required
+                        >
+
+                            <option value="">
+                                Select country
+                            </option>
+
+                            <option>
+                                South Korea
+                            </option>
+
+                            <option>
+                                China
+                            </option>
+
+                            <option>
+                                Germany
+                            </option>
+
+                            <option>
+                                United States
+                            </option>
+
+                            <option>
+                                Italy
+                            </option>
+
+                            <option>
+                                United Kingdom
+                            </option>
+
+                            <option>
+                                Japan
+                            </option>
+
+                            <option>
+                                Canada
+                            </option>
+
+                            <option>
+                                Australia
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="scholarshipLevel">
+                            Study level
+                        </label>
+
+                        <select
+                            id="scholarshipLevel"
+                            required
+                        >
+
+                            <option value="">
+                                Select level
+                            </option>
+
+                            <option>
+                                Undergraduate
+                            </option>
+
+                            <option>
+                                Masters
+                            </option>
+
+                            <option>
+                                PhD
+                            </option>
+
+                            <option>
+                                Research
+                            </option>
+
+                            <option>
+                                Exchange
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- FUNDING -->
+
+                <div class="admin-form-group">
+
+                    <label for="scholarshipFunding">
+                        Funding
+                    </label>
+
+                    <input
+                        type="text"
+                        id="scholarshipFunding"
+                        required
+                        placeholder="e.g. Full tuition + monthly stipend"
+                    >
+
+                </div>
+
+
+                <!-- DEADLINE -->
+
+                <div class="admin-form-row">
+
+
+                    <div class="admin-form-group">
+
+                        <label for="scholarshipDeadline">
+                            Application deadline
+                        </label>
+
+                        <input
+                            type="date"
+                            id="scholarshipDeadline"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="scholarshipStatus">
+                            Status
+                        </label>
+
+                        <select
+                            id="scholarshipStatus"
+                            required
+                        >
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="upcoming">
+                                Upcoming
+                            </option>
+
+                            <option value="closed">
+                                Closed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="admin-form-group">
+
+                    <label for="scholarshipCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="scholarshipCategory"
+                        required
+                    >
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option>
+                            Undergraduate
+                        </option>
+
+                        <option>
+                            Masters
+                        </option>
+
+                        <option>
+                            PhD
+                        </option>
+
+                        <option>
+                            Research
+                        </option>
+
+                        <option>
+                            Exchange
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="admin-form-group">
+
+                    <label for="scholarshipDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="scholarshipDescription"
+                        rows="4"
+                        placeholder="Describe the scholarship..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- FEATURED -->
+
+                <label class="admin-setting-toggle">
+
+                    <span>
+
+                        <strong>
+                            Feature this scholarship
+                        </strong>
+
+                        <small>
+                            Display this opportunity prominently
+                            on the public scholarship page.
+                        </small>
+
+                    </span>
+
+                    <input
+                        type="checkbox"
+                        id="scholarshipFeatured"
+                    >
+
+                </label>
+
+
+                <!-- ACTIONS -->
+
+                <div class="admin-modal-actions">
+
+                    <button
+                        type="button"
+                        id="cancelScholarship"
+                        class="admin-secondary-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="admin-primary-button"
+                    >
+                        Save scholarship
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         ADMIN JAVASCRIPT
+    ========================================== -->
+
+    <script src="../../js/admin.js"></script>
+
+
+
+    <!-- =========================================
+         SCHOLARSHIP PAGE JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =================================
+                   ELEMENTS
+                ================================= */
+
+                const tableBody =
+                    document.getElementById(
+                        "scholarshipTableBody"
+                    );
+
+                const searchInput =
+                    document.getElementById(
+                        "scholarshipSearch"
+                    );
+
+                const countryFilter =
+                    document.getElementById(
+                        "countryFilter"
+                    );
+
+                const statusFilter =
+                    document.getElementById(
+                        "statusFilter"
+                    );
+
+                const categoryFilter =
+                    document.getElementById(
+                        "categoryFilter"
+                    );
+
+                const emptyState =
+                    document.getElementById(
+                        "scholarshipEmptyState"
+                    );
+
+                const resultCount =
+                    document.getElementById(
+                        "scholarshipResultCount"
+                    );
+
+                const modal =
+                    document.getElementById(
+                        "scholarshipModal"
+                    );
+
+                const modalOverlay =
+                    document.getElementById(
+                        "scholarshipModalOverlay"
+                    );
+
+                const form =
+                    document.getElementById(
+                        "scholarshipForm"
+                    );
+
+                const modalTitle =
+                    document.getElementById(
+                        "scholarshipModalTitle"
+                    );
+
+                const addButton =
+                    document.getElementById(
+                        "addScholarshipButton"
+                    );
+
+                const closeButton =
+                    document.getElementById(
+                        "closeScholarshipModal"
+                    );
+
+                const cancelButton =
+                    document.getElementById(
+                        "cancelScholarship"
+                    );
+
+
+                /* =================================
+                   STORAGE KEY
+                ================================== */
+
+                const STORAGE_KEY =
+                    "lionScholarships";
+
+
+                /* =================================
+                   DEMO DATA
+                ================================== */
+
+                const defaultScholarships = [
+
+                    {
+                        id: "gks-001",
+                        name: "Global Korea Scholarship",
+                        provider: "Government of South Korea",
+                        country: "South Korea",
+                        level: "Masters",
+                        funding: "Full tuition + monthly stipend",
+                        deadline: "2026-03-31",
+                        status: "active",
+                        category: "Masters",
+                        featured: true,
+                        description:
+                            "International scholarship opportunity for qualified students pursuing graduate study in South Korea."
+                    },
+
+
+                    {
+                        id: "china-001",
+                        name: "Chinese Government Scholarship",
+                        provider: "Chinese Government",
+                        country: "China",
+                        level: "PhD",
+                        funding: "Tuition + accommodation + stipend",
+                        deadline: "2026-04-15",
+                        status: "active",
+                        category: "PhD",
+                        featured: true,
+                        description:
+                            "Scholarship opportunities for international students studying at participating Chinese universities."
+                    },
+
+
+                    {
+                        id: "germany-001",
+                        name: "DAAD Study Scholarship",
+                        provider: "DAAD",
+                        country: "Germany",
+                        level: "Masters",
+                        funding: "Monthly scholarship allowance",
+                        deadline: "2026-05-20",
+                        status: "upcoming",
+                        category: "Masters",
+                        featured: false,
+                        description:
+                            "Funding opportunities for international graduates pursuing postgraduate study in Germany."
+                    },
+
+
+                    {
+                        id: "italy-001",
+                        name: "Italian Regional Scholarship",
+                        provider: "Regional Scholarship Program",
+                        country: "Italy",
+                        level: "Undergraduate",
+                        funding: "Tuition support + living assistance",
+                        deadline: "2026-06-15",
+                        status: "upcoming",
+                        category: "Undergraduate",
+                        featured: false,
+                        description:
+                            "Financial support opportunities for eligible international students in Italy."
+                    }
+
+                ];
+
+
+                /* =================================
+                   LOAD DATA
+                ================================== */
+
+                let scholarships =
+                    loadScholarships();
+
+
+                function loadScholarships() {
+
+                    const saved =
+                        localStorage.getItem(
+                            STORAGE_KEY
+                        );
+
+
+                    if (!saved) {
+
+                        localStorage.setItem(
+                            STORAGE_KEY,
+                            JSON.stringify(
+                                defaultScholarships
+                            )
+                        );
+
+
+                        return [
+                            ...defaultScholarships
+                        ];
+
+                    }
+
+
+                    try {
+
+                        return JSON.parse(saved);
+
+                    } catch (error) {
+
+                        console.error(
+                            "Scholarship data could not be loaded.",
+                            error
+                        );
+
+
+                        return [
+                            ...defaultScholarships
+                        ];
+
+                    }
+
+                }
+
+
+                /* =================================
+                   SAVE DATA
+                ================================== */
+
+                function saveScholarships() {
+
+                    localStorage.setItem(
+                        STORAGE_KEY,
+                        JSON.stringify(
+                            scholarships
+                        )
+                    );
+
+                }
+
+
+                /* =================================
+                   FORMAT DATE
+                ================================== */
+
+                function formatDate(dateString) {
+
+                    if (!dateString) {
+                        return "—";
+                    }
+
+
+                    const date =
+                        new Date(
+                            dateString + "T00:00:00"
+                        );
+
+
+                    return date.toLocaleDateString(
+                        "en-US",
+                        {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric"
+                        }
+                    );
+
+                }
+
+
+                /* =================================
+                   DAYS UNTIL DEADLINE
+                ================================== */
+
+                function daysUntilDeadline(
+                    dateString
+                ) {
+
+                    if (!dateString) {
+                        return null;
+                    }
+
+
+                    const today =
+                        new Date();
+
+
+                    today.setHours(
+                        0,
+                        0,
+                        0,
+                        0
+                    );
+
+
+                    const deadline =
+                        new Date(
+                            dateString + "T00:00:00"
+                        );
+
+
+                    const difference =
+                        deadline.getTime() -
+                        today.getTime();
+
+
+                    return Math.ceil(
+                        difference /
+                        (1000 * 60 * 60 * 24)
+                    );
+
+                }
+
+
+                /* =================================
+                   UPDATE STATISTICS
+                ================================== */
+
+                function updateStatistics() {
+
+                    const total =
+                        scholarships.length;
+
+
+                    const active =
+                        scholarships.filter(
+                            item =>
+                                item.status === "active"
+                        ).length;
+
+
+                    const featured =
+                        scholarships.filter(
+                            item =>
+                                item.featured === true
+                        ).length;
+
+
+                    const closing =
+                        scholarships.filter(
+                            item => {
+
+                                const days =
+                                    daysUntilDeadline(
+                                        item.deadline
+                                    );
+
+                                return (
+                                    item.status === "active" &&
+                                    days !== null &&
+                                    days >= 0 &&
+                                    days <= 30
+                                );
+
+                            }
+                        ).length;
+
+
+                    document.getElementById(
+                        "totalScholarships"
+                    ).textContent = total;
+
+
+                    document.getElementById(
+                        "activeScholarships"
+                    ).textContent = active;
+
+
+                    document.getElementById(
+                        "featuredScholarships"
+                    ).textContent = featured;
+
+
+                    document.getElementById(
+                        "closingScholarships"
+                    ).textContent = closing;
+
+                }
+
+
+                /* =================================
+                   FILTER DATA
+                ================================== */
+
+                function getFilteredScholarships() {
+
+                    const search =
+                        searchInput.value
+                            .trim()
+                            .toLowerCase();
+
+
+                    const country =
+                        countryFilter.value;
+
+
+                    const status =
+                        statusFilter.value;
+
+
+                    const category =
+                        categoryFilter.value;
+
+
+                    return scholarships.filter(
+                        function (item) {
+
+                            const matchesSearch =
+                                !search ||
+                                item.name
+                                    .toLowerCase()
+                                    .includes(search) ||
+                                item.provider
+                                    .toLowerCase()
+                                    .includes(search) ||
+                                item.country
+                                    .toLowerCase()
+                                    .includes(search) ||
+                                item.level
+                                    .toLowerCase()
+                                    .includes(search);
+
+
+                            const matchesCountry =
+                                country === "all" ||
+                                item.country === country;
+
+
+                            const matchesStatus =
+                                status === "all" ||
+                                item.status === status;
+
+
+                            const matchesCategory =
+                                category === "all" ||
+                                item.category === category;
+
+
+                            return (
+                                matchesSearch &&
+                                matchesCountry &&
+                                matchesStatus &&
+                                matchesCategory
+                            );
+
+                        }
+                    );
+
+                }
+
+
+                /* =================================
+                   STATUS LABEL
+                ================================== */
+
+                function statusLabel(status) {
+
+                    const labels = {
+
+                        active: "Active",
+
+                        upcoming: "Upcoming",
+
+                        closed: "Closed"
+
+                    };
+
+
+                    return labels[status] ||
+                        status;
+
+                }
+
+
+                /* =================================
+                   RENDER TABLE
+                ================================== */
+
+                function renderTable() {
+
+                    const filtered =
+                        getFilteredScholarships();
+
+
+                    tableBody.innerHTML = "";
+
+
+                    if (!filtered.length) {
+
+                        emptyState.hidden = false;
+
+                        resultCount.textContent =
+                            "0 scholarships";
+
+                        return;
+
+                    }
+
+
+                    emptyState.hidden = true;
+
+
+                    filtered.forEach(
+                        function (item) {
+
+
+                            const row =
+                                document.createElement(
+                                    "tr"
+                                );
+
+
+                            const deadlineDays =
+                                daysUntilDeadline(
+                                    item.deadline
+                                );
+
+
+                            let deadlineClass =
+                                "";
+
+
+                            if (
+                                item.status === "active" &&
+                                deadlineDays !== null &&
+                                deadlineDays <= 30 &&
+                                deadlineDays >= 0
+                            ) {
+
+                                deadlineClass =
+                                    "deadline-warning";
+
+                            }
+
+
+                            row.innerHTML = `
+
+                                <td>
+
+                                    <div class="admin-scholarship-name">
+
+                                        <strong>
+                                            ${escapeHTML(item.name)}
+                                        </strong>
+
+                                        ${
+                                            item.featured
+                                                ? `
+                                                    <span class="admin-featured-badge">
+                                                        Featured
+                                                    </span>
+                                                  `
+                                                : ""
+                                        }
+
+                                        <small>
+                                            ${escapeHTML(item.provider)}
+                                        </small>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    ${escapeHTML(item.country)}
+                                </td>
+
+
+                                <td>
+                                    ${escapeHTML(item.level)}
+                                </td>
+
+
+                                <td>
+                                    ${escapeHTML(item.funding)}
+                                </td>
+
+
+                                <td>
+
+                                    <span
+                                        class="${deadlineClass}"
+                                    >
+                                        ${formatDate(item.deadline)}
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span
+                                        class="admin-status-badge status-${escapeHTML(item.status)}"
+                                    >
+                                        ${statusLabel(item.status)}
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-table-actions">
+
+                                        <button
+                                            type="button"
+                                            class="admin-table-action"
+                                            data-action="edit"
+                                            data-id="${escapeHTML(item.id)}"
+                                        >
+                                            Edit
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="admin-table-action admin-table-action-danger"
+                                            data-action="delete"
+                                            data-id="${escapeHTML(item.id)}"
+                                        >
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            `;
+
+
+                            tableBody.appendChild(
+                                row
+                            );
+
+                        }
+                    );
+
+
+                    resultCount.textContent =
+                        `${filtered.length} ${
+                            filtered.length === 1
+                                ? "scholarship"
+                                : "scholarships"
+                        }`;
+
+                }
+
+
+                /* =================================
+                   ESCAPE HTML
+                ================================== */
+
+                function escapeHTML(value) {
+
+                    return String(value)
+                        .replace(
+                            /&/g,
+                            "&amp;"
+                        )
+                        .replace(
+                            /</g,
+                            "&lt;"
+                        )
+                        .replace(
+                            />/g,
+                            "&gt;"
+                        )
+                        .replace(
+                            /"/g,
+                            "&quot;"
+                        )
+                        .replace(
+                            /'/g,
+                            "&#039;"
+                        );
+
+                }
+
+
+                /* =================================
+                   OPEN MODAL
+                ================================== */
+
+                function openModal(
+                    scholarship = null
+                ) {
+
+                    modal.classList.add(
+                        "is-open"
+                    );
+
+
+                    modal.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+
+                    document.body.classList.add(
+                        "modal-open"
+                    );
+
+
+                    if (scholarship) {
+
+                        modalTitle.textContent =
+                            "Edit scholarship";
+
+
+                        document.getElementById(
+                            "scholarshipId"
+                        ).value =
+                            scholarship.id;
+
+
+                        document.getElementById(
+                            "scholarshipName"
+                        ).value =
+                            scholarship.name;
+
+
+                        document.getElementById(
+                            "scholarshipProvider"
+                        ).value =
+                            scholarship.provider;
+
+
+                        document.getElementById(
+                            "scholarshipCountry"
+                        ).value =
+                            scholarship.country;
+
+
+                        document.getElementById(
+                            "scholarshipLevel"
+                        ).value =
+                            scholarship.level;
+
+
+                        document.getElementById(
+                            "scholarshipFunding"
+                        ).value =
+                            scholarship.funding;
+
+
+                        document.getElementById(
+                            "scholarshipDeadline"
+                        ).value =
+                            scholarship.deadline;
+
+
+                        document.getElementById(
+                            "scholarshipStatus"
+                        ).value =
+                            scholarship.status;
+
+
+                        document.getElementById(
+                            "scholarshipCategory"
+                        ).value =
+                            scholarship.category;
+
+
+                        document.getElementById(
+                            "scholarshipDescription"
+                        ).value =
+                            scholarship.description ||
+                            "";
+
+
+                        document.getElementById(
+                            "scholarshipFeatured"
+                        ).checked =
+                            scholarship.featured === true;
+
+                    } else {
+
+                        modalTitle.textContent =
+                            "Add scholarship";
+
+
+                        form.reset();
+
+
+                        document.getElementById(
+                            "scholarshipId"
+                        ).value = "";
+
+                    }
+
+
+                    window.setTimeout(
+                        function () {
+
+                            document.getElementById(
+                                "scholarshipName"
+                            ).focus();
+
+                        },
+                        100
+                    );
+
+                }
+
+
+                /* =================================
+                   CLOSE MODAL
+                ================================== */
+
+                function closeModal() {
+
+                    modal.classList.remove(
+                        "is-open"
+                    );
+
+
+                    modal.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    document.body.classList.remove(
+                        "modal-open"
+                    );
+
+                }
+
+
+                /* =================================
+                   ADD
+                ================================== */
+
+                addButton.addEventListener(
+                    "click",
+                    function () {
+
+                        openModal();
+
+                    }
+                );
+
+
+                /* =================================
+                   CLOSE
+                ================================== */
+
+                closeButton.addEventListener(
+                    "click",
+                    closeModal
+                );
+
+
+                cancelButton.addEventListener(
+                    "click",
+                    closeModal
+                );
+
+
+                modalOverlay.addEventListener(
+                    "click",
+                    closeModal
+                );
+
+
+                /* =================================
+                   ESCAPE KEY
+                ================================== */
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            modal.classList.contains(
+                                "is-open"
+                            )
+                        ) {
+
+                            closeModal();
+
+                        }
+
+                    }
+                );
+
+
+                /* =================================
+                   SAVE SCHOLARSHIP
+                ================================== */
+
+                form.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        const id =
+                            document.getElementById(
+                                "scholarshipId"
+                            ).value;
+
+
+                        const scholarship = {
+
+                            id:
+                                id ||
+                                `scholarship-${Date.now()}`,
+
+                            name:
+                                document.getElementById(
+                                    "scholarshipName"
+                                ).value.trim(),
+
+                            provider:
+                                document.getElementById(
+                                    "scholarshipProvider"
+                                ).value.trim(),
+
+                            country:
+                                document.getElementById(
+                                    "scholarshipCountry"
+                                ).value,
+
+                            level:
+                                document.getElementById(
+                                    "scholarshipLevel"
+                                ).value,
+
+                            funding:
+                                document.getElementById(
+                                    "scholarshipFunding"
+                                ).value.trim(),
+
+                            deadline:
+                                document.getElementById(
+                                    "scholarshipDeadline"
+                                ).value,
+
+                            status:
+                                document.getElementById(
+                                    "scholarshipStatus"
+                                ).value,
+
+                            category:
+                                document.getElementById(
+                                    "scholarshipCategory"
+                                ).value,
+
+                            description:
+                                document.getElementById(
+                                    "scholarshipDescription"
+                                ).value.trim(),
+
+                            featured:
+                                document.getElementById(
+                                    "scholarshipFeatured"
+                                ).checked
+
+                        };
+
+
+                        const existingIndex =
+                            scholarships.findIndex(
+                                item =>
+                                    item.id ===
+                                    scholarship.id
+                            );
+
+
+                        if (
+                            existingIndex !== -1
+                        ) {
+
+                            scholarships[
+                                existingIndex
+                            ] = scholarship;
+
+                        } else {
+
+                            scholarships.unshift(
+                                scholarship
+                            );
+
+                        }
+
+
+                        saveScholarships();
+
+                        updateStatistics();
+
+                        renderTable();
+
+                        closeModal();
+
+                    }
+                );
+
+
+                /* =================================
+                   TABLE ACTIONS
+                ================================== */
+
+                tableBody.addEventListener(
+                    "click",
+                    function (event) {
+
+                        const button =
+                            event.target.closest(
+                                "button[data-action]"
+                            );
+
+
+                        if (!button) {
+                            return;
+                        }
+
+
+                        const id =
+                            button.dataset.id;
+
+
+                        const action =
+                            button.dataset.action;
+
+
+                        const scholarship =
+                            scholarships.find(
+                                item =>
+                                    item.id === id
+                            );
+
+
+                        if (!scholarship) {
+                            return;
+                        }
+
+
+                        if (
+                            action === "edit"
+                        ) {
+
+                            openModal(
+                                scholarship
+                            );
+
+                        }
+
+
+                        if (
+                            action === "delete"
+                        ) {
+
+                            const confirmed =
+                                window.confirm(
+                                    `Delete "${scholarship.name}"?`
+                                );
+
+
+                            if (!confirmed) {
+                                return;
+                            }
+
+
+                            scholarships =
+                                scholarships.filter(
+                                    item =>
+                                        item.id !== id
+                                );
+
+
+                            saveScholarships();
+
+                            updateStatistics();
+
+                            renderTable();
+
+                        }
+
+                    }
+                );
+
+
+                /* =================================
+                   FILTER EVENTS
+                ================================== */
+
+                searchInput.addEventListener(
+                    "input",
+                    renderTable
+                );
+
+
+                countryFilter.addEventListener(
+                    "change",
+                    renderTable
+                );
+
+
+                statusFilter.addEventListener(
+                    "change",
+                    renderTable
+                );
+
+
+                categoryFilter.addEventListener(
+                    "change",
+                    renderTable
+                );
+
+
+                /* =================================
+                   PAGINATION PLACEHOLDER
+                ================================== */
+
+                document.getElementById(
+                    "previousPage"
+                ).addEventListener(
+                    "click",
+                    function () {
+
+                        /*
+                         * Pagination will be connected
+                         * to the backend when the database
+                         * API is implemented.
+                         */
+
+                    }
+                );
+
+
+                document.getElementById(
+                    "nextPage"
+                ).addEventListener(
+                    "click",
+                    function () {
+
+                        /*
+                         * Pagination will be connected
+                         * to the backend when the database
+                         * API is implemented.
+                         */
+
+                    }
+                );
+
+
+                /* =================================
+                   INITIALIZE
+                ================================== */
+
+                updateStatistics();
+
+                renderTable();
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
