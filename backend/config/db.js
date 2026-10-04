@@ -1,8 +1,3 @@
-/* =========================================================
-   LION CONSULTANCY
-   MYSQL DATABASE CONNECTION
-   ========================================================= */
-
 "use strict";
 
 const mysql = require("mysql2/promise");
@@ -14,15 +9,16 @@ const pool = mysql.createPool({
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_NAME || "lion_consultancy",
 
+    ssl: process.env.DB_HOST
+        ? {
+              rejectUnauthorized: true
+          }
+        : undefined,
+
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
 });
-
-
-/* =========================================================
-   TEST DATABASE CONNECTION
-   ========================================================= */
 
 const connectDB = async () => {
     try {
@@ -48,11 +44,6 @@ const connectDB = async () => {
         process.exit(1);
     }
 };
-
-
-/* =========================================================
-   EXPORTS
-   ========================================================= */
 
 module.exports = {
     pool,
