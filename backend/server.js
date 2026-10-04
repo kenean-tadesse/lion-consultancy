@@ -212,7 +212,7 @@ app.use("/api/admin/inquiries", adminInquiryRoutes);
  */
 
 const frontendPath =
-    path.join(__dirname, "..");
+    path.join(__dirname, "..", "fronted");
 
 
 app.use(
@@ -279,8 +279,9 @@ app.use(
    ========================================================= */
 
 const server =
-    app.listen(
-        PORT,
+   app.listen(
+    PORT,
+    "0.0.0.0",
         () => {
 
             console.log("");
