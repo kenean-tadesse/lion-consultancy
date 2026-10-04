@@ -9,11 +9,11 @@ const pool = mysql.createPool({
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_NAME || "lion_consultancy",
 
-    ssl: process.env.DB_HOST
-        ? {
-              rejectUnauthorized: true
-          }
-        : undefined,
+   ssl: process.env.DB_HOST
+    ? {
+          rejectUnauthorized: false
+      }
+    : undefined,
 
     waitForConnections: true,
     connectionLimit: 10,
