@@ -51,6 +51,14 @@ const NODE_ENV =
 
 
 /* =========================================================
+   FRONTEND PATH
+   ========================================================= */
+
+const frontendPath =
+    path.join(__dirname, "..", "fronted");
+
+
+/* =========================================================
    DATABASE CONNECTION
    ========================================================= */
 
@@ -113,24 +121,20 @@ app.use((req, res, next) => {
 /* =========================================================
    HEALTH CHECK
    ========================================================= */
+/* =========================================================
+   WEBSITE HOME PAGE
+   ========================================================= */
 
 app.get(
     "/",
     (req, res) => {
 
-        res.status(200).json({
-
-            success: true,
-
-            message:
-                "Lion Consultancy API is running.",
-
-            environment:
-                NODE_ENV,
-
-            timestamp:
-                new Date().toISOString()
-        });
+        res.sendFile(
+            path.join(
+                frontendPath,
+                "index.html"
+            )
+        );
     }
 );
 
@@ -211,8 +215,6 @@ app.use("/api/admin/inquiries", adminInquiryRoutes);
  * └── index.html
  */
 
-const frontendPath =
-    path.join(__dirname, "..", "fronted");
 
 
 app.use(
