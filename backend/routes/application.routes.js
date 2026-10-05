@@ -4,10 +4,22 @@ const express = require("express");
 
 const {
     createApplication,
+    getApplications,
     getApplicationById
 } = require("../controllers/application.controller");
 
 const router = express.Router();
+
+
+/* =========================================================
+   GET ALL APPLICATIONS
+   GET /api/applications
+   ========================================================= */
+
+router.get(
+    "/",
+    getApplications
+);
 
 
 /* =========================================================

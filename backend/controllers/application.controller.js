@@ -13,6 +13,7 @@ const {
 
 /* =========================================================
    CREATE APPLICATION
+   POST /api/applications
    ========================================================= */
 
 const createApplication = async (req, res) => {
@@ -121,9 +122,13 @@ const createApplication = async (req, res) => {
         const [existingApplications] =
             await pool.execute(
                 `
-                SELECT id
+                SELECT
+                    id
+
                 FROM applications
+
                 WHERE email = ?
+
                 LIMIT 1
                 `,
                 [
@@ -212,6 +217,7 @@ const createApplication = async (req, res) => {
                 [
 
                     firstName.trim(),
+
                     lastName.trim(),
 
                     email.trim().toLowerCase(),
@@ -309,7 +315,317 @@ const createApplication = async (req, res) => {
 
 
 /* =========================================================
+   GET ALL APPLICATIONS
+   GET /api/applications
+   ========================================================= */
+
+const getApplications = async (req, res) => {
+
+    try {
+
+        /* =================================================
+           PAGINATION
+           ================================================= */
+
+        let page =
+            parseInt(
+                req.query.page,
+                10
+            );
+
+        let limit =
+            parseInt(
+                req.query.limit,
+                10
+            );
+
+
+        if (
+            Number.isNaN(page) ||
+            page < 1
+        ) {
+            page = 1;
+        }
+
+
+        if (
+            Number.isNaN(limit) ||
+            limit < 1
+        ) {
+            limit = 20;
+        }
+
+
+        /* =================================================
+           MAXIMUM LIMIT
+           ================================================= */
+
+        if (limit > 100) {
+            limit = 100;
+        }
+
+
+        const offset =
+            (page - 1) * limit;
+
+
+        /* =================================================
+           SEARCH
+           ================================================= */
+
+        const search =
+            typeof req.query.search === "string"
+                ? req.query.search.trim()
+                : "";
+
+
+        /* =================================================
+           FILTERS
+           ================================================= */
+
+        const status =
+            typeof req.query.status === "string"
+                ? req.query.status.trim()
+                : "";
+
+
+        const preferredCountry =
+            typeof req.query.country === "string"
+                ? req.query.country.trim()
+                : "";
+
+
+        /* =================================================
+           BUILD WHERE CLAUSE
+           ================================================= */
+
+        const conditions = [];
+
+        const values = [];
+
+
+        /* =================================================
+           SEARCH CONDITION
+           ================================================= */
+
+        if (search !== "") {
+
+            conditions.push(
+                `
+                (
+                    first_name LIKE ?
+                    OR last_name LIKE ?
+                    OR email LIKE ?
+                    OR phone LIKE ?
+                )
+                `
+            );
+
+
+            const searchValue =
+                `%${search}%`;
+
+
+            values.push(
+                searchValue,
+                searchValue,
+                searchValue,
+                searchValue
+            );
+        }
+
+
+        /* =================================================
+           STATUS FILTER
+           ================================================= */
+
+        if (status !== "") {
+
+            conditions.push(
+                `status = ?`
+            );
+
+            values.push(status);
+        }
+
+
+        /* =================================================
+           COUNTRY FILTER
+           ================================================= */
+
+        if (preferredCountry !== "") {
+
+            conditions.push(
+                `preferred_country = ?`
+            );
+
+            values.push(
+                preferredCountry
+            );
+        }
+
+
+        /* =================================================
+           WHERE
+           ================================================= */
+
+        const whereClause =
+            conditions.length > 0
+                ? `WHERE ${conditions.join(" AND ")}`
+                : "";
+
+
+        /* =================================================
+           GET TOTAL
+           ================================================= */
+
+        const [countRows] =
+            await pool.execute(
+                `
+                SELECT
+                    COUNT(*) AS total
+
+                FROM applications
+
+                ${whereClause}
+                `,
+                values
+            );
+
+
+        const total =
+            Number(
+                countRows[0].total
+            );
+
+
+        /* =================================================
+           GET APPLICATIONS
+           ================================================= */
+
+        const [rows] =
+            await pool.execute(
+                `
+                SELECT
+
+                    id,
+
+                    first_name,
+                    last_name,
+
+                    email,
+                    phone,
+
+                    date_of_birth,
+
+                    nationality,
+                    city,
+
+                    education_level,
+                    field_of_study,
+                    institution,
+                    graduation_year,
+
+                    gpa,
+                    english_level,
+
+                    preferred_country,
+                    study_level,
+                    preferred_field,
+
+                    intake,
+
+                    preferred_university,
+
+                    study_goals,
+
+                    status,
+
+                    created_at,
+                    updated_at
+
+                FROM applications
+
+                ${whereClause}
+
+                ORDER BY created_at DESC
+
+                LIMIT ${limit}
+
+                OFFSET ${offset}
+                `,
+                values
+            );
+
+
+        /* =================================================
+           PAGINATION
+           ================================================= */
+
+        const totalPages =
+            Math.ceil(
+                total / limit
+            );
+
+
+        /* =================================================
+           RESPONSE
+           ================================================= */
+
+        return res.status(200).json({
+
+            success: true,
+
+            applications:
+                rows,
+
+            pagination: {
+
+                page,
+
+                limit,
+
+                total,
+
+                totalPages
+            },
+
+            filters: {
+
+                search:
+                    search || null,
+
+                status:
+                    status || null,
+
+                country:
+                    preferredCountry || null
+            }
+        });
+
+
+    } catch (error) {
+
+        console.error(
+            "Get applications error:",
+            error
+        );
+
+
+        return res.status(500).json({
+
+            success: false,
+
+            message:
+                "Unable to retrieve applications."
+        });
+    }
+};
+
+
+/* =========================================================
    GET APPLICATION BY ID
+   GET /api/applications/:id
    ========================================================= */
 
 const getApplicationById = async (req, res) => {
@@ -321,16 +637,25 @@ const getApplicationById = async (req, res) => {
         } = req.params;
 
 
+        /* =================================================
+           GET APPLICATION
+           ================================================= */
+
         const [rows] =
             await pool.execute(
                 `
                 SELECT
+
                     id,
+
                     first_name,
                     last_name,
+
                     email,
                     phone,
+
                     date_of_birth,
+
                     nationality,
                     city,
 
@@ -338,17 +663,22 @@ const getApplicationById = async (req, res) => {
                     field_of_study,
                     institution,
                     graduation_year,
+
                     gpa,
                     english_level,
 
                     preferred_country,
                     study_level,
                     preferred_field,
+
                     intake,
+
                     preferred_university,
+
                     study_goals,
 
                     status,
+
                     created_at,
                     updated_at
 
@@ -358,9 +688,15 @@ const getApplicationById = async (req, res) => {
 
                 LIMIT 1
                 `,
-                [id]
+                [
+                    id
+                ]
             );
 
+
+        /* =================================================
+           NOT FOUND
+           ================================================= */
 
         if (rows.length === 0) {
 
@@ -373,6 +709,10 @@ const getApplicationById = async (req, res) => {
             });
         }
 
+
+        /* =================================================
+           SUCCESS
+           ================================================= */
 
         return res.status(200).json({
 
@@ -410,5 +750,8 @@ module.exports = {
 
     createApplication,
 
+    getApplications,
+
     getApplicationById
+
 };
