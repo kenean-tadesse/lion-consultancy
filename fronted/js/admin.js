@@ -317,58 +317,48 @@ document.addEventListener("DOMContentLoaded", () => {
        ===================================================== */
 
     const closeSidebar = () => {
-
         if (adminSidebar) {
             adminSidebar.classList.remove("is-open");
         }
 
         if (adminSidebarOverlay) {
-            adminSidebarOverlay.classList.remove(
-                "is-visible"
-            );
+            adminSidebarOverlay.classList.remove("is-visible");
+        }
+
+        if (adminMenuToggle) {
+            adminMenuToggle.setAttribute("aria-expanded", "false");
         }
     };
 
-
     const openSidebar = () => {
-
         if (adminSidebar) {
             adminSidebar.classList.add("is-open");
         }
 
         if (adminSidebarOverlay) {
-            adminSidebarOverlay.classList.add(
-                "is-visible"
-            );
+            adminSidebarOverlay.classList.add("is-visible");
+        }
+
+        if (adminMenuToggle) {
+            adminMenuToggle.setAttribute("aria-expanded", "true");
         }
     };
 
-
     if (adminMenuToggle) {
+        adminMenuToggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
 
-        adminMenuToggle.addEventListener(
-            "click",
-            () => {
-
-                if (
-                    adminSidebar &&
-                    adminSidebar.classList.contains("is-open")
-                ) {
-                    closeSidebar();
-                } else {
-                    openSidebar();
-                }
+            if (adminSidebar && adminSidebar.classList.contains("is-open")) {
+                closeSidebar();
+            } else {
+                openSidebar();
             }
-        );
+        });
     }
 
-
     if (adminSidebarOverlay) {
-
-        adminSidebarOverlay.addEventListener(
-            "click",
-            closeSidebar
-        );
+        adminSidebarOverlay.addEventListener("click", closeSidebar);
     }
 
 
