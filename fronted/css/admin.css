@@ -2807,7 +2807,7 @@ img {
         transform: translateX(-100%);
     }
 
-    .admin-sidebar.open {
+    .admin-sidebar.is-open {
         transform: translateX(0);
     }
 
@@ -2823,7 +2823,7 @@ img {
         justify-content: center;
     }
 
-    .admin-sidebar-overlay.visible {
+    .admin-sidebar-overlay.is-visible {
         display: block;
     }
 
